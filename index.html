@@ -1,175 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AQuest Inspired Website</title>
+    <title>Aquest Design</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            overflow: hidden;
-            background: #000;
-            color: #fff;
-            position: relative;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: #333;
             color: white;
             padding: 1rem;
-            text-align: center;
-            animation: fadeIn 2s ease-in-out;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             padding: 0;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
+        nav ul li {
             margin: 0 1rem;
-            transition: color 0.3s;
         }
 
-        nav a:hover {
-            color: #ff6347;
+        nav ul li a {
+            color: white;
+            text-decoration: none;
         }
 
         section {
             padding: 2rem;
-            text-align: center;
-            animation: slideIn 1s ease-in-out;
-            position: relative;
-            z-index: 1;
         }
 
-        #home {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        #about {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        #services {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        #contact {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        footer {
-            background-color: rgba(0, 0, 0, 0.9);
-            color: white;
-            text-align: center;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            animation: fadeIn 2s ease-in-out;
-        }
-
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size: cover;
-            background-position: center;
-            z-index: 0;
-            transition: background-image 1s ease-in-out;
-        }
-
-        .wave-text {
-            display: inline-block;
-            position: relative;
-            color: #fff;
-            transition: transform 0.3s, text-shadow 0.3s;
-        }
-
-        .wave-text:hover {
-            transform: translateY(-10px);
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
-            animation: waveEffect 0.5s infinite alternate;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(20px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes waveEffect {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-5px); }
+        h1, h2 {
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <div class="background" id="background"></div>
     <header>
         <nav>
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
+                <li><a href="#home">Accueil</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#team">Équipe</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <section id="home">
-        <h1 class="wave-text">Welcome to Our Website</h1>
-        <p class="wave-text">Creative Production & Technology</p>
-    </section>
-    <section id="about">
-        <h2 class="wave-text">About Us</h2>
-        <p class="wave-text">We combine creativity and technology to create digital experiences.</p>
+        <h1>Bienvenue chez Aquest Design</h1>
+        <p>Conception, Construction, et Aménagement des espaces de travail.</p>
     </section>
     <section id="services">
-        <h2 class="wave-text">Our Services</h2>
-        <p class="wave-text">Explore our wide range of services.</p>
+        <h2>Nos Services</h2>
+        <p>Description des services offerts.</p>
+    </section>
+    <section id="projects">
+        <h2>Nos Projets</h2>
+        <p>Description des projets réalisés.</p>
+    </section>
+    <section id="team">
+        <h2>Notre Équipe</h2>
+        <p>Description de l'équipe.</p>
     </section>
     <section id="contact">
-        <h2 class="wave-text">Contact Us</h2>
-        <p class="wave-text">Get in touch with us for more information.</p>
+        <h2>Contactez-Nous</h2>
+        <form>
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
     </section>
-    <footer>
-        <p>&copy; 2024 AQuest Inspired Website</p>
-    </footer>
     <script>
-        const images = [
-            'https://source.unsplash.com/random/1920x1080?nature',
-            'https://source.unsplash.com/random/1920x1080?water',
-            'https://source.unsplash.com/random/1920x1080?landscape',
-            'https://source.unsplash.com/random/1920x1080?city',
-            'https://source.unsplash.com/random/1920x1080?space'
-        ];
-
-        let currentIndex = 0;
-        const backgroundElement = document.getElementById('background');
-
-        function changeBackground() {
-            backgroundElement.style.backgroundImage = `url(${images[currentIndex]})`;
-            currentIndex = (currentIndex + 1) % images.length;
-        }
-
-        setInterval(changeBackground, 5000); // Change image every 5 seconds
-
-        // Initial background image
-        changeBackground();
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Website loaded successfully');
+        });
     </script>
 </body>
 </html>
