@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            background-color: #f4f4f4;
         }
 
         header {
@@ -22,20 +23,27 @@
         nav ul {
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
 
         nav ul li {
-            display: inline;
             margin: 0 1rem;
         }
 
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: bold;
         }
 
         main {
             padding: 2rem;
+            text-align: center;
+        }
+
+        section {
+            margin: 2rem 0;
         }
 
         footer {
@@ -46,6 +54,14 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+
+        .animate {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .animate:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -62,19 +78,19 @@
         </nav>
     </header>
     <main>
-        <section id="home">
+        <section id="home" class="animate">
             <h2>Home</h2>
             <p>This is the home section.</p>
         </section>
-        <section id="about">
+        <section id="about" class="animate">
             <h2>About</h2>
             <p>This is the about section.</p>
         </section>
-        <section id="services">
+        <section id="services" class="animate">
             <h2>Services</h2>
             <p>This is the services section.</p>
         </section>
-        <section id="contact">
+        <section id="contact" class="animate">
             <h2>Contact</h2>
             <p>This is the contact section.</p>
         </section>
