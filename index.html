@@ -11,12 +11,13 @@
             padding: 0;
             box-sizing: border-box;
             overflow: hidden;
-            background: linear-gradient(to bottom, #00c6ff, #0072ff);
+            background: #000;
+            color: #fff;
             position: relative;
         }
 
         header {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
             padding: 1rem;
             text-align: center;
@@ -50,23 +51,23 @@
         }
 
         #home {
-            background-color: rgba(240, 248, 255, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         #about {
-            background-color: rgba(230, 230, 250, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         #services {
-            background-color: rgba(255, 240, 245, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         #contact {
-            background-color: rgba(245, 245, 220, 0.8);
+            background-color: rgba(0, 0, 0, 0.8);
         }
 
         footer {
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.9);
             color: white;
             text-align: center;
             padding: 1rem;
@@ -91,12 +92,13 @@
         .wave-text {
             display: inline-block;
             position: relative;
-            color: #000;
-            transition: transform 0.3s;
+            color: #fff;
+            transition: transform 0.3s, text-shadow 0.3s;
         }
 
         .wave-text:hover {
             transform: translateY(-10px);
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.3);
             animation: waveEffect 0.5s infinite alternate;
         }
 
