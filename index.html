@@ -200,6 +200,13 @@
   </a>
 </p>
 
+<p>
+  <span class="click-icon" style="color: blue;">👉</span>
+  <a href="#" onclick="showSection('services')" class="highlight">
+    Keni nevojë për përkthyes gjyqësor të besueshëm?
+  </a>
+</p>
+
 <style>
   .click-icon {
     display: inline-block;
@@ -222,9 +229,15 @@
   .highlight {
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 50%; /* Makes the shape circular */
+    border-radius: 25px; /* Makes the shape elliptical */
     background-color: lightblue; /* Background color for visibility */
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for elegance */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .highlight:hover {
+    background-color: deepskyblue; /* Changes color on hover */
   }
 </style>
     </div>
