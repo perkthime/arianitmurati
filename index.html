@@ -170,7 +170,7 @@
 <div class="right">
     <a href="#" onclick="showSection('welcome')" class="highlight">Mirë se vini</a>
     <div class="dropdown">
-        <button class="dropbtn highlight">Shërbime 
+        <button class="dropbtn highlight-blue">Shërbime 
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -195,7 +195,21 @@
   .highlight:hover {
     background-color: rgba(255, 140, 0, 0.7); /* Changes to a slightly darker orange on hover */
   }
-</style>>
+
+  .highlight-blue {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px; /* Makes the shape elliptical */
+    background-color: rgba(135, 206, 235, 0.5); /* Transparent blue background */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for elegance */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  }
+
+  .highlight-blue:hover {
+    background-color: rgba(70, 130, 180, 0.7); /* Changes to a slightly darker blue on hover */
+  }
+</style>
 
             </div> 
         </div>
