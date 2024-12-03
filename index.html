@@ -168,9 +168,9 @@
   <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
 </span>
 <div class="right">
-    <a href="#" onclick="showSection('welcome')" class="highlight">Mirë se vini</a>
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
     <div class="dropdown">
-        <button class="dropbtn highlight">Shërbime 
+        <button class="dropbtn highlight-orange">Shërbime 
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
@@ -178,24 +178,55 @@
             <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
         </div>
     </div>
-    <a href="#" onclick="showSection('contact')" class="highlight">Kontaktoni</a>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
 </div>
 
 <style>
+  .highlight-transparent {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bën formën eliptike */
+    background-color: rgba(0, 191, 255, 0.3); /* Ngjyrë kaltër më e ndritshme dhe transparente */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+  }
+
+  .highlight-transparent:hover {
+    background-color: rgba(0, 191, 255, 0.5); /* Ndryshon në një kaltër më të errët në hover */
+    transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+  }
+
+  .highlight-orange {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bën formën eliptike */
+    background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+  }
+
+  .highlight-orange:hover {
+    background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
+    transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+  }
+
   .highlight {
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 25px; /* Makes the shape elliptical */
-    background-color: rgba(255, 165, 0, 0.5); /* Transparent orange background */
+    border-radius: 25px; /* Bën formën eliptike */
+    background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for elegance */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
   }
 
   .highlight:hover {
-    background-color: rgba(255, 140, 0, 0.7); /* Changes to a slightly darker orange on hover */
+    background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
+    transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
   }
-</style>>
+</style>
 
             </div> 
         </div>
@@ -211,7 +242,7 @@
 </style>
 <p>
   <span class="click-icon" style="color: blue;">👉</span>
-  <a href="#" onclick="showSection('services')" class="highlight">
+  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
     Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
 </p>
@@ -220,7 +251,7 @@
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
-    margin-right: 5px; /* Adjust the spacing as needed */
+    margin-right: 5px; /* Rregulloni hapësirën sipas nevojës */
   }
 
   @keyframes move {
@@ -235,18 +266,39 @@
     }
   }
 
+  .highlight-transparent {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bën formën eliptike */
+    background-color: rgba(0, 191, 255, 0.3); /* Ngjyrë kaltër më e ndritshme dhe transparente */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+    color: orange; /* Ngjyrë portokalli e ndezur për tekstin */
+    text-decoration: none; /* Largon nënvizimin */
+  }
+
+  .highlight-transparent:hover {
+    background-color: rgba(0, 191, 255, 0.5); /* Ndryshon në një kaltër më të errët në hover */
+    transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+  }
+
   .highlight {
     display: inline-block;
     padding: 10px 20px;
-    border-radius: 25px; /* Makes the shape elliptical */
-    background-color: rgba(255, 165, 0, 0.5); /* Transparent orange background */
+    border-radius: 25px; /* Bën formën eliptike */
+    background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for elegance */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shton një hije të lehtë për elegancë */
+    transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
   }
 
   .highlight:hover {
-    background-color: rgba(255, 140, 0, 0.7); /* Changes to a slightly darker orange on hover */
+    background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
+  }
+
+  .no-underline {
+    text-decoration: none; /* Largon nënvizimin */
   }
 </style>
     </div>
