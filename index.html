@@ -242,7 +242,7 @@
 </style>
 <p>
   <span class="click-icon" style="color: blue;">👉</span>
-  <a href="#" onclick="showSection('services')" class="highlight-transparent">
+  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
     Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
 </p>
@@ -274,6 +274,8 @@
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+    color: orange; /* Ngjyrë portokalli e ndezur për tekstin */
+    text-decoration: none; /* Largon nënvizimin */
   }
 
   .highlight-transparent:hover {
@@ -293,6 +295,10 @@
 
   .highlight:hover {
     background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
+  }
+
+  .no-underline {
+    text-decoration: none; /* Largon nënvizimin */
   }
 </style>
     </div>
