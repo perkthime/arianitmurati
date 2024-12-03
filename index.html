@@ -245,9 +245,30 @@
   <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
     Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
-</p>
+<div class="right">
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn highlight-orange">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
+        </div>
+    </div>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
+</div>
 
 <style>
+  .navbar {
+    background-color: rgba(0, 0, 0, 0.5); /* Bën sfondin e navigimit transparent */
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+  }
+
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
@@ -273,13 +294,29 @@
     background-color: rgba(0, 191, 255, 0.3); /* Ngjyrë kaltër më e ndritshme dhe transparente */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
-    color: orange; /* Ngjyrë portokalli e ndezur për tekstin */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+    color: white; /* Ngjyrë e bardhë për tekstin */
     text-decoration: none; /* Largon nënvizimin */
   }
 
   .highlight-transparent:hover {
-    background-color: rgba(0, 191, 255, 0.5); /* Ndryshon në një kaltër më të errët në hover */
+    background-color: rgba(0, 255, 127, 0.5); /* Ndryshon në një të gjelbër të ndezur futuriste në hover */
+    color: white; /* Ruaj ngjyrën e bardhë për tekstin */
+    transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+  }
+
+  .highlight-orange {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bën formën eliptike */
+    background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+  }
+
+  .highlight-orange:hover {
+    background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
     transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
   }
 
