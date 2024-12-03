@@ -182,10 +182,33 @@
     </div>
 
     <div id="welcome" class="content welcome" style="display: block;">
-        <h1>Mirë se vini në faqen time personale!</h1>
+<h1 class="animated-text">Mirë se vini në faqen time personale!</h1>
+
+<style>
+  .animated-text {
+    display: inline-block;
+    animation: fadeIn 2s ease-in-out infinite, colorChange 3s ease-in-out infinite;
+    color: #fff; /* Ngjyra e bardhë fillestare */
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  @keyframes colorChange {
+    0% { color: #fff; }
+    25% { color: #ff6347; } /* Ngjyra e kuqe domate */
+    50% { color: #ffd700; } /* Ngjyra e artë */
+    75% { color: #00ff00; } /* Ngjyra e gjelbër */
+    100% { color: #1e90ff; } /* Ngjyra e kaltër e thellë */
+  }
+</style>
 <p>
+  <span class="click-icon" style="color: blue;">👉</span>
   <a href="#" onclick="showSection('services')" class="highlight">
-    <span class="click-icon" style="color: black;">👉</span> Keni nevojë për përkthyes gjyqësor të besueshëm?
+    Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
 </p>
 
@@ -193,17 +216,18 @@
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
+    margin-right: 5px; /* Adjust the spacing as needed */
   }
 
   @keyframes move {
     0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
     40% {
-      transform: translateY(-10px);
+      transform: translateX(10px);
     }
     60% {
-      transform: translateY(-5px);
+      transform: translateX(5px);
     }
   }
 </style>
@@ -314,12 +338,12 @@
 
 <div id="service1" class="content service1">
     <h1>Video në shqip</h1>
-    <p>Detajet e Video në shqip.</p>
+    <p>Shikoni videon në gjuhën shqipe për të mësuar më shumë rreth profesionalizmit dhe saktësisë që ne ofrojmë në çdo fushë.</p>
     <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 <div id="service2" class="content service2">
     <h1>Video në frëngjisht</h1>
-    <p>Detajet e Video në frëngjisht.</p>
+    <p>Shikoni videon në gjuhën frënge për të mësuar më shumë rreth profesionalizmit dhe saktësisë që ne ofrojmë në çdo fushë.</p>
     <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
     <div id="service2" class="content service2">
