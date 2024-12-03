@@ -193,7 +193,7 @@
     color: #fff; /* Ngjyra e bardhë */
   }
 </style>
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+<div class="centered">
   <p>
     <span class="click-icon" style="color: blue;">👉</span>
     <a href="#" onclick="showSection('services')" class="highlight">
@@ -203,6 +203,13 @@
 </div>
 
 <style>
+  .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Kjo do të qendrojë elementin vertikalisht në mes të faqes */
+  }
+
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
