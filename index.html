@@ -233,10 +233,10 @@
 </style>
 <p>
   <span class="click-icon" style="color: blue;">👉</span>
-  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
+  <a href="#" onclick="showSection('services'); createSparkles(event);" class="highlight-transparent no-underline">
     Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
-<p>
+</p>
 
 <style>
   .click-icon {
@@ -291,7 +291,40 @@
   .no-underline {
     text-decoration: none; /* Largon nënvizimin */
   }
+
+  .sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: yellow;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none;
+    animation: sparkle 0.5s linear;
+  }
+
+  @keyframes sparkle {
+    to {
+      transform: translateY(-50px) translateX(50px);
+      opacity: 0;
+    }
+  }
 </style>
+
+<script>
+  function createSparkles(event) {
+    for (let i = 0; i < 20; i++) {
+      const sparkle = document.createElement('div');
+      sparkle.classList.add('sparkle');
+      sparkle.style.left = `${event.clientX + Math.random() * 50 - 25}px`;
+      sparkle.style.top = `${event.clientY + Math.random() * 50 - 25}px`;
+      document.body.appendChild(sparkle);
+      setTimeout(() => {
+        sparkle.remove();
+      }, 500);
+    }
+  }
+</script>
     </div>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
