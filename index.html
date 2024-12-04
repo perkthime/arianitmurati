@@ -10,7 +10,6 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow: hidden;
         }
         .video-background {
             position: fixed;
@@ -20,6 +19,11 @@
             height: 100%;
             z-index: -1;
             object-fit: cover;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
         }
         .navbar {
             background-color: black;
@@ -84,13 +88,6 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
-        }
-        .content {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            color: white;
-            display: none;
         }
         .welcome {
             color: white;
@@ -163,6 +160,16 @@
     </style>
 </head>
 <body>
+    <video autoplay muted loop class="video-background">
+        <source src="https://videos.pexels.com/video-files/27034803/12052488_2560_1440_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="navbar">
+        <!-- Navbar content here -->
+    </div>
+    <div class="content">
+        <!-- Other content here -->
+    </div>
+</body>
     <video autoplay muted loop class="video-background">
         <source src="https://videos.pexels.com/video-files/5844543/5844543-hd_1280_720_30fps.mp4" type="video/mp4">
     </video>
