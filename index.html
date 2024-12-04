@@ -200,11 +200,10 @@
     }
   }
 
-  .highlight-transparent {
+  .highlight-transparent, .highlight, .highlight-orange {
     display: inline-block;
     padding: 10px 20px;
     border-radius: 25px; /* Bën formën eliptike */
-    background-color: rgba(0, 191, 255, 0.3); /* Ngjyrë kaltër më e ndritshme dhe transparente */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
     transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
@@ -212,38 +211,28 @@
     text-decoration: none; /* Largon nënvizimin */
   }
 
-  .highlight-transparent:hover {
+  .highlight-transparent {
+    background-color: rgba(0, 191, 255, 0.3); /* Ngjyrë kaltër më e ndritshme dhe transparente */
+  }
+
+  .highlight-transparent:hover, .highlight-transparent:focus {
     background-color: rgba(0, 255, 0, 0.5); /* Ngjyrë e gjelbër më e ndezur dhe transparente në hover */
     transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
   }
 
   .highlight {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px; /* Bën formën eliptike */
     background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shton një hije të lehtë për elegancë */
-    transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
   }
 
-  .highlight:hover {
+  .highlight:hover, .highlight:focus {
     background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
   }
 
   .highlight-orange {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px; /* Bën formën eliptike */
     background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shton një hije të lehtë për elegancë */
-    transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
-    color: white; /* Ngjyra e bardhë për tekstin */
-    text-decoration: none; /* Largon nënvizimin */
   }
 
-  .highlight-orange:hover {
+  .highlight-orange:hover, .highlight-orange:focus {
     background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
     transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
   }
@@ -252,7 +241,6 @@
     text-decoration: none; /* Largon nënvizimin */
   }
 </style>
-
             </div> 
         </div>
     </div>
