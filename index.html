@@ -233,10 +233,10 @@
 </style>
 <p>
   <span class="click-icon" style="color: blue;">👉</span>
-  <a href="#" onclick="showSection('services'); scatterText(event);" class="highlight-transparent no-underline">
+  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
     Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
-</p>
+<p>
 
 <style>
   .click-icon {
@@ -291,45 +291,7 @@
   .no-underline {
     text-decoration: none; /* Largon nënvizimin */
   }
-
-  .scatter {
-    position: absolute;
-    font-size: 20px;
-    opacity: 1;
-    pointer-events: none;
-    animation: scatter 1s forwards;
-  }
-
-  @keyframes scatter {
-    to {
-      transform: translate(-100px, -100px) rotate(360deg);
-      opacity: 0;
-    }
-  }
 </style>
-
-<script>
-  function scatterText(event) {
-    const text = event.target.textContent;
-    const letters = text.split('');
-    const parent = event.target.parentElement;
-    parent.innerHTML = '';
-
-    letters.forEach((letter, index) => {
-      const span = document.createElement('span');
-      span.classList.add('scatter');
-      span.style.left = `${event.clientX}px`;
-      span.style.top = `${event.clientY}px`;
-      span.style.transitionDelay = `${index * 0.05}s`;
-      span.textContent = letter;
-      document.body.appendChild(span);
-
-      setTimeout(() => {
-        span.remove();
-      }, 1000);
-    });
-  }
-</script>
     </div>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
