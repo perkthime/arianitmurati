@@ -8,18 +8,16 @@
         /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            overflow: hidden; /* Prevent scrolling */
+            animation: backgroundAnimation 20s infinite alternate;
         }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1; /* Ensure the video is behind other content */
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
         .navbar {
             background-color: black;
@@ -90,6 +88,7 @@
             margin: 20px;
             border-radius: 10px;
             color: white;
+            display: none;
         }
         .welcome {
             color: white;
@@ -162,54 +161,82 @@
     </style>
 </head>
 <body>
-    <video class="video-background" autoplay muted loop>
-        <source src="https://videos.pexels.com/video-files/5818973/5818973-uhd_2560_1440_24fps.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
     <div class="navbar">
-        <span class="left futuristic-background">
-            <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
-            <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
-            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
-        </span>
-        <div class="right">
-            <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
-            <div class="dropdown">
-                <button class="dropbtn highlight-orange">Shërbime 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
-                    <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
-                </div>
-            </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
+      <span class="left futuristic-background">
+  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+</span>
+
+<style>
+  .futuristic-background {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(255, 0, 0, 0.2));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .futuristic-background:hover {
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
+    transform: scale(1.05);
+  }
+</style>
+<div class="right">
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn highlight-orange">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
         </div>
     </div>
-    <div class="content" id="welcome">
-        <h1 class="main-text">Mirë se vini në faqen time personale!</h1>
-        <div class="image-container">
-            <img src="https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg" alt="Background Image">
-        </div>
-    </div>
-    <div class="content" id="service1">
-        <h1 class="main-text">Shërbimi 1: Video në shqip</h1>
-    </div>
-    <div class="content" id="service2">
-        <h1 class="main-text">Shërbimi 2: Video në frëngjisht</h1>
-    </div>
-    <div class="content" id="contact">
-        <h1 class="main-text">Kontaktoni</h1>
-    </div>
-    <div class="social-container">
-        <div class="social-links">
-            <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733547.png" alt="Facebook"></a>
-            <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733558.png" alt="Twitter"></a>
-            <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733579.png" alt="Instagram"></a>
-        </div>
-    </div>
-</body>
-</html>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
+</div>
+
+<style>
+  .highlight-transparent, .highlight, .highlight-orange {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white;
+    text-decoration: none;
+  }
+
+  .highlight-transparent {
+    background-color: rgba(0, 191, 255, 0.3);
+  }
+
+  .highlight-transparent:hover, .highlight-transparent:focus {
+    background-color: rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
+  }
+
+  .highlight {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+
+  .highlight:hover, .highlight:focus {
+    background-color: rgba(255, 140, 0, 0.7);
+  }
+
+  .highlight-orange {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+
+  .highlight-orange:hover, .highlight-orange:focus {
+    background-color: rgba(255, 140, 0, 0.7);
+    transform: scale(1.05);
+  }
+</style>
             </div> 
         </div>
     </div>
