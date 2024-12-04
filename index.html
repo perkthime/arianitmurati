@@ -236,6 +236,11 @@
   <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
     Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
+<p>
+  <span class="click-icon" style="color: blue;">👉</span>
+  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
+    Keni nevojë për përkthyes gjyqësor të besueshëm?
+  </a>
 </p>
 
 <style>
@@ -261,16 +266,16 @@
     display: inline-block;
     padding: 10px 20px;
     border-radius: 25px; /* Bën formën eliptike */
-    background-color: rgba(0, 191, 255, 0.3); /* Ngjyrë kaltër më e ndritshme dhe transparente */
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 255, 0, 0.5)); /* Gradient nga kaltër në të gjelbër */
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+    transition: background 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
     color: white; /* Ngjyra e bardhë për tekstin */
     text-decoration: none; /* Largon nënvizimin */
   }
 
   .highlight-transparent:hover {
-    background-color: rgba(0, 128, 0, 0.7); /* Ngjyrë e gjelbër më e errët dhe transparente në hover */
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.5), rgba(0, 255, 0, 0.7)); /* Gradient më i ndezur në hover */
     transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
   }
 
