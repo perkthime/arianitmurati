@@ -8,22 +8,16 @@
         /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
+            animation: backgroundAnimation 20s infinite alternate;
         }
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            object-fit: cover;
-        }
-        .content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
         .navbar {
             background-color: black;
@@ -88,6 +82,13 @@
         }
         .dropdown:hover .dropdown-content {
             display: block;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            color: white;
+            display: none;
         }
         .welcome {
             color: white;
@@ -158,11 +159,6 @@
             }
         }
     </style>
-</head>
-<body>
-    <video autoplay muted loop class="video-background">
-        <source src="https://videos.pexels.com/video-files/27034803/12052488_2560_1440_30fps.mp4" type="video/mp4">
-    </video>
 </head>
 <body>
     <div class="navbar">
