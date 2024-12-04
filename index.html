@@ -161,51 +161,45 @@
     </style>
 </head>
 <body>
-    <div class="navbar futuristic-background">
-  <span class="left">
-    <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
-    <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
-    <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
-  </span>
-  <div class="right">
-    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
-    <div class="dropdown">
-      <button class="dropbtn highlight-orange">Shërbime 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
-        <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
-      </div>
-    </div>
-    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
-  </div>
-</div>
-
-<div id="welcome" class="content welcome" style="display: block;">
-  <h1 class="static-text">Mirë se vini në faqen time personale!</h1>
-  <p>
-    <span class="click-icon" style="color: blue;">👉</span>
-    <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
-      Keni nevojë për përkthyes gjyqësor të besueshëm?
-    </a>
-  </p>
-</div>
+    <div class="navbar">
+      <span class="left futuristic-background">
+  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+</span>
 
 <style>
   .futuristic-background {
-    background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(0, 191, 255, 0.2));
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(255, 0, 0, 0.2));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease, background 0.3s ease;
   }
 
   .futuristic-background:hover {
-    background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(0, 191, 255, 0.4));
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
     transform: scale(1.05);
   }
+</style>
+<div class="right">
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn highlight-orange">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
+        </div>
+    </div>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
+</div>
 
+<style>
   .highlight-transparent, .highlight, .highlight-orange {
     display: inline-block;
     padding: 10px 20px;
@@ -242,29 +236,27 @@
     background-color: rgba(255, 140, 0, 0.7);
     transform: scale(1.05);
   }
+</style>
+            </div> 
+        </div>
+    </div>
 
+    <div id="welcome" class="content welcome" style="display: block;">
+<h1 class="static-text">Mirë se vini në faqen time personale!</h1>
+
+<style>
   .static-text {
     color: #fff; /* Ngjyra e bardhë */
   }
-
-  .click-icon {
-    display: inline-block;
-    animation: move 1s infinite;
-    margin-right: 5px; /* Rregulloni hapësirën sipas nevojës */
-  }
-
-  @keyframes move {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateX(0);
-    }
-    40% {
-      transform: translateX(10px);
-    }
-    60% {
-      transform: translateX(5px);
-    }
-  }
 </style>
+<p>
+  <span class="click-icon" style="color: blue;">👉</span>
+  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
+    Keni nevojë për përkthyes gjyqësor të besueshëm?
+  </a>
+<p>
+
+<style>
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
