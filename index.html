@@ -8,16 +8,18 @@
         /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            animation: backgroundAnimation 20s infinite alternate;
+            overflow: hidden;
         }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            object-fit: cover;
         }
         .navbar {
             background-color: black;
@@ -161,6 +163,15 @@
     </style>
 </head>
 <body>
+    <video autoplay muted loop class="video-background">
+        <source src="https://videos.pexels.com/video-files/27034803/12052488_2560_1440_30fps.mp4" type="video/mp4">
+    </video>
+    <div class="navbar">
+        <!-- Navbar content here -->
+    </div>
+    <!-- Other content here -->
+</body>
+</html>
     <div class="navbar">
       <span class="left futuristic-background">
   <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
