@@ -162,39 +162,17 @@
 </head>
 <body>
     <div class="navbar">
-    <div class="navbar futuristic-background">
-  <span class="left">
-    <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
-    <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
-    <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
-  </span>
-  <div class="right">
-    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
-    <div class="dropdown">
-      <button class="dropbtn highlight-orange">Shërbime 
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-content">
-        <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
-        <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
-      </div>
-    </div>
-    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
-  </div>
-</div>
-
-<div id="welcome" class="content welcome" style="display: block;">
-  <h1 class="static-text">Mirë se vini në faqen time personale!</h1>
-  <p>
-    <span class="click-icon" style="color: blue;">👉</span>
-    <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
-      Keni nevojë për përkthyes gjyqësor të besueshëm?
-    </a>
-  </p>
-</div>
+      <span class="left futuristic-background">
+  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+</span>
 
 <style>
   .futuristic-background {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
     background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(255, 0, 0, 0.2));
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
@@ -206,7 +184,22 @@
     background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
     transform: scale(1.05);
   }
+</style>
+<div class="right">
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn highlight-orange">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
+        </div>
+    </div>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
+</div>
 
+<style>
   .highlight-transparent, .highlight, .highlight-orange {
     display: inline-block;
     padding: 10px 20px;
@@ -243,11 +236,27 @@
     background-color: rgba(255, 140, 0, 0.7);
     transform: scale(1.05);
   }
+</style>
+            </div> 
+        </div>
+    </div>
 
+    <div id="welcome" class="content welcome" style="display: block;">
+<h1 class="static-text">Mirë se vini në faqen time personale!</h1>
+
+<style>
   .static-text {
     color: #fff; /* Ngjyra e bardhë */
   }
+</style>
+<p>
+  <span class="click-icon" style="color: blue;">👉</span>
+  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
+    Keni nevojë për përkthyes gjyqësor të besueshëm?
+  </a>
+<p>
 
+<style>
   .click-icon {
     display: inline-block;
     animation: move 1s infinite;
@@ -264,6 +273,41 @@
     60% {
       transform: translateX(5px);
     }
+  }
+
+  .highlight-transparent {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bën formën eliptike */
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 255, 0, 0.5)); /* Gradient nga kaltër në të gjelbër */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
+    transition: background 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+    color: white; /* Ngjyra e bardhë për tekstin */
+    text-decoration: none; /* Largon nënvizimin */
+  }
+
+  .highlight-transparent:hover {
+    background: linear-gradient(135deg, rgba(0, 191, 255, 0.5), rgba(0, 255, 0, 0.7)); /* Gradient më i ndezur në hover */
+    transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+  }
+
+  .highlight {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px; /* Bën formën eliptike */
+    background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shton një hije të lehtë për elegancë */
+    transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
+  }
+
+  .highlight:hover {
+    background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
+  }
+
+  .no-underline {
+    text-decoration: none; /* Largon nënvizimin */
   }
 </style>
     </div>
