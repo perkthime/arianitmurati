@@ -8,16 +8,18 @@
         /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
-            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
-            background-size: cover;
-            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            animation: backgroundAnimation 20s infinite alternate;
+            overflow: hidden; /* Për të hequr shiritat e lëvizjes */
         }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-            100% { background-position: 100% 100%; }
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Për ta vendosur videon pas përmbajtjes */
         }
         .navbar {
             background-color: black;
@@ -88,7 +90,6 @@
             margin: 20px;
             border-radius: 10px;
             color: white;
-            display: none;
         }
         .welcome {
             color: white;
@@ -161,45 +162,45 @@
     </style>
 </head>
 <body>
+    <video autoplay muted loop class="video-background">
+        <source src="https://videos.pexels.com/video-files/6550654/6550654-uhd_2560_1440_25fps.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
     <div class="navbar">
-      <span class="left futuristic-background">
-  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
-  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
-  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
-</span>
-
-<style>
-  .futuristic-background {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 15px;
-    background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(255, 0, 0, 0.2));
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-
-  .futuristic-background:hover {
-    background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
-    transform: scale(1.05);
-  }
-</style>
-<div class="right">
-    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
-    <div class="dropdown">
-        <button class="dropbtn highlight-orange">Shërbime 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
-            <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
+        <span class="left futuristic-background">
+            <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+            <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+        </span>
+        <div class="right">
+            <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
+            <div class="dropdown">
+                <button class="dropbtn highlight-orange">Shërbime 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
+                    <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
+                </div>
+            </div>
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
         </div>
     </div>
-    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
-</div>
-
-<style>
+    <div class="content">
+        <h1 class="main-text">Mirë se vini në faqen time personale!</h1>
+        <div class="image-container">
+            <img src="https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg" alt="Example Image">
+        </div>
+    </div>
+    <div class="social-container">
+        <div class="social-links">
+            <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733547.png" alt="Facebook"></a>
+            <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733558.png" alt="Twitter"></a>
+            <a href="#"><img src="https://image.flaticon.com/icons/png/512/733/733579.png" alt="Instagram"></a>
+        </div>
+    </div>
+</body>
+</html>
   .highlight-transparent, .highlight, .highlight-orange {
     display: inline-block;
     padding: 10px 20px;
