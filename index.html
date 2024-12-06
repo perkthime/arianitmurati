@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
     <style>
+        /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            overflow: auto;
+            animation: backgroundAnimation 20s infinite alternate;
         }
-        .background-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
         .navbar {
             background-color: black;
@@ -158,74 +158,99 @@
                 padding: 10px;
             }
         }
-        .highlight-transparent, .highlight-orange {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            color: white;
-            text-decoration: none;
-        }
-        .highlight-transparent {
-            background-color: rgba(0, 191, 255, 0.3);
-        }
-        .highlight-transparent:hover, .highlight-transparent:focus {
-            background-color: rgba(0, 255, 0, 0.5);
-            transform: scale(1.05);
-        }
-        .highlight-orange {
-            background-color: rgba(255, 165, 0, 0.5);
-        }
-        .highlight-orange:hover, .highlight-orange:focus {
-            background-color: rgba(255, 140, 0, 0.7);
-            transform: scale(1.05);
-        }
-        iframe {
-            width: 80%;
-            height: 450px;
-        }
     </style>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-            window.scrollTo(0, 0);
-        }
-   </script>
 </head>
 <body>
-    <video autoplay muted loop class="background-video">
-        <source src="https://videos.pexels.com/video-files/5519999/5519999-uhd_3840_2160_30fps.mp4">
-    </video>
     <div class="navbar">
-        <span class="left futuristic-background">
-            <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
-            <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
-            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
-        </span>
-        <div class="right">
-            <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
-            <div class="dropdown">
-                <button class="dropbtn highlight-orange">Shërbime 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
-                    <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
-                </div>
-            </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
+      <span class="left futuristic-background">
+  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+</span>
+
+<style>
+  .futuristic-background {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(255, 0, 0, 0.2));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+
+  .futuristic-background:hover {
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
+    transform: scale(1.05);
+  }
+</style>
+<div class="right">
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn highlight-orange">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
+        </div>
+    </div>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
+</div>
+
+<style>
+  .highlight-transparent, .highlight, .highlight-orange {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white;
+    text-decoration: none;
+  }
+
+  .highlight-transparent {
+    background-color: rgba(0, 191, 255, 0.3);
+  }
+
+  .highlight-transparent:hover, .highlight-transparent:focus {
+    background-color: rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
+  }
+
+  .highlight {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+
+  .highlight:hover, .highlight:focus {
+    background-color: rgba(255, 140, 0, 0.7);
+  }
+
+  .highlight-orange {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+
+  .highlight-orange:hover, .highlight-orange:focus {
+    background-color: rgba(255, 140, 0, 0.7);
+    transform: scale(1.05);
+  }
+</style>
+            </div> 
         </div>
     </div>
 
     <div id="welcome" class="content welcome" style="display: block;">
-        <h1 class="static-text">Mirë se vini në faqen time personale!</h1>
-        <p>
-             <span class="click-icon" style="color: blue;">👉</span>
+<h1 class="static-text">Mirë se vini në faqen time personale!</h1>
+
+<style>
+  .static-text {
+    color: #fff; /* Ngjyra e bardhë */
+  }
+</style>
+<p>
+  <span class="click-icon" style="color: blue;">👉</span>
   <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
     Keni nevojë për përkthyes gjyqësor të besueshëm?
   </a>
@@ -431,4 +456,5 @@
     </script>
 </body>
 </html>
+
 
