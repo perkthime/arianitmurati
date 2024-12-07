@@ -195,32 +195,18 @@
     background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
     transform: scale(1.05);
   }
-</style>
-<div class="right">
-    <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 10px; padding: 2px 6px;">Mirë se vini</a>
-    <div class="dropdown">
-        <button class="dropbtn highlight-orange" style="font-size: 10px; padding: 2px 6px;">Shërbime 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#" onclick="showSection('service1')" class="highlight" style="font-size: 10px; padding: 2px 6px;">Video në shqip</a>
-            <a href="#" onclick="showSection('service2')" class="highlight" style="font-size: 10px; padding: 2px 6px;">Video në frëngjisht</a>
-        </div>
-    </div>
-    <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 10px; padding: 2px 6px;">Kontaktoni</a>
-</div>
-
 <style>
   .highlight-transparent, .highlight, .highlight-orange {
     display: inline-block;
-    padding: 2px 6px; /* Zvogëluar padding */
+    padding: 10px 20px; /* Rrit padding-un për fushat */
     border-radius: 25px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease, transform 0.3s ease;
     color: white;
     text-decoration: none;
-    font-size: 10px; /* Zvogëluar madhësinë e tekstit */
+    font-size: 14px; /* Rrit madhësinë e tekstit */
+    font-family: 'Georgia', serif; /* Font elegant */
   }
 
   .highlight-transparent {
@@ -253,10 +239,21 @@
     background-color: transparent; /* Ndryshuar nga black në transparent */
   }
 </style>
-        
-    </div> 
+
+<div class="right">
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 14px; padding: 10px 20px;">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn highlight-orange" style="font-size: 14px; padding: 10px 20px;">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')" class="highlight" style="font-size: 14px; padding: 10px 20px;">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')" class="highlight" style="font-size: 14px; padding: 10px 20px;">Video në frëngjisht</a>
         </div>
     </div>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 14px; padding: 10px 20px;">Kontaktoni</a>
+</div>
+
 <div id="welcome" class="content welcome" style="display: block;">
   <h1 class="static-text">Mirë se vini në faqen time personale!</h1>
 
@@ -333,6 +330,7 @@
       text-decoration: none; /* Largon nënvizimin */
     }
   </style>
+</div>
     </div>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
