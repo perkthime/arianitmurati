@@ -231,15 +231,27 @@
       letter-spacing: 1px; /* Hapësirë midis shkronjave për një prekje unike */
       line-height: 1.5; /* Lartësia e rreshtave për lexueshmëri më të mirë */
     }
-  </style>
+ <div id="welcome" class="content welcome" style="display: block;">
+  <h1 class="static-text">Mirë se vini në faqen time personale!</h1>
+
   <p>
-    <span class="click-icon" style="color: blue;">👉</span>
+    <span class="click-icon" style="color: blue;">👇</span>
+  </p>
+
+  <p>
     <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
       Keni nevojë për përkthyes gjyqësor të besueshëm?
     </a>
-  <p>
+  </p>
 
   <style>
+    .static-text {
+      color: #fff; /* Ngjyra e bardhë */
+      font-family: 'Georgia', serif; /* Font elegant */
+      font-size: 24px; /* Madhësia e tekstit */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hije për elegancë */
+    }
+
     .click-icon {
       display: inline-block;
       animation: move 1s infinite;
@@ -248,13 +260,13 @@
 
     @keyframes move {
       0%, 20%, 50%, 80%, 100% {
-        transform: translateX(0);
+        transform: translateY(0);
       }
       40% {
-        transform: translateX(10px);
+        transform: translateY(10px);
       }
       60% {
-        transform: translateX(5px);
+        transform: translateY(5px);
       }
     }
 
