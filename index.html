@@ -157,6 +157,15 @@
             .navbar .right a {
                 padding: 10px;
             }
+     }
+        @keyframes logoAnimation {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        .logo {
+            height: 60px; /* Increase the height of the logo */
+            margin: 0 20px;
+            animation: logoAnimation 1s infinite alternate; /* Simple animation */
         }
     </style>
 </head>
@@ -167,7 +176,8 @@
             <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
             <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
         </span>
-        <img src="Designer.png" alt="Logo" style="height: 40px; margin: 0 20px;"> <!-- Logo with red dot -->
+        <img src="Designer.png" alt="Logo" class="logo"> <!-- Logo with red dot -->
+        <div class="right">
 
 <style>
   .futuristic-background {
