@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
     <style>
+        /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
+            background-image: url('https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-attachment: fixed;
             margin: 0;
             padding: 0;
-            overflow: auto;
+            animation: backgroundAnimation 20s infinite alternate;
         }
-        .background-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1;
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
         }
         .navbar {
-            background-color: black;
+            background-color: transparent; /* Ndryshuar nga black në transparent */
             overflow: hidden;
             display: flex;
             justify-content: space-between;
@@ -157,134 +157,182 @@
             .navbar .right a {
                 padding: 10px;
             }
+     }
+        @keyframes logoAnimation {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
         }
-        .highlight-transparent, .highlight-orange {
-            display: inline-block;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            color: white;
-            text-decoration: none;
+        .logo {
+            height: 60px; /* Increase the height of the logo */
+            margin: 0 20px;
+            animation: logoAnimation 1s infinite alternate; /* Simple animation */
         }
-        .highlight-transparent {
-            background-color: rgba(0, 191, 255, 0.3);
-        }
-        .highlight-transparent:hover, .highlight-transparent:focus {
-            background-color: rgba(0, 255, 0, 0.5);
-            transform: scale(1.05);
-        }
-        .highlight-orange {
-            background-color: rgba(255, 165, 0, 0.5);
-        }
-        .highlight-orange:hover, .highlight-orange:focus {
-            background-color: rgba(255, 140, 0, 0.7);
-            transform: scale(1.05);
-        }
-        iframe {
-            width: 80%;
-            height: 450px;
-        }
-    </style>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-            window.scrollTo(0, 0);
-        }
-   </script>
+</style>
 </head>
 <body>
-    <video autoplay muted loop class="background-video">
-        <source src="https://videos.pexels.com/video-files/5986701/5986701-uhd_2560_1440_30fps.mp4">
-    </video>
     <div class="navbar">
-        <span class="left futuristic-background">
-            <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
-            <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
-            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
-        </span>
-        <div class="right">
-            <a href="#" onclick="showSection('welcome')" class="highlight-transparent">Mirë se vini</a>
-            <div class="dropdown">
-                <button class="dropbtn highlight-orange">Shërbime 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showSection('service1')" class="highlight">Video në shqip</a>
-                    <a href="#" onclick="showSection('service2')" class="highlight">Video në frëngjisht</a>
-                </div>
-            </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent">Kontaktoni</a>
-        </div>
-    </div>
-
-    <div id="welcome" class="content welcome" style="display: block;">
-        <h1 class="static-text">Mirë se vini në faqen time personale!</h1>
-        <p>
-             <span class="click-icon" style="color: blue;">👉</span>
-  <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
-    Keni nevojë për përkthyes gjyqësor të besueshëm?
-  </a>
-<p>
+      <span class="left futuristic-background" style="font-size: 10px; padding: 2px 6px;">
+  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+         </span>
+            
 
 <style>
-  .click-icon {
+  .futuristic-background {
     display: inline-block;
-    animation: move 1s infinite;
-    margin-right: 5px; /* Rregulloni hapësirën sipas nevojës */
+    padding: 2px 6px; /* Zvogëluar padding */
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(255, 0, 0, 0.2));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease;
+    font-size: 10px; /* Zvogëluar madhësinë e tekstit */
   }
 
-  @keyframes move {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateX(0);
-    }
-    40% {
-      transform: translateX(10px);
-    }
-    60% {
-      transform: translateX(5px);
-    }
+  .futuristic-background:hover {
+    background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
+    transform: scale(1.05);
+  }
+</style>
+<div class="right">
+    <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 10px; padding: 2px 6px;">Mirë se vini</a>
+    <div class="dropdown">
+        <button class="dropbtn highlight-orange" style="font-size: 10px; padding: 2px 6px;">Shërbime 
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#" onclick="showSection('service1')" class="highlight" style="font-size: 10px; padding: 2px 6px;">Video në shqip</a>
+            <a href="#" onclick="showSection('service2')" class="highlight" style="font-size: 10px; padding: 2px 6px;">Video në frëngjisht</a>
+        </div>
+    </div>
+    <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 10px; padding: 2px 6px;">Kontaktoni</a>
+</div>
+
+<style>
+  .highlight-transparent, .highlight, .highlight-orange {
+    display: inline-block;
+    padding: 2px 6px; /* Zvogëluar padding */
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    color: white;
+    text-decoration: none;
+    font-size: 10px; /* Zvogëluar madhësinë e tekstit */
   }
 
   .highlight-transparent {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px; /* Bën formën eliptike */
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 255, 0, 0.5)); /* Gradient nga kaltër në të gjelbër */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
-    transition: background 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
-    color: white; /* Ngjyra e bardhë për tekstin */
-    text-decoration: none; /* Largon nënvizimin */
+    background-color: rgba(0, 191, 255, 0.3);
   }
 
-  .highlight-transparent:hover {
-    background: linear-gradient(135deg, rgba(0, 191, 255, 0.5), rgba(0, 255, 0, 0.7)); /* Gradient më i ndezur në hover */
-    transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+  .highlight-transparent:hover, .highlight-transparent:focus {
+    background-color: rgba(0, 255, 0, 0.5);
+    transform: scale(1.05);
   }
 
   .highlight {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 25px; /* Bën formën eliptike */
-    background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shton një hije të lehtë për elegancë */
-    transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
+    background-color: rgba(255, 165, 0, 0.5);
   }
 
-  .highlight:hover {
-    background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
+  .highlight:hover, .highlight:focus {
+    background-color: rgba(255, 140, 0, 0.7);
   }
 
-  .no-underline {
-    text-decoration: none; /* Largon nënvizimin */
+  .highlight-orange {
+    background-color: rgba(255, 165, 0, 0.5);
+  }
+
+  .highlight-orange:hover, .highlight-orange:focus {
+    background-color: rgba(255, 140, 0, 0.7);
+    transform: scale(1.05);
+  }
+
+  .dropdown-content {
+    background-color: transparent; /* Ndryshuar nga black në transparent */
   }
 </style>
+        
+    </div> 
+        </div>
+    </div>
+<div id="welcome" class="content welcome" style="display: block;">
+  <h1 class="static-text">Mirë se vini në faqen time personale!</h1>
+
+  <p>
+    <span class="click-icon" style="color: blue;">👇</span>
+  </p>
+
+  <p>
+    <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline">
+      Keni nevojë për përkthyes gjyqësor të besueshëm?
+    </a>
+  </p>
+
+  <style>
+    .static-text {
+      color: #fff; /* Ngjyra e bardhë */
+      font-family: 'Georgia', serif; /* Font elegant */
+      font-size: 24px; /* Madhësia e tekstit */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hije për elegancë */
+    }
+
+    .click-icon {
+      display: inline-block;
+      animation: move 1s infinite;
+      margin-right: 5px; /* Rregulloni hapësirën sipas nevojës */
+    }
+
+    @keyframes move {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(10px);
+      }
+      60% {
+        transform: translateY(5px);
+      }
+    }
+
+    .highlight-transparent {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px; /* Bën formën eliptike */
+      background: linear-gradient(135deg, rgba(0, 191, 255, 0.3), rgba(0, 255, 0, 0.5)); /* Gradient nga kaltër në të gjelbër */
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
+      transition: background 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+      color: white; /* Ngjyra e bardhë për tekstin */
+      text-decoration: none; /* Largon nënvizimin */
+      font-family: 'Georgia', serif; /* Font elegant */
+    }
+
+    .highlight-transparent:hover {
+      background: linear-gradient(135deg, rgba(0, 191, 255, 0.5), rgba(0, 255, 0, 0.7)); /* Gradient më i ndezur në hover */
+      transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+    }
+
+    .highlight {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 25px; /* Bën formën eliptike */
+      background-color: rgba(255, 165, 0, 0.5); /* Ngjyrë portokalli transparente */
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shton një hije të lehtë për elegancë */
+      transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
+      font-family: 'Georgia', serif; /* Font elegant */
+    }
+
+    .highlight:hover {
+      background-color: rgba(255, 140, 0, 0.7); /* Ndryshon në një portokalli më të errët në hover */
+    }
+
+    .no-underline {
+      text-decoration: none; /* Largon nënvizimin */
+    }
+  </style>
     </div>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -308,7 +356,6 @@
     </div>
 </body>
 </html>
-
 </body>
 </html>
 
@@ -417,9 +464,13 @@
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
         </a>
     </div>
+      
+   
 <div style="text-align: right; flex-grow: 1; color: rgba(255, 255, 255, 0.1); margin-right: 20px; font-family: 'Helvetica Neue', sans-serif;">
     Copyright 2024. Të gjitha të drejtat e rezervuara.
 </div>
+    <img src="Designer.png" alt="Logo" class="logo"> <!-- Logo with red dot -->
+        </span>   
 </div>
     <script>
         function showSection(sectionId) {
@@ -431,4 +482,3 @@
     </script>
 </body>
 </html>
-
