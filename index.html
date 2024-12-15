@@ -272,11 +272,6 @@
         font-family: 'Georgia', serif; /* Font elegant */
         font-size: 16.8px; /* Madhësia e tekstit */
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hije për elegancë */
-        transition: color 0.3s ease; /* Kalim i butë për ndryshimin e ngjyrës */
-    }
-
-    .static-text:hover {
-        color: #000; /* Ngjyra e zezë kur kalon mausi mbi të */
     }
 
     .click-icon {
@@ -304,7 +299,7 @@
         background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 69, 0, 0.5)); /* Gradient nga portokalli i lehtë në portokalli të ndezur */
         text-align: center;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
-        transition: background 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
+        transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Kalim i butë për efektin hover */
         color: white; /* Ngjyra e bardhë për tekstin */
         text-decoration: none; /* Largon nënvizimin */
         font-family: 'Georgia', serif; /* Font elegant */
@@ -313,6 +308,7 @@
     .highlight-transparent:hover {
         background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 69, 0, 0.7)); /* Gradient më i ndezur në hover */
         transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
+        color: black; /* Ndryshon ngjyrën e tekstit në të zezë */
     }
 
     .highlight {
