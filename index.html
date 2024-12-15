@@ -278,61 +278,6 @@
     .static-text:hover {
         color: #000; /* Ngjyra e zezë kur mausi kalon mbi tekstin */
     }
-
-    .click-icon {
-        display: inline-block;
-        animation: move 1s infinite;
-        margin-right: 5px; /* Rregulloni hapësirën sipas nevojës */
-    }
-
-    @keyframes move {
-        0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0);
-        }
-        40% {
-            transform: translateY(10px);
-        }
-        60% {
-            transform: translateY(5px);
-        }
-    }
-
-    .highlight-transparent {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 25px; /* Bën formën eliptike */
-        background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 69, 0, 0.5)); /* Gradient nga portokalli i lehtë në portokalli të ndezur */
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
-        transition: background 0.3s ease, transform 0.3s ease; /* Kalim i butë për efektin hover */
-        color: white; /* Ngjyra e bardhë për tekstin */
-        text-decoration: none; /* Largon nënvizimin */
-        font-family: 'Georgia', serif; /* Font elegant */
-    }
-
-    .highlight-transparent:hover {
-        background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 69, 0, 0.7)); /* Gradient më i ndezur në hover */
-        transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
-    }
-
-    .highlight {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 25px; /* Bën formën eliptike */
-        background-color: rgba(255, 255, 255, 0.1); /* Ngjyrë e bardhë transparente */
-        text-align: center;
-        box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* Efekt ndriçimi portokalli */
-        transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
-        font-family: 'Georgia', serif; /* Font elegant */
-    }
-
-    .highlight:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Ndryshon në një të bardhë më të ndezur në hover */
-    }
-
-    .no-underline {
-        text-decoration: none; /* Largon nënvizimin */
-    }
 </style>
     </div>
 <meta charset="UTF-8">
