@@ -385,20 +385,103 @@
             document.getElementById('video-french').innerText = 'Vidéo en français';
             document.getElementById('contact-link').innerText = 'Contactez';
             document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur judiciaire fiable?';
-            document.getElementById('services-title').innerText = 'Services';
-            document.getElementById('services-description').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
-            document.getElementById('legal-translations').innerText = 'Traductions Juridiques';
-            document.getElementById('legal-translations-desc').innerText = 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.';
-            document.getElementById('medical-translations').innerText = 'Traductions Médicales';
-            document.getElementById('medical-translations-desc').innerText = 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.';
-            document.getElementById('technical-translations').innerText = 'Traductions Techniques';
-            document.getElementById('technical-translations-desc').innerText = 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.';
-            document.getElementById('financial-translations').innerText = 'Traductions Financières';
-            document.getElementById('financial-translations-desc').innerText = 'Traduction de rapports financiers, de bilans et d\'autres documents financiers.';
-            document.getElementById('marketing-translations').innerText = 'Traductions Marketing';
-            document.getElementById('marketing-translations-desc').innerText = 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.';
-            document.getElementById('food-label-translations').innerText = 'Traductions des Étiquettes Alimentaires';
-            document.getElementById('food-label-translations-desc').innerText = 'Traduction des étiquettes alimentaires et du contenu des emballages.';
+           <!DOCTYPE html>
+<html lang="sq">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <style>
+        /* Shtoni stilet tuaja këtu */
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <span class="left futuristic-background" style="font-size: 9px; padding: 1px 4px;">
+            <span style="color: #1e90ff;" id="translator-title">Përkthyes Gjyqësor</span>
+            <span style="color: #fff;" id="certified-text"> i Certifikuar për Gjuhët </span>
+            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+        </span>
+        <div class="center">
+            <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+            <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+        </div>
+        <div class="right">
+            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="welcome-link">Mirë se vini</a>
+            <div class="dropdown">
+                <button class="dropbtn highlight-orange" style="font-size: 13px; padding: 2px 6px;" id="services-button">Shërbime 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('service1')" class="highlight" style="font-size: 13px; padding: 2px 6px;" id="video-albanian">Video në shqip</a>
+                    <a href="#" onclick="showSection('service2')" class="highlight" style="font-size: 13px; padding: 2px 6px;" id="video-french">Video në frëngjisht</a>
+                </div>
+            </div>
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="contact-link">Kontaktoni</a>
+        </div>
+    </div>
+    <div id="welcome" class="content welcome" style="display: block;"> 
+        <p> 
+            <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
+        </p> 
+        <p> 
+            <a href="#" onclick="showSection('services'); changeToFrench();" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
+                Keni nevojë për përkthyes gjyqësor të besueshëm?
+            </a> 
+        </p>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="content services">
+        <h1 id="services-title">Shërbimet</h1>
+        <p id="services-description">Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
+        <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
+        <div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+          <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+            <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+            </div>
+          </div>
+        </div>
+        <div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+          <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+            <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+              <div style="text-align: center;">
+                <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
+                <h3 style="color: orange;" id="legal-translations">Përkthime Ligjore</h3>
+              </div>
+              <p style="text-align: center;" id="legal-translations-desc">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
+            </div>
+            <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+              <div style="text-align: center;">
+                <div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
+                <h3 style="color: orange;" id="medical-translations">Përkthime Mjekësore</h3>
+              </div>
+              <p style="text-align: center;" id="medical-translations-desc">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
+            </div>
+            <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+              <div style="text-align: center;">
+                <div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
+                <h3 style="color: orange;" id="technical-translations">Përkthime Teknike</h3>
+              </div>
+              <p style="text-align: center;" id="technical-translations-desc">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
+            </div>
+            <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+              <div style="text-align: center;">
+                <div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
+                <h3 style="color: orange;" id="financial-translations">Përkthime Financiare</h3>
+              </div>
+              <p style="text-align: center;" id="financial-translations-desc">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
+            </div>
+            <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+              <div style="text-align: center;">
+                <div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
+                <h3 style="color: orange;" id="marketing-translations">Përkthime të Marketingut</h3>
+              </div>
+              <p style="text-align: center;" id="marketing-translations-desc">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
+            </div>
+            <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+              <div style="text-align: center;">
+                <div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display
              } else if (lang === 'sq') {
             document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
             document.getElementById('certified-text').innerText = ' i Certifikuar për Gjuhët ';
