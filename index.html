@@ -202,176 +202,64 @@
             </a> 
         </p>
     </div>
-    <script>
-        function changeLanguage(lang) {
-            if (lang === 'fr') {
-                document.getElementById('translator-title').innerText = 'Traducteur Judiciaire';
-                document.getElementById('certified-text').innerText = ' Certifié pour les Langues ';
-                document.getElementById('welcome-link').innerText = 'Bienvenue';
-                document.getElementById('services-button').innerText = 'Services';
-                document.getElementById('video-albanian').innerText = 'Vidéo en albanais';
-                document.getElementById('video-french').innerText = 'Vidéo en français';
-                document.getElementById('contact-link').innerText = 'Contactez';
-                document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur judiciaire fiable?';
-            } else if (lang === 'sq') {
-                document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
-                document.getElementById('certified-text').innerText = ' i Certifikuar për Gjuhët ';
-                document.getElementById('welcome-link').innerText = 'Mirë se vini';
-                document.getElementById('services-button').innerText = 'Shërbime';
-                document.getElementById('video-albanian').innerText = 'Video në shqip';
-                document.getElementById('video-french').innerText = 'Video në frëngjisht';
-                document.getElementById('contact-link').innerText = 'Kontaktoni';
-                document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
-            }
-        }
-    </script>
-</body>
-<style>
-    .static-text {
-        color: #fff; /* Ngjyra e bardhë */
-        font-family: 'Georgia', serif; /* Font elegant */
-        font-size: 16.8px; /* Madhësia e tekstit */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hije për elegancë */
-    }
 
-    .click-icon {
-        display: inline-block;
-        animation: move 1s infinite;
-        margin-right: 5px; /* Rregulloni hapësirën sipas nevojës */
-    }
-
-    @keyframes move {
-        0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0);
-        }
-        40% {
-            transform: translateY(10px);
-        }
-        60% {
-            transform: translateY(5px);
-        }
-    }
-
-    .highlight-transparent {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 25px; /* Bën formën eliptike */
-        background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 69, 0, 0.5)); /* Gradient nga portokalli i lehtë në portokalli të ndezur */
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
-        transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Kalim i butë për efektin hover */
-        color: white; /* Ngjyra e bardhë për tekstin */
-        text-decoration: none; /* Largon nënvizimin */
-        font-family: 'Georgia', serif; /* Font elegant */
-    }
-
-    .highlight-transparent:hover {
-        background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 69, 0, 0.7)); /* Gradient më i ndezur në hover */
-        transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
-        color: black; /* Ndryshon ngjyrën e tekstit në të zezë */
-    }
-
-    .highlight {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 25px; /* Bën formën eliptike */
-        background-color: rgba(255, 255, 255, 0.1); /* Ngjyrë e bardhë transparente */
-        text-align: center;
-        box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* Efekt ndriçimi portokalli */
-        transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
-        font-family: 'Georgia', serif; /* Font elegant */
-    }
-
-    .highlight:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Ndryshon në një të bardhë më të ndezur në hover */
-    }
-
-    .no-underline {
-        text-decoration: none; /* Largon nënvizimin */
-    }
-</style>
-    </div>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktoni</title>
-    <style>
-        #contact p:hover {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div id="contact" class="content">
-        <h2>Kontaktoni</h2>
-        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
-        </p>
-        <p onclick="window.location.href='tel:+38345569246'">
-            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
-        </p>
-    </div>
-</body>
-</html>
-</body>
-</html>
-
+    <!-- Services Section -->
     <div id="services" class="content services">
-        <h1>Shërbimet</h1>
-        <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
+        <h1 id="services-title">Shërbimet</h1>
+        <p id="services-description">Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-    </div>
-  </div>
-</div>
-<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Ligjore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Mjekësore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Teknike</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Financiare</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime të Marketingut</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime të Etiketave Ushqimore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
-    </div>
-  </div>
-</div>
+        <div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+          <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+            <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+            </div>
+          </div>
+        </div>
+        <div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+          <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+            <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+              <div style="text-align: center;">
+                <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
+                <h3 id='legal-translations' style='color: orange;'>Përkthime Ligjore</h3>
+              </div>
+              <p id='legal-translations-desc' style='text-align:center;'>Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
+            </div>
+            <div class='col-lg-6 columnBlockLayout' style='flex-grow :1 ; display :flex ; flex-direction :column ; min-width :300 px ;'>
+              <div style='text-align:center ;'>
+                <div style='width :20 px ; height :20 px ; background-color :blue ; border-radius :50 % ; display :inline-block ;'></div >
+                <h3 id='medical-translations' style='color :orange ;'>Përkthime Mjekësore</h3 >
+              </div >
+              <p id='medical-translations-desc' style='text-align:center ;'>Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p >
+            </div >
+            <div class='col-lg-6 columnBlockLayout' style='flex-grow :1 ; display :flex ; flex-direction :column ; min-width :300 px ;'>
+              <div style='text-align:center ;'>
+                <div style='width :20 px ; height :20 px ; background-color :orange ; border-radius :50 % ; display :inline-block ;'></div >
+                <h3 id='technical-translations' style='color :orange ;'>Përkthime Teknike</h3 >
+              </div >
+              <p id='technical-translations-desc' style='text-align:center ;'>Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p >
+            </div >
+            <div class='col-lg-6 columnBlockLayout' style='flex-grow :1 ; display :flex ; flex-direction :column ; min-width :300 px ;'>
+              <div style='text-align:center ;'>
+                <div style='width :20 px ; height :20 px ; background-color :purple ; border-radius :50 % ; display :inline-block ;'></div >
+                <h3 id='financial-translations' style='color :orange ;'>Përkthime Financiare</h3 >
+              </div >
+              <p id='financial-translations-desc' style='text-align:center ;'>Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p >
+            </div >
+            <div class='col-lg-6 columnBlockLayout' style='flex-grow :1 ; display :flex ; flex-direction :column ; min-width :300 px ;'>
+              <div style='text-align:center ;'>
+                <div style='width :20 px ; height :20 px ; background-color :yellow ; border-radius :50 % ; display :inline-block ;'></div >
+                <h3 id='marketing-translations' style='color :orange ;'>Përkthime të Marketingut</h3 >
+              </div >
+              <p id='marketing-translations-desc' style='text-align:center ;'>Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p >
+            </div >
+            <div class='col-lg-6 columnBlockLayout' style='flex-grow :1 ; display :flex ; flex-direction :column ; min-width :300 px ;'>
+              <div style='text-align:center ;'>
+                <div style='width :20 px ; height :20 px ; background-color :red ; border-radius :50 % ; display :inline-block ;'></div >
+                <h3 id='food-label-translations' style='color :orange ;'>Përkthime të Etiketave Ushqimore</h3 >
+              </div >
+              <p id='food-label-translations-desc' style='text-align:center ;'>Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p >
+            </div >
+          </div >
+        </div >
 </div>
 <script type="text/javascript">
   // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
