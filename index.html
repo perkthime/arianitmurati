@@ -372,48 +372,7 @@
     </div>
   </div>
 </div>
-</div
-    <style>
-        .content {
-            text-align: center;
-        }
-        iframe {
-            width: 80%;
-            height: 450px;
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <img src="path/to/french-flag.png" alt="French Flag" width="30" height="20" onclick="changeLanguage('fr')">
-        <img src="path/to/albanian-flag.png" alt="Albanian Flag" width="30" height="20" onclick="changeLanguage('sq')">
-    </div>
-
-    <div id="contact" class="content">
-        <h2 data-lang-fr="Contactez" data-lang-sq="Kontaktoni">Kontaktoni</h2>
-        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
-        </p>
-        <p onclick="window.location.href='tel:+38345569246'">
-            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
-        </p>
-    </div>
-
-    <div id="services" class="content services">
-        <h1 data-lang-fr="Services" data-lang-sq="Shërbimet">Shërbimet</h1>
-        <p data-lang-fr="Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines." data-lang-sq="Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.">Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
-        <!-- Add more content here with data-lang-fr and data-lang-sq attributes -->
-    </div>
-
-    <script>
-        function changeLanguage(lang) {
-            document.querySelectorAll('[data-lang-fr], [data-lang-sq]').forEach(element => {
-                element.textContent = element.getAttribute(`data-lang-${lang}`);
-            });
-        }
-    </script>
-</body>
-</html>
+</div>
 <script type="text/javascript">
   // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
   if (navigator.userAgent.match(/IEMobile/10.0/)) {
