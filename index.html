@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -214,7 +213,32 @@
                 document.getElementById('video-french').innerText = 'Vidéo en français';
                 document.getElementById('contact-link').innerText = 'Contactez';
                 document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur judiciaire fiable?';
+                if (lang === 'fr') {
+            document.getElementById('translator-title').innerText = 'Traducteur Judiciaire';
+            document.getElementById('certified-text').innerText = ' Certifié pour les Langues ';
+            document.getElementById('welcome-link').innerText = 'Bienvenue';
+            document.getElementById('services-button').innerText = 'Services';
+            document.getElementById('video-albanian').innerText = 'Vidéo en albanais';
+            document.getElementById('video-french').innerText = 'Vidéo en français';
+            document.getElementById('contact-link').innerText = 'Contactez';
+            document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur judiciaire fiable?';
+            document.getElementById('services-title').innerText = 'Services';
+            document.getElementById('services-description').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
+            document.getElementById('legal-translations').innerText = 'Traductions Juridiques';
+            document.getElementById('legal-translations-desc').innerText = 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.';
+            document.getElementById('medical-translations').innerText = 'Traductions Médicales';
+            document.getElementById('medical-translations-desc').innerText = 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.';
+            document.getElementById('technical-translations').innerText = 'Traductions Techniques';
+            document.getElementById('technical-translations-desc').innerText = 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.';
+            document.getElementById('financial-translations').innerText = 'Traductions Financières';
+            document.getElementById('financial-translations-desc').innerText = 'Traduction de rapports financiers, de bilans et d\'autres documents financiers.';
+            document.getElementById('marketing-translations').innerText = 'Traductions Marketing';
+            document.getElementById('marketing-translations-desc').innerText = 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.';
+            document.getElementById('food-label-translations').innerText = 'Traductions des Étiquettes Alimentaires';
+            document.getElementById('food-label-translations-desc').innerText = 'Traduction des étiquettes alimentaires et du contenu des emballages.';
             } else if (lang === 'sq') {
+                    document.getElementById('services-title').innerText = 'sherbime';
+            document.getElementById('services-description').innerText = 'patatatatatatatatattatatata.';
                 document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
                 document.getElementById('certified-text').innerText = ' i Certifikuar për Gjuhët ';
                 document.getElementById('welcome-link').innerText = 'Mirë se vini';
@@ -426,19 +450,12 @@
         </span>   
 </div>
     <script>
-       
-        function changeLanguage(lang) {
-            if (lang === 'fr') {
-                document.getElementById('translator-title').innerText = Regardez la vidéo en albanais pour en savoir plus sur le professionnalisme et la précision que nous offrons dans tous les domaines. ';
-               
-            } else if (lang === 'sq') {
-                document.getElementById('translator-title').innerText = 'Shikoni videon në gjuhën shqipe për të mësuar më shumë rreth profesionalizmit dhe saktësisë që ne ofrojmë në çdo fushë.';
-              
-            }
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
         }
-    </script>
-</body>
-<style>
     </script>
 </body>
 </html>
