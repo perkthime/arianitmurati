@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
-  <style>
+ <style>
     /* Stilet ekzistuese */
     body {
         font-family: Arial, sans-serif;
@@ -204,13 +204,27 @@
     <script>
         function changeLanguage(lang) {
             if (lang === 'fr') {
-                // Ndrysho gjuhën në frëngjisht
-                document.documentElement.lang = 'fr';
-                // Shto kodin për të ndryshuar tekstet në frëngjisht
+                document.getElementById('welcome').innerHTML = `
+                    <p>
+                        <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span>
+                    </p>
+                    <p>
+                        <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;">
+                            Besoin d'un traducteur judiciaire fiable?
+                        </a>
+                    </p>
+                `;
             } else if (lang === 'sq') {
-                // Ndrysho gjuhën në shqip
-                document.documentElement.lang = 'sq';
-                // Shto kodin për të ndryshuar tekstet në shqip
+                document.getElementById('welcome').innerHTML = `
+                    <p>
+                        <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span>
+                    </p>
+                    <p>
+                        <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;">
+                            Keni nevojë për përkthyes gjyqësor të besueshëm?
+                        </a>
+                    </p>
+                `;
             }
         }
     </script>
