@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
-   <style>
+  <style>
     /* Stilet ekzistuese */
     body {
         font-family: Arial, sans-serif;
@@ -161,111 +161,60 @@
         from { transform: scale(1); }
         to { transform: scale(1.1); }
     }
-        .logo {
-            height: 60px; /* Increase the height of the logo */
-            margin: 0 20px;
-        }
+    .logo {
+        height: 60px; /* Increase the height of the logo */
+        margin: 0 20px;
+    }
 </style>
 </head>
 <body>
     <div class="navbar">
-      <span class="left futuristic-background" style="font-size: 9px; padding: 1px 4px;">
-  <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
-  <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
-  <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
-         </span>
-            
-
-<style>
-  .futuristic-background {
-    display: inline-block;
-    padding: 1px 4px; /* Zvogëluar padding për 30% */
-    border-radius: 10px; /* Zvogëluar border-radius për 30% */
-    background: linear-gradient(135deg, rgba(30, 144, 255, 0.2), rgba(255, 0, 0, 0.2));
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); /* Zvogëluar box-shadow për 30% */
-    backdrop-filter: blur(7px); /* Zvogëluar blur për 30% */
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    transition: transform 0.3s ease, background 0.3s ease;
-    font-size: 9px; /* Zvogëluar madhësinë e tekstit për 30% */
-  }
-
-  .futuristic-background:hover {
-    background: linear-gradient(135deg, rgba(30, 144, 255, 0.4), rgba(255, 0, 0, 0.4));
-    transform: scale(1.05);
-  }
-</style>
-<div class="right">
-    <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;">Mirë se vini</a>
-    <div class="dropdown">
-        <button class="dropbtn highlight-orange" style="font-size: 13px; padding: 2px 6px;">Shërbime 
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-            <a href="#" onclick="showSection('service1')" class="highlight" style="font-size: 13px; padding: 2px 6px;">Video në shqip</a>
-            <a href="#" onclick="showSection('service2')" class="highlight" style="font-size: 13px; padding: 2px 6px;">Video në frëngjisht</a>
+        <span class="left futuristic-background" style="font-size: 9px; padding: 1px 4px;">
+            <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+            <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+        </span>
+        <div class="right">
+            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;">Mirë se vini</a>
+            <div class="dropdown">
+                <button class="dropbtn highlight-orange" style="font-size: 13px; padding: 2px 6px;">Shërbime 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('service1')" class="highlight" style="font-size: 13px; padding: 2px 6px;">Video në shqip</a>
+                    <a href="#" onclick="showSection('service2')" class="highlight" style="font-size: 13px; padding: 2px 6px;">Video në frëngjisht</a>
+                </div>
+            </div>
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;">Kontaktoni</a>
+            <!-- Flamujt për ndërrimin e gjuhës -->
+            <a href="#" onclick="changeLanguage('fr')"><img src="path/to/french-flag.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin-left: 10px;"></a>
+            <a href="#" onclick="changeLanguage('sq')"><img src="path/to/albanian-flag.png" alt="Shqip" style="width: 30px; height: 20px; margin-left: 10px;"></a>
         </div>
     </div>
-    <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;">Kontaktoni</a>
-</div>
-
-<style>
-  .highlight-transparent, .highlight, .highlight-orange {
-    display: inline-block;
-    padding: 2px 6px; /* Zvogëluar padding */
-    border-radius: 25px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    color: white;
-    text-decoration: none;
-    font-size: 13px; /* Rritur madhësinë e tekstit */
-  }
-
-  .highlight-transparent {
-    background-color: rgba(0, 191, 255, 0.3);
-  }
-
-  .highlight-transparent:hover, .highlight-transparent:focus {
-    background-color: rgba(0, 255, 0, 0.5);
-    transform: scale(1.05);
-  }
-
-  .highlight {
-    background-color: rgba(255, 165, 0, 0.5);
-  }
-
-  .highlight:hover, .highlight:focus {
-    background-color: rgba(255, 140, 0, 0.7);
-  }
-
-  .highlight-orange {
-    background-color: rgba(255, 165, 0, 0.5);
-  }
-
-  .highlight-orange:hover, .highlight-orange:focus {
-    background-color: rgba(255, 140, 0, 0.7);
-    transform: scale(1.05);
-  }
-
-  .dropdown-content {
-    background-color: transparent; /* Ndryshuar nga black në transparent */
-  }
-</style>
-        
-    </div> 
-        </div>
+    <div id="welcome" class="content welcome" style="display: block;"> 
+        <p> 
+            <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
+        </p> 
+        <p> 
+            <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;"> 
+                Keni nevojë për përkthyes gjyqësor të besueshëm?
+            </a> 
+        </p> 
     </div>
-<div id="welcome" class="content welcome" style="display: block;"> 
-    <p> 
-        <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
-    </p> 
-    <p> 
-        <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;"> 
-            Keni nevojë për përkthyes gjyqësor të besueshëm?
-        </a> 
-    </p> 
-</div>
-
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'fr') {
+                // Ndrysho gjuhën në frëngjisht
+                document.documentElement.lang = 'fr';
+                // Shto kodin për të ndryshuar tekstet në frëngjisht
+            } else if (lang === 'sq') {
+                // Ndrysho gjuhën në shqip
+                document.documentElement.lang = 'sq';
+                // Shto kodin për të ndryshuar tekstet në shqip
+            }
+        }
+    </script>
+</body>
 <style>
     .static-text {
         color: #fff; /* Ngjyra e bardhë */
