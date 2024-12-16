@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
- <style>
+   <style>
         /* Stilet ekzistuese */
         body {
             font-family: Arial, sans-serif;
@@ -184,6 +184,40 @@
     </script>
 </head>
 <body>
+    <div class="navbar">
+        <span class="left futuristic-background" style="font-size: 9px; padding: 1px 4px;">
+            <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
+            <span style="color: #fff;"> i Certifikuar për Gjuhët </span>
+            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+        </span>
+        <div class="right">
+            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="welcome">Mirë se vini</a>
+            <div class="dropdown">
+                <button class="dropbtn highlight-orange" style="font-size: 13px; padding: 2px 6px;">Shërbime 
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('service1')" class="highlight" style="font-size: 13px; padding: 2px 6px;" id="service1">Video në shqip</a>
+                    <a href="#" onclick="showSection('service2')" class="highlight" style="font-size: 13px; padding: 2px 6px;" id="service2">Video në frëngjisht</a>
+                </div>
+            </div>
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="contact">Kontaktoni</a>
+            <img src="flag_sq.png" alt="Shqip" style="width: 30px; height: 20px; cursor: pointer;" onclick="changeLanguage('sq')">
+            <img src="flag_fr.png" alt="Français" style="width: 30px; height: 20px; cursor: pointer;" onclick="changeLanguage('fr')">
+        </div>
+    </div>
+    <div class="content" id="welcome">
+        <h1 class="main-text">Mirë se vini</h1>
+    </div>
+    <div class="content" id="service1">
+        <h1 class="main-text">Video në shqip</h1>
+    </div>
+    <div class="content" id="service2">
+        <h1 class="main-text">Video në frëngjisht</h1>
+    </div>
+    <div class="content" id="contact">
+        <h1 class="main-text">Kontaktoni</h1>
+    </div>
     <div class="navbar">
         <span class="left futuristic-background" style="font-size: 9px; padding: 1px 4px;">
             <span style="color: #1e90ff;">Përkthyes Gjyqësor</span>
