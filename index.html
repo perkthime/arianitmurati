@@ -165,34 +165,9 @@
             height: 60px; /* Increase the height of the logo */
             margin: 0 20px;
         }
- </style>
+</style>
 </head>
 <body>
-    <nav>
-        <img src="albanian-flag.png" alt="Albanian Flag" id="albanian-flag">
-        <img src="french-flag.png" alt="French Flag" id="french-flag">
-    </nav>
-    <div id="content">
-        <h1>Mirë se vini!</h1>
-        <p>Kjo është faqja në gjuhën shqipe.</p>
-    </div>
-    <script>
-        document.getElementById('albanian-flag').addEventListener('click', function() {
-            document.getElementById('content').innerHTML = `
-                <h1>Mirë se vini!</h1>
-                <p>Kjo është faqja në gjuhën shqipe.</p>
-            `;
-        });
-
-        document.getElementById('french-flag').addEventListener('click', function() {
-            document.getElementById('content').innerHTML = `
-                <h1>Bienvenue!</h1>
-                <p>Ceci est la page en français.</p>
-            `;
-        });
-    </script>
-</body>
-</html>
     <div class="navbar">
         <span class="left futuristic-background" style="font-size: 9px; padding: 1px 4px;">
             <span style="color: #1e90ff;" id="translator-title">Përkthyes Gjyqësor</span>
@@ -228,6 +203,20 @@
         </p>
     </div>
     <script>
+        document.getElementById('albanian-flag').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+                <h1>Mirë se vini!</h1>
+                <p>Kjo është faqja në gjuhën shqipe.</p>
+            `;
+        });
+
+        document.getElementById('french-flag').addEventListener('click', function() {
+            document.getElementById('content').innerHTML = `
+                <h1>Bienvenue!</h1>
+                <p>Ceci est la page en français.</p>
+            `;
+        });
+ 
         function changeLanguage(lang) {
             if (lang === 'fr') {
                 document.getElementById('translator-title').innerText = 'Traducteur Judiciaire';
