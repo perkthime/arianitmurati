@@ -203,20 +203,6 @@
         </p>
     </div>
     <script>
-        document.getElementById('albanian-flag').addEventListener('click', function() {
-            document.getElementById('content').innerHTML = `
-                <h1>Mirë se vini!</h1>
-                <p>Kjo është faqja në gjuhën shqipe.</p>
-            `;
-        });
-
-        document.getElementById('french-flag').addEventListener('click', function() {
-            document.getElementById('content').innerHTML = `
-                <h1>Bienvenue!</h1>
-                <p>Ceci est la page en français.</p>
-            `;
-        });
- 
         function changeLanguage(lang) {
             if (lang === 'fr') {
                 document.getElementById('translator-title').innerText = 'Traducteur Judiciaire';
