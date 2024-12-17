@@ -339,63 +339,211 @@
 </body>
 </html>
 
-    <div id="services" class="content services">
-        <h1>Shërbimet</h1>
-        <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
-        <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-    </div>
-  </div>
-</div>
-<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Ligjore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Mjekësore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Teknike</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Financiare</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime të Marketingut</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime të Etiketave Ushqimore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
-    </div>
-  </div>
-</div>
-</div>
+       <style>
+        /* Stilet ekzistuese */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('am1.2.png');
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            animation: backgroundAnimation 20s infinite alternate;
+        }
+        @keyframes backgroundAnimation {
+            0% { background-position: 0% 0%; }
+        }
+        .navbar {
+            background-color: transparent;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px 20px;
+        }
+        .navbar .left {
+            color: orange;
+            font-size: 18px;
+        }
+        .navbar .right {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .right a {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar .right a:hover {
+            background-color: orange;
+            color: black;
+        }
+        .dropdown {
+            display: inline-block;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: orange;
+            color: black;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .content {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            color: white;
+            display: none;
+        }
+        .welcome {
+            color: white;
+        }
+        .highlight {
+            border: 2px solid orange;
+            background-color: orange;
+            color: black;
+            padding: 5px;
+            display: inline-block;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .highlight:hover {
+            transform: scale(1.1);
+        }
+        .main-text {
+            color: orange;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 24px;
+        }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .social-container {
+            padding: 8px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 52px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-links a {
+            margin: 0 10px;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+            .navbar .right {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .navbar .right a {
+                padding: 10px;
+            }
+        }
+        @keyframes logoAnimation {
+            from { transform: scale(1); }
+            to { transform: scale(1.1); }
+        }
+        .logo {
+            height: 60px;
+            margin: 0 20px;
+        }
+    </style>
+    <script>
+        function changeLanguage(lang) {
+            if (lang === 'fr') {
+                document.getElementById('translator-title').textContent = "Traducteur Judiciaire";
+                document.getElementById('certified-text').textContent = " Certifié pour les Langues ";
+                document.getElementById('welcome-link').textContent = "Bienvenue";
+                document.getElementById('services-button').textContent = "Services";
+                document.getElementById('video-albanian').textContent = "Vidéo en albanais";
+                document.getElementById('video-french').textContent = "Vidéo en français";
+                document.getElementById('contact-link').textContent = "Contactez";
+                document.getElementById('translator-link').textContent = "Besoin d'un traducteur judiciaire fiable?";
+                document.getElementById('services-title').textContent = "Services";
+                document.getElementById('services-description').textContent = "Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.";
+                document.getElementById('legal-translation').textContent = "Traductions Juridiques";
+                document.getElementById('legal-description').textContent = "Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.";
+                document.getElementById('medical-translation').textContent = "Traductions Médicales";
+                document.getElementById('medical-description').textContent = "Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.";
+                document.getElementById('technical-translation').textContent = "Traductions Techniques";
+                document.getElementById('technical-description').textContent = "Traduction de manuels techniques, de documents d'ingénierie et d'autres matériaux techniques.";
+                document.getElementById('financial-translation').textContent = "Traductions Financières";
+                document.getElementById('financial-description').textContent = "Traduction de rapports financiers, de bilans et d'autres documents financiers.";
+                document.getElementById('marketing-translation').textContent = "Traductions Marketing";
+                document.getElementById('marketing-description').textContent = "Traduction de matériel marketing, y compris des brochures, des campagnes publicitaires et du contenu pour les réseaux sociaux.";
+                document.getElementById('food-label-translation').textContent = "Traductions d'Étiquettes Alimentaires";
+                document.getElementById('food-label-description').textContent = "Traduction d'étiquettes alimentaires et de contenu d'emballage.";
+            } else if (lang === 'sq') {
+                document.getElementById('translator-title').textContent = "Përkthyes Gjyqësor";
+                document.getElementById('certified-text').textContent = " i Certifikuar për Gjuhët ";
+                document.getElementById('welcome-link').textContent = "Mirë se vini";
+                document.getElementById('services-button').textContent = "Shërbime";
+                document.getElementById('video-albanian').textContent = "Video në shqip";
+                document.getElementById('video-french').textContent = "Video në frëngjisht";
+                document.getElementById('contact-link').textContent = "Kontaktoni";
+                document.getElementById('translator-link').textContent = "Keni nevojë për përkthyes gjyqësor të besueshëm?";
+                document.getElementById('services-title').textContent = "Shërbimet";
+                document.getElementById('services-description').textContent = "Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.";
+                document.getElementById('legal-translation').textContent = "Përkthime Ligjore";
+                document.getElementById('legal-description').textContent = "Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.";
+                document.getElementById('medical-translation').textContent = "Përkthime Mjekësore";
+                document.getElementById('medical-description').textContent = "Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.";
+                document.getElementById('technical-translation').textContent = "Përkthime Teknike";
+
+
 <script type="text/javascript">
   // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
   if (navigator.userAgent.match(/IEMobile/10.0/)) {
