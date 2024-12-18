@@ -203,29 +203,71 @@
             </a> 
         </p>
     </div>
-    <script>
-        function changeLanguage(lang) {
-            if (lang === 'fr') {
-                document.getElementById('translator-title').innerText = 'Traducteur Judiciaire';
-                document.getElementById('certified-text').innerText = ' Certifié pour les Langues ';
-                document.getElementById('welcome-link').innerText = 'Bienvenue';
-                document.getElementById('services-button').innerText = 'Services';
-                document.getElementById('video-albanian').innerText = 'Vidéo en albanais';
-                document.getElementById('video-french').innerText = 'Vidéo en français';
-                document.getElementById('contact-link').innerText = 'Contactez';
-                document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur judiciaire fiable?';
-            } else if (lang === 'sq') {
-                document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
-                document.getElementById('certified-text').innerText = ' i Certifikuar për Gjuhët ';
-                document.getElementById('welcome-link').innerText = 'Mirë se vini';
-                document.getElementById('services-button').innerText = 'Shërbime';
-                document.getElementById('video-albanian').innerText = 'Video në shqip';
-                document.getElementById('video-french').innerText = 'Video në frëngjisht';
-                document.getElementById('contact-link').innerText = 'Kontaktoni';
-                document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
-            }
-        }
-    </script>
+   <script>
+function changeLanguage(lang) {
+    if (lang === 'fr') {
+        document.getElementById('translator-title').innerText = 'Traducteur Judiciaire';
+        document.getElementById('certified-text').innerText = ' Certifié pour les Langues ';
+        document.getElementById('welcome-link').innerText = 'Bienvenue';
+        document.getElementById('services-button').innerText = 'Services';
+        document.getElementById('video-albanian').innerText = 'Vidéo en albanais';
+        document.getElementById('video-french').innerText = 'Vidéo en français';
+        document.getElementById('contact-link').innerText = 'Contactez';
+        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur judiciaire fiable?';
+        
+        // Update the services section
+        document.querySelector('#services h1').innerText = 'Services';
+        document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
+        
+        // Update each service
+        const services = [
+            { color: 'green', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
+            { color: 'blue', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
+            { color: 'orange', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
+            { color: 'purple', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
+            { color: 'yellow', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
+            { color: 'red', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
+        ];
+        
+        services.forEach((service, index) => {
+            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
+            serviceElement.querySelector('h3').innerText = service.title;
+            serviceElement.querySelector('p').innerText = service.description;
+            serviceElement.querySelector('div').style.backgroundColor = service.color;
+        });
+    } else if (lang === 'sq') {
+        // Existing Albanian content
+        document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
+        document.getElementById('certified-text').innerText = ' i Certifikuar për Gjuhët ';
+        document.getElementById('welcome-link').innerText = 'Mirë se vini';
+        document.getElementById('services-button').innerText = 'Shërbime';
+        document.getElementById('video-albanian').innerText = 'Video në shqip';
+        document.getElementById('video-french').innerText = 'Video në frëngjisht';
+        document.getElementById('contact-link').innerText = 'Kontaktoni';
+        document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
+        
+        // Existing Albanian services content
+        document.querySelector('#services h1').innerText = 'Shërbimet';
+        document.querySelector('#services p').innerText = 'Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
+        
+        const services = [
+            { color: 'green', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
+            { color: 'blue', title: 'Përkthime Mjekësore', description: 'Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.' },
+            { color: 'orange', title: 'Përkthime Teknike', description: 'Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.' },
+            { color: 'purple', title: 'Përkthime Financiare', description: 'Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.' },
+            { color: 'yellow', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
+            { color: 'red', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
+        ];
+        
+        services.forEach((service, index) => {
+            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
+            serviceElement.querySelector('h3').innerText = service.title;
+            serviceElement.querySelector('p').innerText = service.description;
+            serviceElement.querySelector('div').style.backgroundColor = service.color;
+        });
+    }
+}
+</script>
 </body>
 <style>
     .static-text {
