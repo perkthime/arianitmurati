@@ -166,14 +166,14 @@
             height: 60px; /* Increase the height of the logo */
             margin: 0 20px;
         }
-    </style>
+        </style>
 </head>
 <body>
     <div class="navbar">
         <span class="left futuristic-background">
             <span style="color: #1e90ff;" id="translator-title">Përkthyes Gjyqësor</span>
             <span style="color: #fff;" id="certified-text"> i Certifikuar për Gjuhët </span>
-            <span style="color: #ff0000;">Frëngjisht dhe Shqip</span>
+            <span style="color: #ff0000;" id="languages">Frëngjisht dhe Shqip</span>
         </span>
         <div class="center">
             <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px;"></a>
@@ -208,12 +208,24 @@
             if (lang === 'fr') {
                 document.getElementById('translator-title').innerText = 'Traducteur Judiciaire';
                 document.getElementById('certified-text').innerText = ' Certifié pour les Langues ';
+                document.getElementById('languages').innerText = 'Français et Albanais';
                 document.getElementById('welcome-link').innerText = 'Bienvenue';
                 document.getElementById('services-button').innerText = 'Services';
                 document.getElementById('video-albanian').innerText = 'Vidéo en albanais';
                 document.getElementById('video-french').innerText = 'Vidéo en français';
                 document.getElementById('contact-link').innerText = 'Contactez';
                 document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur judiciaire fiable?';
+            } else if (lang === 'sq') {
+                document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
+                document.getElementById('certified-text').innerText = ' i Certifikuar për Gjuhët ';
+                document.getElementById('languages').innerText = 'Frëngjisht dhe Shqip';
+                document.getElementById('welcome-link').innerText = 'Mirë se vini';
+                document.getElementById('services-button').innerText = 'Shërbime';
+                document.getElementById('video-albanian').innerText = 'Video në shqip';
+                document.getElementById('video-french').innerText = 'Video në frëngjisht';
+                document.getElementById('contact-link').innerText = 'Kontaktoni';
+                document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
+            }
         
         // Update the services section
         document.querySelector('#services h1').innerText = 'Services';
