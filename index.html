@@ -267,20 +267,6 @@ function changeLanguage(lang) {
             serviceElement.querySelector('h3').innerText = service.title;
             serviceElement.querySelector('p').innerText = service.description;
             serviceElement.querySelector('div').style.backgroundColor = service.color;
-
-            function changeLanguage(lang) {
-    if (lang === 'fr') {
-        document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
-        document.getElementById('service1').innerHTML = `
-            <p>Shikoni videon në gjuhën frënge për të mësuar më shumë rreth profesionalizmit dhe saktësisë që ne ofrojmë në çdo fushë.</p>
-            <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `;
-    } else if (lang === 'sq') {
-        document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
-        document.getElementById('service1').innerHTML = `
-            <p>Shikoni videon në gjuhën shqipe për të mësuar më shumë rreth profesionalizmit dhe saktësisë që ne ofrojmë në çdo fushë.</p>
-            <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        `;
         });
     }
 }
