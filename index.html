@@ -277,29 +277,6 @@ function changeLanguage(lang) {
             serviceElement.querySelector('h3').innerText = service.title;
             serviceElement.querySelector('p').innerText = service.description;
             serviceElement.querySelector('div').style.backgroundColor = service.color;
-            <div id="translator-title">Përkthyes Gjyqësor</div>
-    <div id="services">
-        <div id="service1" class="content service1">
-            <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div id="service2" class="content service2" style="display: none;">
-            <p>Detajet e Video në frëngjisht.</p>
-            <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-    <button onclick="changeLanguage('sq')">Shqip</button>
-    <button onclick="changeLanguage('fr')">Français</button>
-
-    <script>
-        function changeLanguage(lang) {
-            if (lang === 'fr') {
-                document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
-                document.getElementById('service1').style.display = 'none';
-                document.getElementById('service2').style.display = 'block';
-            } else if (lang === 'sq') {
-                document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
-                document.getElementById('service1').style.display = 'block';
-                document.getElementById('service2').style.display = 'none';
         });
     }
 }
