@@ -219,6 +219,9 @@ function changeLanguage(lang) {
         document.querySelector('#services h1').innerText = 'Services';
         document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
         
+        // Remove background from services section
+        document.getElementById('services').style.background = 'none';
+        
         // Update each service
         const services = [
             { color: 'green', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
@@ -245,6 +248,9 @@ function changeLanguage(lang) {
         document.getElementById('video-french').innerText = 'Video në frëngjisht';
         document.getElementById('contact-link').innerText = 'Kontaktoni';
         document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
+        
+        // Remove background from services section
+        document.getElementById('services').style.background = 'none';
         
         // Existing Albanian services content
         document.querySelector('#services h1').innerText = 'Shërbimet';
