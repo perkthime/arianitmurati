@@ -1,4 +1,31 @@
 
+<div class="navbar">
+    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
+        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
+    </span>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="right" id="menu">
+        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
+        <div class="dropdown">
+            <button class="dropbtn highlight-orange" id="services-button">Shërbime 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
+            </div>
+        </div>
+        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
+    </div>
+</div>
+
+
+
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
