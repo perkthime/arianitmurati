@@ -246,29 +246,7 @@
         <div class="dropdown-content">
             <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
             <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
-        <div id="welcome" class="content welcome" style="display: block;"> 
-        <p> 
-            <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
-        </p> 
-        <p> 
-            <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
-                Keni nevojë për përkthyes gjyqësor të besueshëm?
-            </a> 
-        </p>
-    <div id="services" class="content services">
-        <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
-        
-        <h1>Shërbimet</h1>
-        
-        <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"><div id="contact" class="content">
-      
-        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
-        </p>
-        <p onclick="window.location.href='tel:+38345569246'">
-            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
-        </p>
-    </div></div></div></div>
+        </div>
     </div>
     <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
 </div>
@@ -314,7 +292,16 @@
         <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
     </div>
     </div>
-    
+    <div id="welcome" class="content welcome" style="display: block;"> 
+        <p> 
+            <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
+        </p> 
+        <p> 
+            <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
+                Keni nevojë për përkthyes gjyqësor të besueshëm?
+            </a> 
+        </p>
+    </div>
    <script>
 function changeLanguage(lang) {
     if (lang === 'fr') {
@@ -461,13 +448,26 @@ function changeLanguage(lang) {
     </style>
 </head>
 <body>
-    
+    <div id="contact" class="content">
+      
+        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
+        </p>
+        <p onclick="window.location.href='tel:+38345569246'">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
+        </p>
+    </div>
 </body>
 </html>
 </body>
 </html>
 
-    
+    <div id="services" class="content services">
+        <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
+        
+        <h1>Shërbimet</h1>
+        
+        <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
 <div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
