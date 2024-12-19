@@ -180,7 +180,7 @@
         <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
     </span>
 
- <style>
+<style>
     .menu-icon {
         cursor: pointer;
     }
@@ -239,6 +239,16 @@
     <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
 </div>
 
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>
 <script>
     function toggleMenu() {
         var menu = document.getElementById('menu');
