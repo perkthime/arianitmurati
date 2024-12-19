@@ -194,7 +194,12 @@
             display: none;
         }
         .dropdown-content {
+            display: none;
+            position: absolute;
             background-color: transparent;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
         }
         .highlight {
             font-size: 13px;
@@ -227,6 +232,20 @@
     </div>
 
     <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        function showSection(sectionId) {
+            // Këtu mund të shtoni logjikën për të treguar seksionet përkatëse
+            console.log('Shfaq seksionin:', sectionId);
+        }
+    </script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
             if (menu.style.display === 'block') {
