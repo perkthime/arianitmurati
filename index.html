@@ -1,81 +1,4 @@
 
-<!DOCTYPE html>
-<html lang="sq">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faqja Ime Personale</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .navbar {
-            display: flex;
-            background-color: #333;
-            overflow: hidden;
-        }
-        .navbar a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        .navbar a:hover {
-            background-color: #ddd;
-            color: black;
-        }
-        .toggle-menu {
-            display: none;
-        }
-        .toggle-menu:checked + .navbar {
-            display: flex;
-            flex-direction: column;
-        }
-        .toggle-menu-label {
-            display: none;
-            background-color: #333;
-            color: white;
-            padding: 14px 20px;
-            cursor: pointer;
-        }
-        @media (max-width: 600px) {
-            .navbar {
-                display: none;
-                flex-direction: column;
-            }
-            .toggle-menu-label {
-                display: block;
-            }
-        }
-    </style>
-</head>
-<body>
-
-<input type="checkbox" id="toggle-menu" class="toggle-menu">
-<label for="toggle-menu" class="toggle-menu-label">&#9776; Menu</label>
-
-<div class="navbar">
-    <a href="#welcome">Mirë se vini</a>
-    <a href="#services">Shërbime</a>
-    <a href="#contact">Kontaktoni</a>
-</div>
-
-<section id="welcome">
-    <h1>Mirë se vini</h1>
-</section>
-
-<section id="services">
-    <h1>Shërbime</h1>
-</section>
-
-<section id="contact">
-    <h1>Kontaktoni</h1>
-</section>
-
-</body>
-</html>
-
-
 
 <!DOCTYPE html>
 <html lang="sq">
@@ -255,7 +178,22 @@
     <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
         <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
     </span>
-
+<button onclick="toggleNavigation()">Toggle Navigation</button>
+    <script>
+function toggleNavigation() {
+    var navbar = document.querySelector('.navbar .right');
+    if (navbar.style.display === 'none' || navbar.style.display === '') {
+        navbar.style.display = 'flex';
+    } else {
+        navbar.style.display = 'none';
+    }
+}
+</script>
+    @media (max-width: 768px) {
+    .navbar .right {
+        display: none;
+    }
+}
     <div class="right">
         <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="welcome-link">Mirë se vini</a>
         <div class="dropdown">
