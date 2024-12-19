@@ -168,19 +168,7 @@
             height: 60px; /* Increase the height of the logo */
             margin: 0 20px;
         }
-</style>
-</head>
-<body>
- <style>
-    
-</style>
-
-<div class="navbar">
-    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
-        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
-    </span>
-
-    <style>
+<style>
         .menu-icon {
             display: inline-block;
             cursor: pointer;
@@ -191,24 +179,26 @@
             background-color: black;
             margin: 5px 0;
         }
-        .right {
+        .menu-content {
             display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
         }
-        .dropdown-content {
-            background-color: transparent;
+        .menu-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
         }
-        .highlight {
-            font-size: 13px;
-            padding: 2px 6px;
-        }
-        .highlight-transparent {
-            font-size: 13px;
-            padding: 2px 6px;
+        .menu-content a:hover {
+            background-color: #ddd;
         }
     </style>
 </head>
 <body>
-  <div class="menu-icon" onclick="toggleMenu()">
+    <div class="menu-icon" onclick="toggleMenu()">
         <div></div>
         <div></div>
         <div></div>
@@ -249,20 +239,8 @@
             console.log('Shfaq seksionin:', sectionId);
         }
     </script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        function showSection(sectionId) {
-            // Këtu mund të shtoni logjikën për të treguar seksionet përkatëse
-            console.log('Shfaq seksionin:', sectionId);
-        }
-    </script>
+</body>
+</html>
     <div class="center">
         <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
         <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
