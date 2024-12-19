@@ -170,6 +170,30 @@
 </style>
 </head>
 <body>
+
+<div class="navbar">
+    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
+        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
+    </span>
+    <div class="right">
+        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="welcome-link">Mirë se vini</a>
+        <div class="dropdown">
+            <button class="dropbtn highlight-orange" style="font-size: 13px; padding: 2px 6px;" id="services-button">Shërbime 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
+            </div>
+        </div>
+        <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="contact-link">Kontaktoni</a>
+    </div>
+    <div class="center">
+        <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+        <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+    </div>
+</div>
+
  <style>
     
 </style>
@@ -289,28 +313,6 @@ function changeLanguage(lang) {
     }
 }
 </script>
-
-<button onclick="toggleNavigation()">Toggle Navigation</button>
-
-<script>
-function toggleNavigation() {
-    var navbar = document.querySelector('.navbar .right');
-    if (navbar.style.display === 'none' || navbar.style.display === '') {
-        navbar.style.display = 'flex';
-    } else {
-        navbar.style.display = 'none';
-    }
-}
-</script>
-
-<style>
-@media (max-width: 768px) {
-    .navbar .right {
-        display: none;
-    }
-}
-</style>
-
 </body>
 <style>
     .static-text {
@@ -388,6 +390,30 @@ function toggleNavigation() {
     </style>
 </head>
 <body>
+
+<div class="navbar">
+    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
+        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
+    </span>
+    <div class="right">
+        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="welcome-link">Mirë se vini</a>
+        <div class="dropdown">
+            <button class="dropbtn highlight-orange" style="font-size: 13px; padding: 2px 6px;" id="services-button">Shërbime 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
+            </div>
+        </div>
+        <a href="#" onclick="showSection('contact')" class="highlight-transparent" style="font-size: 13px; padding: 2px 6px;" id="contact-link">Kontaktoni</a>
+    </div>
+    <div class="center">
+        <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+        <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+    </div>
+</div>
+
     <div id="contact" class="content">
       
         <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
@@ -397,52 +423,8 @@ function toggleNavigation() {
             <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
         </p>
     </div>
-
-<button onclick="toggleNavigation()">Toggle Navigation</button>
-
-<script>
-function toggleNavigation() {
-    var navbar = document.querySelector('.navbar .right');
-    if (navbar.style.display === 'none' || navbar.style.display === '') {
-        navbar.style.display = 'flex';
-    } else {
-        navbar.style.display = 'none';
-    }
-}
-</script>
-
-<style>
-@media (max-width: 768px) {
-    .navbar .right {
-        display: none;
-    }
-}
-</style>
-
 </body>
 </html>
-
-<button onclick="toggleNavigation()">Toggle Navigation</button>
-
-<script>
-function toggleNavigation() {
-    var navbar = document.querySelector('.navbar .right');
-    if (navbar.style.display === 'none' || navbar.style.display === '') {
-        navbar.style.display = 'flex';
-    } else {
-        navbar.style.display = 'none';
-    }
-}
-</script>
-
-<style>
-@media (max-width: 768px) {
-    .navbar .right {
-        display: none;
-    }
-}
-</style>
-
 </body>
 </html>
 
@@ -567,27 +549,5 @@ function toggleNavigation() {
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
-
-<button onclick="toggleNavigation()">Toggle Navigation</button>
-
-<script>
-function toggleNavigation() {
-    var navbar = document.querySelector('.navbar .right');
-    if (navbar.style.display === 'none' || navbar.style.display === '') {
-        navbar.style.display = 'flex';
-    } else {
-        navbar.style.display = 'none';
-    }
-}
-</script>
-
-<style>
-@media (max-width: 768px) {
-    .navbar .right {
-        display: none;
-    }
-}
-</style>
-
 </body>
 </html>
