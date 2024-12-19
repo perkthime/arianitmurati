@@ -183,12 +183,22 @@
 <style>
     .menu-icon {
         cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
     }
     .menu-icon div {
         background-color: gold;
         width: 35px;
         height: 5px;
         margin: 6px 0;
+    }
+    .menu-icon span {
+        color: gold;
+        margin-top: 10px;
+        text-align: center;
     }
     .right {
         display: none;
@@ -225,6 +235,7 @@
     <div></div>
     <div></div>
     <div></div>
+    <span>Keni nevojë për përkthyes gjyqësor të besueshëm?</span>
 </div>
 <div class="right" id="menu">
     <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
@@ -239,6 +250,17 @@
     </div>
     <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
 </div>
+
+<script>
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'flex';
+        }
+    }
+</script>
 
 <script>
     function toggleMenu() {
