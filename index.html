@@ -289,6 +289,70 @@ function changeLanguage(lang) {
     }
 }
 </script>
+
+<style>
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-button div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu-content {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+}
+
+.menu-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: orange;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+}
+</style>
+
+<div class="menu-button" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="menu-content" id="menuContent">
+    <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+    <a href="#" onclick="showSection('services')">Shërbime</a>
+    <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+</div>
+
+<script>
+function toggleMenu() {
+    var menuContent = document.getElementById('menuContent');
+    if (menuContent.style.display === 'flex') {
+        menuContent.style.display = 'none';
+    } else {
+        menuContent.style.display = 'flex';
+    }
+}
+</script>
 </body>
 <style>
     .static-text {
@@ -375,8 +439,136 @@ function changeLanguage(lang) {
             <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
         </p>
     </div>
+
+<style>
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-button div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu-content {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+}
+
+.menu-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: orange;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+}
+</style>
+
+<div class="menu-button" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="menu-content" id="menuContent">
+    <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+    <a href="#" onclick="showSection('services')">Shërbime</a>
+    <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+</div>
+
+<script>
+function toggleMenu() {
+    var menuContent = document.getElementById('menuContent');
+    if (menuContent.style.display === 'flex') {
+        menuContent.style.display = 'none';
+    } else {
+        menuContent.style.display = 'flex';
+    }
+}
+</script>
 </body>
 </html>
+
+<style>
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-button div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu-content {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+}
+
+.menu-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: orange;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+}
+</style>
+
+<div class="menu-button" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="menu-content" id="menuContent">
+    <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+    <a href="#" onclick="showSection('services')">Shërbime</a>
+    <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+</div>
+
+<script>
+function toggleMenu() {
+    var menuContent = document.getElementById('menuContent');
+    if (menuContent.style.display === 'flex') {
+        menuContent.style.display = 'none';
+    } else {
+        menuContent.style.display = 'flex';
+    }
+}
+</script>
 </body>
 </html>
 
@@ -501,5 +693,69 @@ function changeLanguage(lang) {
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
+
+<style>
+.menu-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.menu-button div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.menu-content {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    z-index: 1;
+}
+
+.menu-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: orange;
+}
+
+@media (max-width: 768px) {
+    .menu-button {
+        display: flex;
+    }
+}
+</style>
+
+<div class="menu-button" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="menu-content" id="menuContent">
+    <a href="#" onclick="showSection('welcome')">Mirë se vini</a>
+    <a href="#" onclick="showSection('services')">Shërbime</a>
+    <a href="#" onclick="showSection('contact')">Kontaktoni</a>
+</div>
+
+<script>
+function toggleMenu() {
+    var menuContent = document.getElementById('menuContent');
+    if (menuContent.style.display === 'flex') {
+        menuContent.style.display = 'none';
+    } else {
+        menuContent.style.display = 'flex';
+    }
+}
+</script>
 </body>
 </html>
