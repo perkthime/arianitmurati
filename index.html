@@ -229,25 +229,14 @@
     .dropdown:hover .dropdown-content {
         display: block;
     }
-<style>
-    .menu-icon {
-        cursor: pointer;
-    }
-    .menu-icon div {
-        width: 35px;
-        height: 5px;
-        background-color: #333;
-        margin: 6px 0;
-        transition: 0.4s;
-    }
 </style>
 
 <div class="menu-icon" onclick="toggleMenu()">
     <div></div>
     <div></div>
     <div></div>
-</div>
 
+</div>
 <div class="right" id="menu">
     <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
     <div class="dropdown">
@@ -264,14 +253,15 @@
 
 <script>
     function toggleMenu() {
-        var menu = document.getElementById("menu");
-        if (menu.style.display === "block") {
-            menu.style.display = "none";
+        var menu = document.getElementById('menu');
+        if (menu.style.display === 'flex') {
+            menu.style.display = 'none';
         } else {
-            menu.style.display = "block";
+            menu.style.display = 'flex';
         }
     }
 </script>
+
 <script>
     function toggleMenu() {
         var menu = document.getElementById('menu');
