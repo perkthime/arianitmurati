@@ -208,26 +208,47 @@
     </style>
 </head>
 <body>
-    <div class="menu-icon" onclick="toggleMenu()">
+  <div class="menu-icon" onclick="toggleMenu()">
         <div></div>
         <div></div>
         <div></div>
     </div>
-    <div class="right" id="menu">
-        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
+    <div class="menu-content" id="menu">
+        <a href="#" onclick="showSection('welcome')" id="welcome-link">Mirë se vini</a>
         <div class="dropdown">
-            <button class="dropbtn highlight-orange" id="services-button">Shërbime 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
+            <a href="#" onclick="toggleDropdown()">Shërbime <i class="fa fa-caret-down"></i></a>
+            <div class="dropdown-content" id="dropdown">
+                <a href="#" onclick="showSection('service1')" id="video-albanian">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" id="video-french">Filmim në frëngjisht</a>
             </div>
         </div>
-        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
+        <a href="#" onclick="showSection('contact')" id="contact-link">Kontaktoni</a>
     </div>
 
     <script>
+        function toggleMenu() {
+            var menu = document.getElementById('menu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+
+        function toggleDropdown() {
+            var dropdown = document.getElementById('dropdown');
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+            } else {
+                dropdown.style.display = 'block';
+            }
+        }
+
+        function showSection(sectionId) {
+            // Këtu mund të shtoni logjikën për të treguar seksionet përkatëse
+            console.log('Shfaq seksionin:', sectionId);
+        }
+    </script>
         function toggleMenu() {
             var menu = document.getElementById('menu');
             if (menu.style.display === 'block') {
