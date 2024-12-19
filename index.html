@@ -215,27 +215,15 @@
     </div>
     <div class="right" id="menu">
         <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
-        <style>
-  .highlight-red {
-    border: 2px solid red;
-  }
-<style>
-  .highlight-red {
-    border: 1px solid red;
-    border-radius: 100px; /* Kjo e bën kornizën me kënde më të rrumbullakosura */
-    padding: 10px; /* Shton pak hapësirë brenda kornizës për ta bërë më të dukshme */
-  }
-</style>
-
-<div class="dropdown highlight-red">
-  <button class="dropbtn highlight-orange" id="services-button">Shërbime 
-    <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
-  </div>
-</div>
+        <div class="dropdown">
+            <button class="dropbtn highlight-orange" id="services-button">Shërbime 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
+            </div>
+        </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
     </div>
 
