@@ -242,11 +242,11 @@
             <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
                 Keni nevojë për përkthyes gjyqësor të besueshëm?
             </a> 
-            <audio id="background-music" autoplay loop>
-        <source src="wicked game.mp3" type="audio/mpeg">
+        </p>
+        <audio id="background-music" autoplay loop>
+        <source src="path-to-your-music-file.mp3" type="audio/mpeg">
         Shfletuesi juaj nuk e mbështet elementin audio.
     </audio>
-        </p>
     </div>
    <script>
 function changeLanguage(lang) {
@@ -489,37 +489,17 @@ function changeLanguage(lang) {
 </style>
 
 <div id="service1" class="content service1">
-        <iframe id="video1" src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
+    
+    
+    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="service2" class="content service2">
+ 
+ 
+    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
     <div id="service2" class="content service2">
-        <iframe id="video2" src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-    <script>
-        const backgroundMusic = document.getElementById('background-music');
-        const videos = document.querySelectorAll('iframe');
-
-        videos.forEach(video => {
-            video.addEventListener('play', () => {
-                backgroundMusic.pause();
-            });
-
-            video.addEventListener('ended', () => {
-                backgroundMusic.play();
-            });
-
-            video.addEventListener('pause', () => {
-                backgroundMusic.play();
-            });
-        });
-
-        // Kontrolloni nëse videoja është duke luajtur kur përdoruesi kalon diku tjetër
-        document.addEventListener('click', (event) => {
-            if (!event.target.closest('iframe')) {
-                backgroundMusic.play();
-            }
-        });
-       </script>
+       
         <p>Detajet e Video në frëngjisht.</p>
         <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
@@ -551,3 +531,4 @@ function changeLanguage(lang) {
     </script>
 </body>
 </html>
+
