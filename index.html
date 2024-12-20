@@ -39,23 +39,22 @@
         align-items: center;
     }
 .navbar .right a,
-#services-button,
-#translator-link {
+#services-button {
     display: inline-block;
-    color: black; /* Ngjyra e tekstit në të zezë për të qenë gjithmonë i dukshëm */
+    color: white;
     text-align: center;
     padding: 14px 20px;
     text-decoration: none;
-    background: none; /* Heq sfondin */
+    background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); /* Gradient shumë i ndezur */
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); /* Hije për efekt futuristik */
     border-radius: 25px; /* Formë ovale */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease; /* Kalim i butë për efektet */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Kalim i butë për efektet */
+    color: black; /* Ngjyra e tekstit në të zezë */
 }
 
 .navbar .right a:hover,
-#services-button:hover,
-#translator-link:hover {
+#services-button:hover {
     transform: scale(1.1); /* Efekt zmadhimi i lehtë */
-    color: rgba(255, 165, 0, 1); /* Ngjyra e tekstit portokalli e ndezur */
     box-shadow: 0 6px 20px rgba(255, 69, 0, 1); /* Hije më e theksuar në hover */
 }
     }
