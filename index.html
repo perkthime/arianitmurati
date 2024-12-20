@@ -242,14 +242,22 @@
             <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
                 Keni nevojë për përkthyes gjyqësor të besueshëm?
             </a> 
-             <audio id="background-music" autoplay loop>
-        <source src="wicked game.mp3" type="audio/mpeg">
+        </p>
+        <audio id="background-music" autoplay loop>
+        <source src="path-to-your-music-file.mp3" type="audio/mpeg">
         Shfletuesi juaj nuk e mbështet elementin audio.
     </audio>
 
+    <div id="service1" class="content service1">
+        <iframe id="video1" src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="service2" class="content service2">
+        <iframe id="video2" src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
     <script>
         const backgroundMusic = document.getElementById('background-music');
-        backgroundMusic.volume = 0.1; // Rregulloni volumin në minimum
+        backgroundMusic.volume = 0.2; // Vendosni volumin në 20%
 
         const videos = document.querySelectorAll('iframe');
 
@@ -273,12 +281,6 @@
                 backgroundMusic.play();
             }
         });
-    </script>
-        </p>
-        <audio id="background-music" autoplay loop>
-        <source src="path-to-your-music-file.mp3" type="audio/mpeg">
-        Shfletuesi juaj nuk e mbështet elementin audio.
-    </audio>
     </div>
    <script>
 function changeLanguage(lang) {
@@ -520,18 +522,12 @@ function changeLanguage(lang) {
     }
 </style>
 
-
+<div id="service1" class="content service1">
     
     
-  
-    <div id="service1" class="content service1">
-        <iframe id="video1" src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <div id="service2" class="content service2">
-        <iframe id="video2" src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
-
+    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div id="service2" class="content service2">
  
  
     <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
