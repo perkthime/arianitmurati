@@ -37,16 +37,27 @@
         display: flex;
         align-items: center;
     }
-    .navbar .right a {
-        display: inline-block;
-        color: white;
-        text-align: center;
-        padding: 14px 20px;
-        text-decoration: none;
-    }
-    .navbar .right a:hover {
-        background-color: orange;
-        color: black;
+.navbar .right a,
+#services-button {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); /* Gradient shumë i ndezur */
+    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); /* Hije për efekt futuristik */
+    border-radius: 25px; /* Formë ovale */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Kalim i butë për efektet */
+    color: black; /* Ngjyra e tekstit në të zezë */
+}
+
+.navbar .right a:hover,
+#services-button:hover {
+    transform: scale(1.1); /* Efekt zmadhimi i lehtë */
+    box-shadow: 0 6px 20px rgba(255, 69, 0, 1); /* Hije më e theksuar në hover */
+     margin: 0 15px; /* Shton distancë horizontale ndërmjet elementeve */
+        }
+}
     }
     .dropdown {
         display: inline-block;
