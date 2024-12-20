@@ -489,17 +489,37 @@ function changeLanguage(lang) {
 </style>
 
 <div id="service1" class="content service1">
-    
-    
-    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div id="service2" class="content service2">
- 
- 
-    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+        <iframe id="video1" src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <div id="service2" class="content service2">
-       
+        <iframe id="video2" src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        const backgroundMusic = document.getElementById('background-music');
+        const videos = document.querySelectorAll('iframe');
+
+        videos.forEach(video => {
+            video.addEventListener('play', () => {
+                backgroundMusic.pause();
+            });
+
+            video.addEventListener('ended', () => {
+                backgroundMusic.play();
+            });
+
+            video.addEventListener('pause', () => {
+                backgroundMusic.play();
+            });
+        });
+
+        // Kontrolloni nëse videoja është duke luajtur kur përdoruesi kalon diku tjetër
+        document.addEventListener('click', (event) => {
+            if (!event.target.closest('iframe')) {
+                backgroundMusic.play();
+            }
+        });
+       </script>
         <p>Detajet e Video në frëngjisht.</p>
         <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
