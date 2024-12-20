@@ -37,27 +37,16 @@
         display: flex;
         align-items: center;
     }
-  .navbar .right a,
-#services-button {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); /* Gradient shumë i ndezur */
-    box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); /* Hije për efekt futuristik */
-    border-radius: 25px; /* Formë ovale */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Kalim i butë për efektet */
-    color: black; /* Ngjyra e tekstit në të zezë */
-    margin: 0 15px; /* Shton distancë horizontale ndërmjet elementeve */
-        }
-}
-
-.navbar .right a:hover,
-#services-button:hover {
-    transform: scale(1.1); /* Efekt zmadhimi i lehtë */
-    box-shadow: 0 6px 20px rgba(255, 69, 0, 1); /* Hije më e theksuar në hover */
-}
+    .navbar .right a {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 20px;
+        text-decoration: none;
+    }
+    .navbar .right a:hover {
+        background-color: orange;
+        color: black;
     }
     .dropdown {
         display: inline-block;
@@ -237,30 +226,11 @@
         <p> 
             <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
         </p> 
-         <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
+        <p> 
+            <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
                 Keni nevojë për përkthyes gjyqësor të besueshëm?
             </a> 
-    <audio autoplay loop>
-        <source src="path/to/your/classical-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-    </div>
-   <script>
-function changeLanguage(lang) {
-    if (lang === 'fr') {
-        document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
-        document.getElementById('welcome-link').innerText = 'Bienvenue';
-        document.getElementById('services-button').innerText = 'Services';
-        document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
-        document.getElementById('video-french').innerText = 'Clip vidéo en français';
-        document.getElementById('contact-link').innerText = 'Contactez';
-        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
-        
-            </a> 
-    <audio autoplay loop>
-        <source src="path/to/your/classical-music.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
+        </p>
     </div>
    <script>
 function changeLanguage(lang) {
