@@ -206,7 +206,12 @@
             padding: 2px 6px;
         }
     </style>
-
+</head>
+<body>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
     </div>
     <div class="right" id="menu">
         <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
@@ -229,11 +234,10 @@
                 menu.style.display = 'block';
             }
         }
-
-        function showSection(sectionId) {
-            // Këtu mund të shtoni logjikën për të treguar seksionet përkatëse
-            console.log('Shfaq seksionin:', sectionId);
-        }
+#menu a, #menu .dropdown {
+    margin-right: 20px; /* Rregulloni këtë vlerë sipas nevojës */
+}
+       
     </script>
     <div class="center">
         <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
