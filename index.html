@@ -237,10 +237,25 @@
         <p> 
             <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
         </p> 
-        <p> 
-             <p>
         <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
                 Keni nevojë për përkthyes gjyqësor të besueshëm?
+            </a> 
+    <audio autoplay loop>
+        <source src="path/to/your/classical-music.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    </div>
+   <script>
+function changeLanguage(lang) {
+    if (lang === 'fr') {
+        document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
+        document.getElementById('welcome-link').innerText = 'Bienvenue';
+        document.getElementById('services-button').innerText = 'Services';
+        document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
+        document.getElementById('video-french').innerText = 'Clip vidéo en français';
+        document.getElementById('contact-link').innerText = 'Contactez';
+        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
+        
             </a> 
     <audio autoplay loop>
         <source src="path/to/your/classical-music.mp3" type="audio/mpeg">
