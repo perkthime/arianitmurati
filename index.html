@@ -222,32 +222,6 @@
     
 </style>
 
-<div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="left" style="display: flex; align-items: center;">
-        <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
-            <span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
-        </span>
-        <span style="color: #fff; margin-left: 10px;" id="translator-title">Përkthyes Gjyqësor</span>
-        <div class="center" style="display: flex; align-items: center; margin-left: 10px;">
-            <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 5px;"></a>
-            <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 5px;"></a>
-        </div>
-    </div>
-    <div class="right" id="menu" style="display: flex; align-items: center;">
-        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
-        <div class="dropdown">
-            <button class="dropbtn highlight-orange" id="services-button">Shërbime 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
-            </div>
-        </div>
-        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
-    </div>
-</div>
-
 <div class="bio-section" id="bio-section">
     <h2 id="bio-title"><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Përkthyes Gjyqësor dhe Mësimdhënës i Gjuhës Frënge</span></h2>
     <p id="bio-text">Arianit Murati është një përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge.
@@ -259,9 +233,10 @@ Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në m�
 <script>
     function changeLanguage(lang) {
         if (lang === 'fr') {
-           
+            document.getElementById('bio-title').innerText = 'Traducteur Assermenté et Enseignant de Langue Française';
             document.getElementById('bio-text').innerText = "Arianit Murati est un traducteur assermenté et enseignant de langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l'Université de Pristina, où il a acquis une solide base en langue et culture françaises. Sa passion pour les langues l'a conduit à l'Université Paris 8, où il a poursuivi des études en sciences du langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning). Actuellement, il est enseignant de langue française au lycée 'Ulpiana' à Lipjan, où il s'efforce d'inspirer et d'éduquer les nouvelles générations dans la langue et la culture françaises. En outre, il sert comme traducteur assermenté, offrant des services de traduction précis et fiables à ses clients. Avec un engagement profond envers la langue et une riche expérience dans l'enseignement et la traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.";
         } else if (lang === 'sq') {
+            document.getElementById('bio-title').innerText = 'Përkthyes Gjyqësor dhe Mësimdhënës i Gjuhës Frënge';
             document.getElementById('bio-text').innerText = "Arianit Murati është një përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin 'Ulpiana' në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.";
         }
     }
@@ -622,5 +597,6 @@ function showSection(sectionId) {
 </script>
 </body>
 </html>
+
 
 
