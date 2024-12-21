@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
- <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-image: url('pc.jpeg');
@@ -227,9 +227,11 @@
 
         function showSection(sectionId) {
             console.log('Shfaq seksionin:', sectionId);
-            // Fsheh biografinë kur kalon në seksione të tjera
+            // Fsheh biografinë dhe tekstin e Arianit Murati kur kalon në seksione të tjera
             var bioSection = document.getElementById('bio-section');
             bioSection.style.display = 'none';
+            var translatorName = document.getElementById('translator-name');
+            translatorName.style.display = 'none';
         }
 
         function showBio() {
