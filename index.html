@@ -176,6 +176,14 @@
         height: 60px; /* Increase the height of the logo */
         margin: 0 20px;
     }
+    .bio-section {
+        display: none;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
 </style>
 </head>
 <body>
@@ -185,7 +193,7 @@
 
 <div class="navbar">
     <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
-        <span style="color: #fff;" id="translator-name">Arianit Murati</span>
+        <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">Arianit Murati</span>
         <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
     </span>
     <div class="center">
@@ -207,6 +215,11 @@
     </div>
 </div>
 
+<div class="bio-section" id="bio-section">
+    <h2>Biografia e Arianit Murati</h2>
+    <p>LOREM IPSUM</p>
+</div>
+
 <script>
     function toggleMenu() {
         var menu = document.getElementById('menu');
@@ -219,6 +232,11 @@
 
     function showSection(sectionId) {
         console.log('Shfaq seksionin:', sectionId);
+    }
+
+    function showBio() {
+        var bioSection = document.getElementById('bio-section');
+        bioSection.style.display = 'block';
     }
 </script>
     </div>
