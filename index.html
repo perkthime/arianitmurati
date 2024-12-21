@@ -243,40 +243,6 @@
                 Keni nevojë për përkthyes gjyqësor të besueshëm?
             </a> 
         </p>
-       <audio id="background-music" autoplay loop>
-    <source src="wicked game.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-
-<script>
-    document.getElementById('background-music').volume = 0.15;
-</script>
-    <script>
-        const backgroundMusic = document.getElementById('background-music');
-        backgroundMusic.volume = 0.2; // Vendosni volumin në 5%
-
-        const videos = document.querySelectorAll('iframe');
-
-        videos.forEach(video => {
-            video.addEventListener('play', () => {
-                backgroundMusic.pause();
-            });
-
-            video.addEventListener('ended', () => {
-                backgroundMusic.play();
-            });
-
-            video.addEventListener('pause', () => {
-                backgroundMusic.play();
-            });
-        });
-
-        // Kontrolloni nëse videoja është duke luajtur kur përdoruesi kalon diku tjetër
-        document.addEventListener('click', (event) => {
-            if (!event.target.closest('iframe')) {
-                backgroundMusic.play();
-            }
-        });
     </div>
    <script>
 function changeLanguage(lang) {
