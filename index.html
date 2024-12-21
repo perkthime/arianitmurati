@@ -32,8 +32,6 @@
         background-size: cover; /* Mbulo të gjithë elementin */
     }
     .navbar .left {
-        display: flex;
-        align-items: center;
         color: orange;
         font-size: 18px;
     }
@@ -44,7 +42,7 @@
     .navbar .right a,
     #services-button {
         display: inline-block;
-        color: white; /* Ndryshuar nga black në white */
+        color: white;
         text-align: center;
         padding: 0px 15px;
         text-decoration: none;
@@ -52,7 +50,8 @@
         box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); /* Hije për efekt futuristik */
         border-radius: 25px; /* Formë ovale */
         transition: transform 0.3s ease, box-shadow 0.3s ease; /* Kalim i butë për efektet */
-        margin: 0 0.8px; /* Shton distancë horizontale ndërmjet elementeve */
+        color: black; /* Ngjyra e tekstit në të zezë */
+        margin: 0 50px; /* Shton distancë horizontale ndërmjet elementeve */
     }
     .navbar .right a:hover,
     #services-button:hover {
@@ -189,17 +188,8 @@
 
 <div class="navbar">
     <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
-        <a href="biografia.html" target="_blank" style="color: #fff; text-decoration: none;">
-            <span id="translator-name">Arianit Murati</span>
-            <body>
-    <div class="container">
-        <h1>Biografia e Arianit Murati</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        <p>Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris. Integer in mauris eu nibh euismod gravida. Duis ac tellus et risus vulputate vehicula. Donec lobortis risus a elit. Etiam tempor. Ut ullamcorper, ligu...
-        </a>
-        <span style="color: #fff; margin-left: 10px;" id="translator-title">Përkthyes Gjyqësor</span>
-        <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin-left: 20px;"></a>
-        <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin-left: 10px;"></a>
+        <span style="color: #fff;" id="translator-name">Arianit Murati</span>
+        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
     </span>
     <div class="right" id="menu">
         <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
@@ -213,6 +203,10 @@
             </div>
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
+    </div>
+     <div class="center">
+        <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+        <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
     </div>
 </div>
 
