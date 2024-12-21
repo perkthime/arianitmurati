@@ -21,22 +21,19 @@
     @keyframes backgroundAnimation {
         0% { background-position: 0% 0%; }
     }
-     .navbar {
-            display: flex;
-            align-items: center;
-            background-color: #333;
-            padding: 10px;
-        }
-        .navbar .left {
-            display: flex;
-            align-items: center;
-            background: linear-gradient(to right, #1e1e1e, #3e3e3e);
-            padding: 2px 4px;
-            font-size: 12px;
-        }
-        .navbar .left #translator-title {
-            color: #fff;
-        }
+    .navbar {
+        background-color: transparent; /* Ndryshuar nga black në transparent */
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+        background-image: url('navbar-background.jpeg'); /* Shto sfondin këtu */
+        background-size: cover; /* Mbulo të gjithë elementin */
+    }
+    .navbar .left {
+        color: orange;
+        font-size: 18px;
     }
     .navbar .right {
         display: flex;
