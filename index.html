@@ -185,13 +185,6 @@
     
 </style>
 
-<div class="navbar">
-    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
-        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
-        <span style="color: orange; font-size: 18px;">Arianit Murati</span> <!-- New Name Added Here -->
-    </span>
-    <!-- Rest of your navigation bar code -->
-</div>
 
    
 </head>
@@ -201,6 +194,10 @@
         <div></div>
         <div></div>
     </div>
+   <div class="navbar">
+    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
+        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
+    </span>
     <div class="right" id="menu">
         <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
         <div class="dropdown">
@@ -213,7 +210,9 @@
             </div>
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
+        <span style="color: orange; font-size: 18px; margin-left: 20px;">Arianit Murati</span> <!-- New Name Added Here -->
     </div>
+</div>
 
     <script>
         function toggleMenu() {
