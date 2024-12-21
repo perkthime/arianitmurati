@@ -35,10 +35,11 @@
         color: orange;
         font-size: 18px;
     }
-    .navbar .center {
-        display: flex;
-        justify-content: flex-start; /* Zhvendos ikonat e flamujve në anën e majtë */
-    }
+   .navbar .center {
+    display: flex;
+    justify-content: flex-start; /* Zhvendos ikonat e flamujve në anën e majtë */
+    margin-left: 10px; /* Shton distancë të vogël nga e majta */
+}
     .navbar .right {
         display: flex;
         align-items: center;
@@ -92,9 +93,9 @@
         display: block;
         text-align: left;
     }
-    .dropdown-content a:hover {
-        background-color: orange;
-        color: black;
+   .dropdown-content a {
+    color: white; /* Ndryshon ngjyrën e tekstit në të bardhë */
+}
     }
     .dropdown:hover .dropdown-content {
         display: block;
@@ -106,8 +107,9 @@
         color: white;
         display: none;
     }
-    .welcome {
-        color: white;
+   #welcome-link, #services-button, #contact-link {
+    color: white; /* Ndryshon ngjyrën e tekstit në të bardhë */
+}
     }
     .highlight {
         border: 2px solid orange;
