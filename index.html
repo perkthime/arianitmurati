@@ -184,14 +184,15 @@
         background-color: rgba(0, 0, 0, 0.8);
         color: white;
     }
-    .center {
+  .center {
     display: flex;
     align-items: center;
-    margin-left: 10px; /* Shton hapësirë ndërmjet emrit dhe ikonave */
+    margin-left: 20px; /* Shton hapësirë ndërmjet tekstit dhe ikonave */
 }
 
 .center a {
     margin: 0 5px; /* Shton hapësirë ndërmjet ikonave */
+}
 }
 </style>
 </head>
@@ -201,12 +202,12 @@
 </style>
 
 <div class="navbar">
-    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
+    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px; display: flex; align-items: center;">
         <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
             <span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
         </span>
-        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
-        <div class="center">
+        <span style="color: #fff; margin-left: 10px;" id="translator-title">Përkthyes Gjyqësor</span>
+        <div class="center" style="margin-left: 20px;">
             <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
             <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
         </div>
