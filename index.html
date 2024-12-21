@@ -1,781 +1,244 @@
 
+
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
-  <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('pc.jpeg');
-            background-size: 100% 100%;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-            animation: backgroundAnimation 20s infinite alternate;
-        }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-        }
+<style>
+    /* Stilet ekzistuese */
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('pc.jpeg');
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        animation: backgroundAnimation 20s infinite alternate;
+    }
+    @keyframes backgroundAnimation {
+        0% { background-position: 0% 0%; }
+    }
+    .navbar {
+        background-color: transparent; /* Ndryshuar nga black në transparent */
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 20px;
+    }
+    .navbar .left {
+        color: orange;
+        font-size: 18px;
+    }
+    .navbar .right {
+        display: flex;
+        align-items: center;
+    }
+    .navbar .right a,
+    #services-button {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 0px 15px;
+        text-decoration: none;
+        background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); /* Gradient shumë i ndezur */
+        box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); /* Hije për efekt futuristik */
+        border-radius: 25px; /* Formë ovale */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Kalim i butë për efektet */
+        color: white; /* Ndryshuar ngjyra e tekstit në të bardhë */
+        margin: 0 20px; /* Shton distancë horizontale ndërmjet elementeve */
+    }
+    .navbar .right a:hover,
+    #services-button:hover {
+        transform: scale(1.1); /* Efekt zmadhimi i lehtë */
+        box-shadow: 0 6px 20px rgba(255, 69, 0, 1); /* Hije më e theksuar në hover */
+    }
+    .dropdown {
+        display: inline-block;
+        overflow: hidden;
+    }
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 50px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    .dropdown-content a:hover {
+        background-color: orange;
+        color: black;
+    }
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .content {
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        color: white;
+        display: none;
+    }
+    .welcome {
+        color: white;
+    }
+    .highlight {
+        border: 2px solid orange;
+        background-color: orange;
+        color: black;
+        padding: 5px;
+        display: inline-block;
+        text-decoration: none;
+        transition: transform 0.2s;
+    }
+    .highlight:hover {
+        transform: scale(1.1);
+    }
+    .main-text {
+        color: orange;
+        text-align: center;
+        margin-top: 20px;
+        font-size: 24px;
+    }
+    .image-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+    .social-container {
+        padding: 8px;
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        min-height: 52px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .social-links a {
+        margin: 0 10px;
+    }
+    .social-links img {
+        width: 30px;
+        height: 30px;
+    }
+    @media (max-width: 768px) {
         .navbar {
-            background-color: transparent;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px;
-        }
-        .navbar .left {
-            color: orange;
-            font-size: 18px;
+            flex-direction: column;
         }
         .navbar .right {
             display: flex;
+            flex-direction: column;
             align-items: center;
         }
-        .navbar .right a,
-        #services-button {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 0px 15px;
-            text-decoration: none;
-            background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7);
-            border-radius: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            color: white;
-            margin: 0 20px;
+        .navbar .right a {
+            padding: 10px;
         }
-        .navbar .right a:hover,
-        #services-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(255, 69, 0, 1);
-        }
-        .dropdown {
-            display: inline-block;
-            overflow: hidden;
-        }
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 50px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: black;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            float: none;
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        .dropdown-content a:hover {
-            background-color: orange;
-            color: black;
-        }
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        .content {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            color: white;
-            display: none;
-        }
-        .welcome {
-            color: white;
-        }
-        .highlight {
-            border: 2px solid orange;
-            background-color: orange;
-            color: black;
-            padding: 5px;
-            display: inline-block;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-        .highlight:hover {
-            transform: scale(1.1);
-        }
-        .main-text {
-            color: orange;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 24px;
-        }
-        .image-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-        .social-container {
-            padding: 8px;
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            min-height: 52px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .social-links a {
-            margin: 0 10px;
-        }
-        .social-links img {
-            width: 30px;
-            height: 30px;
-        }
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
-            }
-            .navbar .right {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            .navbar .right a {
-                padding: 10px;
-            }
-        }
-        @keyframes logoAnimation {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
-        .logo {
-            height: 60px;
-            margin: 0 20px;
-        }
-        .bio-section {
-            display: none;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-        }
-    </style>
+    }
+    @keyframes logoAnimation {
+        from { transform: scale(1); }
+        to { transform: scale(1.1); }
+    }
+    .logo {
+        height: 60px; /* Increase the height of the logo */
+        margin: 0 20px;
+    }
+    .bio-section {
+        display: none;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+    }
+</style>
 </head>
 <body>
-    <div class="navbar">
-        <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
-            <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">Arianit Murati</span>
-            <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
-        </span>
-        <div class="center">
-            <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
-            <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
-        </div>
-        <div class="right" id="menu">
-            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
-            <div class="dropdown">
-                <button class="dropbtn highlight-orange" id="services-button">Shërbime 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-                    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
-                </div>
+ <style>
+    
+</style>
+
+<div class="navbar">
+    <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
+        <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">Arianit Murati</span>
+        <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
+    </span>
+    <div class="center">
+        <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+        <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
+    </div>
+    <div class="right" id="menu">
+        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
+        <div class="dropdown">
+            <button class="dropbtn highlight-orange" id="services-button">Shërbime 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
             </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
         </div>
+        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
     </div>
+</div>
 
-    <div class="bio-section" id="bio-section">
-        <h2>Biografia e Arianit Murati</h2>
-        <p>LOREM IPSUM</p>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        function showSection(sectionId) {
-            console.log('Shfaq seksionin:', sectionId);
-            // Fsheh biografinë kur kalon në seksione të tjera
-            var bioSection = document.getElementById('bio-section');
-            bioSection.style.display = 'none';
-        }
-
-        function showBio() {
-            var bioSection = document.getElementById('bio-section');
-            bioSection.style.display = 'block';
-        }
-    </script>
-</script>
-    </div>
-    <div id="welcome" class="content welcome" style="display: block;"> 
-        <p> 
-            <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
-        </p> 
-        <p> 
-            <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
-                Keni nevojë për përkthyes gjyqësor të besueshëm?
-            </a> 
-        </p>
-        <audio id="background-music" autoplay loop>
-    <source src="Wicked Game-Clipchamp.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+<div class="bio-section" id="bio-section">
+    <h2>Biografia e Arianit Murati</h2>
+    <p>LOREM IPSUM</p>
+</div>
 
 <script>
-    document.getElementById('background-music').volume = 0.04;
+    function toggleMenu() {
+        var menu = document.getElementById('menu');
+        if (menu.style.display === 'block') {
+            menu.style.display = 'none';
+        } else {
+            menu.style.display = 'block';
+        }
+    }
+
+    function showSection(sectionId) {
+        console.log('Shfaq seksionin:', sectionId);
+    }
+
+    function showBio() {
+        var bioSection = document.getElementById('bio-section');
+        bioSection.style.display = 'block';
+    }
 </script>
-    </div>
-   <script>
-function changeLanguage(lang) {
-    if (lang === 'fr') {
-        document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
-        document.getElementById('welcome-link').innerText = 'Bienvenue';
-        document.getElementById('services-button').innerText = 'Services';
-        document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
-        document.getElementById('video-french').innerText = 'Clip vidéo en français';
-        document.getElementById('contact-link').innerText = 'Contactez';
-        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
-        
-        // Update the services section
-        document.querySelector('#services h1').innerText = 'Services';
-        document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
-        
-        // Remove background from services section
-        document.getElementById('services').style.background = 'none';
-        
-        // Update each service
-        const services = [
-            { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
-            { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
-            { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
-            { color: 'none', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
-            { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
-            { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
-        ];
-        
-        services.forEach((service, index) => {
-            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
-            serviceElement.querySelector('h3').innerText = service.title;
-            serviceElement.querySelector('p').innerText = service.description;
-            serviceElement.querySelector('div').style.backgroundColor = service.color;
-        });
-    } else if (lang === 'sq') {
-        // Existing Albanian content
-        document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
-        document.getElementById('welcome-link').innerText = 'Mirë se vini';
-        document.getElementById('services-button').innerText = 'Shërbime';
-        document.getElementById('video-albanian').innerText = 'Filmim në shqip';
-        document.getElementById('video-french').innerText = 'Filmim në frëngjisht';
-        document.getElementById('contact-link').innerText = 'Kontaktoni';
-        document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
-        
-        // Remove background from services section
-        document.getElementById('services').style.background = 'none';
-        
-        // Existing Albanian services content
-        document.querySelector('#services h1').innerText = 'Shërbimet';
-        document.querySelector('#services p').innerText = 'Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
-        
-        const services = [
-            { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
-            { color: 'none', title: 'Përkthime Mjekësore', description: 'Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.' },
-            { color: 'none', title: 'Përkthime Teknike', description: 'Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.' },
-            { color: 'none', title: 'Përkthime Financiare', description: 'Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.' },
-            { color: 'none', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
-            { color: 'none', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
-        ];
-        
-        services.forEach((service, index) => {
-            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
-            serviceElement.querySelector('h3').innerText = service.title;
-            serviceElement.querySelector('p').innerText = service.description;
-            serviceElement.querySelector('div').style.backgroundColor = service.color;
-        });
-    }
-}
-</script>
-</body>
-<style>
-    .static-text {
-        color: #fff; /* Ngjyra e bardhë */
-        font-family: 'Georgia', serif; /* Font elegant */
-        font-size: 16.8px; /* Madhësia e tekstit */
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Hije për elegancë */
-    }
-
-    .click-icon {
-        display: inline-block;
-        animation: move 1s infinite;
-        margin-right: 5px; /* Rregulloni hapësirën sipas nevojës */
-    }
-
-    @keyframes move {
-        0%, 20%, 50%, 80%, 100% {
-            transform: translateY(0);
-        }
-        40% {
-            transform: translateY(10px);
-        }
-        60% {
-            transform: translateY(5px);
-        }
-    }
-
-    .highlight-transparent {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 25px; /* Bën formën eliptike */
-        background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 69, 0, 0.5)); /* Gradient nga portokalli i lehtë në portokalli të ndezur */
-        text-align: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
-        transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Kalim i butë për efektin hover */
-        color: white; /* Ngjyra e bardhë për tekstin */
-        text-decoration: none; /* Largon nënvizimin */
-        font-family: 'Georgia', serif; /* Font elegant */
-    }
-
-    .highlight-transparent:hover {
-        background: linear-gradient(135deg, rgba(255, 165, 0, 0.5), rgba(255, 69, 0, 0.7)); /* Gradient më i ndezur në hover */
-        transform: scale(1.05); /* Shton një efekt të lehtë zmadhimi në hover */
-        color: black; /* Ndryshon ngjyrën e tekstit në të zezë */
-    }
-
-    .highlight {
-        display: inline-block;
-        padding: 10px 20px;
-        border-radius: 25px; /* Bën formën eliptike */
-        background-color: rgba(255, 255, 255, 0.1); /* Ngjyrë e bardhë transparente */
-        text-align: center;
-        box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* Efekt ndriçimi portokalli */
-        transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
-        font-family: 'Georgia', serif; /* Font elegant */
-    }
-
-    .highlight:hover {
-        background-color: rgba(255, 255, 255, 0.2); /* Ndryshon në një të bardhë më të ndezur në hover */
-    }
-
-    .no-underline {
-        text-decoration: none; /* Largon nënvizimin */
-    }
-</style>
-    </div>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontaktoni</title>
-    <style>
-        #contact p:hover {
-            cursor: pointer;
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div id="contact" class="content">
-      
-        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
-            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
-        </p>
-        <p onclick="window.location.href='tel:+38345569246'">
-            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
-        </p>
-    </div>
-</body>
-</html>
-</body>
-</html>
-
-    <div id="services" class="content services">
-        <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
-        
-        <h1>Shërbimet</h1>
-        
-        <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-    </div>
-  </div>
-</div>
-<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Ligjore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Mjekësore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Teknike</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime Financiare</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime të Marketingut</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
-    </div>
-    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
-        <div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display: inline-block;"></div>
-        <h3 style="color: orange;">Përkthime të Etiketave Ushqimore</h3>
-      </div>
-      <p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
-    </div>
-  </div>
-</div>
-</div>
-<script type="text/javascript">
-  // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
-  if (navigator.userAgent.match(/IEMobile/10.0/)) {
-    var msViewportStyle = document.createElement("style");
-    msViewportStyle?.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
-    document.getElementsByTagName("head")[0]?.appendChild(msViewportStyle);
-  }
-</script>
-
-    </div>
-
-    <style>
-    .content {
-        text-align: center;
-    }
-    iframe {
-        width: 80%;
-        height: 450px;
-    }
-</style>
-
-<div id="service1" class="content service1">
-    
-    
-    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div id="service2" class="content service2">
- 
- 
-    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-    <div id="service2" class="content service2">
-       
-        <p>Detajet e Video në frëngjisht.</p>
-        <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-<div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="social-links" style="text-align: left;">
-        <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile of Arianit Murati">
-        </a>
-<a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile of Arianit Murati">
-        </a>
-       
-    </div>
-      
-   
-<div style="text-align: right; flex-grow: 1; color: rgba(255, 255, 255, 0.1); margin-right: 20px; font-family: 'Helvetica Neue', sans-serif;">
-    COPYRIGHT 2024. TË GJITHA TË DREJTAT E REZERVUARA.
-</div>
-    <img src="Designer.png" alt="Logo" class="logo"> <!-- Logo with red dot -->
-        </span>   
-</div>
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('.content').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
-</body>
-</html>
-
-
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faqja Ime Personale</title>
-   <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-image: url('pc.jpeg');
-            background-size: 100% 100%;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 0;
-            animation: backgroundAnimation 20s infinite alternate;
-        }
-        @keyframes backgroundAnimation {
-            0% { background-position: 0% 0%; }
-        }
-        .navbar {
-            background-color: transparent;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 14px 20px;
-        }
-        .navbar .left {
-            color: orange;
-            font-size: 18px;
-        }
-        .navbar .right {
-            display: flex;
-            align-items: center;
-        }
-        .navbar .right a,
-        #services-button {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 0px 15px;
-            text-decoration: none;
-            background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7);
-            border-radius: 25px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            color: white;
-            margin: 0 20px;
-        }
-        .navbar .right a:hover,
-        #services-button:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 20px rgba(255, 69, 0, 1);
-        }
-        .dropdown {
-            display: inline-block;
-            overflow: hidden;
-        }
-        .dropdown .dropbtn {
-            font-size: 16px;
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 50px;
-            background-color: inherit;
-            font-family: inherit;
-            margin: 0;
-        }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: black;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        .dropdown-content a {
-            float: none;
-            color: white;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left.
-        }
-        .dropdown-content a:hover {
-            background-color: orange;
-            color: black.
-        }
-        .dropdown:hover .dropdown-content {
-            display: block.
-        }
-        .content {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            color: white;
-            display: none.
-        }
-        .welcome {
-            color: white.
-        }
-        .highlight {
-            border: 2px solid orange;
-            background-color: orange;
-            color: black;
-            padding: 5px;
-            display: inline-block;
-            text-decoration: none;
-            transition: transform 0.2s.
-        }
-        .highlight:hover {
-            transform: scale(1.1).
-        }
-        .main-text {
-            color: orange;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 24px.
-        }
-        .image-container {
-            text-align: center;
-            margin-top: 20px.
-        }
-        .image-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px.
-        }
-        .social-container {
-            padding: 8px;
-            margin: 20px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-            min-height: 52px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.5).
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            align-items: center.
-        }
-        .social-links a {
-            margin: 0 10px.
-        }
-        .social-links img {
-            width: 30px;
-            height: 30px.
-        }
-        @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column.
-            }
-            .navbar .right {
-                display: flex;
-                flex-direction: column;
-                align-items: center.
-            }
-            .navbar .right a {
-                padding: 10px.
-            }
-        }
-        @keyframes logoAnimation {
-            from { transform: scale(1); }
-            to { transform: scale(1.1); }
-        }
-        .logo {
-            height: 60px;
-            margin: 0 20px.
-        }
-        .bio-section {
-            display: none;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white.
-        }
-    </style>
-</head>
-<body>
-    <div class="navbar">
-        <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
-            <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">Arianit Murati</span>
-            <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
-        </span>
-        <div class="center">
-            <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
-            <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
-        </div>
-        <div class="right" id="menu">
-            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
-            <div class="dropdown">
-                <button class="dropbtn highlight-orange" id="services-button">Shërbime 
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-                    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
-                </div>
-            </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
-        </div>
-    </div>
-
-    <div class="bio-section" id="bio-section">
-        <h2>Biografia e Arianit Murati</h2>
-        <p>LOREM IPSUM</p>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            var menu = document.getElementById('menu');
-            if (menu.style.display === 'block') {
-                menu.style.display = 'none';
-            } else {
-                menu.style.display = 'block';
-            }
-        }
-
-        function showSection(sectionId) {
-            console.log('Shfaq seksionin:', sectionId);
-            // Fsheh biografinë kur kalon në seksione të tjera
-            var bioSection = document.getElementById('bio-section');
-            bioSection.style.display = 'none';
-        }
-
-        function showBio() {
-            var bioSection = document.getElementById('bio-section');
-            bioSection.style.display = 'block';
-        }
-    </script>
-    </script>
     </div>
     <div id="welcome" class="content welcome" style="display: block;"> 
         <p> 
