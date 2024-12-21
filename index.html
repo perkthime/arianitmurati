@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
-<style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-image: url('pc.jpeg');
@@ -105,6 +105,31 @@
             color: white;
             height: 100vh;
         }
+        .social-container {
+            padding: 8px;
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            min-height: 52px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .social-links a {
+            margin: 0 10px;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -138,6 +163,14 @@
         <a href="#" onclick="hideBio()">Kthehu prapa</a>
     </div>
 
+    <div class="social-container">
+        <div class="social-links">
+            <a href="#"><img src="facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="twitter.png" alt="Twitter"></a>
+            <a href="#"><img src="instagram.png" alt="Instagram"></a>
+        </div>
+    </div>
+
     <script>
         function showSection(sectionId) {
             console.log('Shfaq seksionin:', sectionId);
@@ -152,7 +185,7 @@
         function hideBio() {
             var bioSection = document.getElementById('bio-section');
             bioSection.style.display = 'none';
-            document.body.style.backgroundImage = "url('https://images.pexels.com/photos/164357/pexels-photo-164357.jpegpc.jpeg')";
+            document.body.style.backgroundImage = "url('pc.jpeg')";
         }
     </script>
     </div>
