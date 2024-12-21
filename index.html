@@ -32,6 +32,8 @@
         background-size: cover; /* Mbulo të gjithë elementin */
     }
     .navbar .left {
+        display: flex;
+        align-items: center;
         color: orange;
         font-size: 18px;
     }
@@ -190,11 +192,9 @@
     <span class="left futuristic-background" style="font-size: 12px; padding: 2px 4px;">
         <span style="color: #fff;" id="translator-name">Arianit Murati</span>
         <span style="color: #fff;" id="translator-title">Përkthyes Gjyqësor</span>
-    </span>
-     <div class="center">
         <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 10px;"></a>
         <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 10px;"></a>
-    </div>
+    </span>
     <div class="right" id="menu">
         <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
         <div class="dropdown">
@@ -208,7 +208,6 @@
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
     </div>
-     
 </div>
 
 <script>
@@ -225,6 +224,7 @@
         console.log('Shfaq seksionin:', sectionId);
     }
 </script>
+
     </div>
     <div id="welcome" class="content welcome" style="display: block;"> 
         <p> 
