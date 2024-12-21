@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faqja Ime Personale</title>
-<style>
+ <style>
         body {
             font-family: Arial, sans-serif;
             background-image: url('pc.jpeg');
@@ -211,7 +211,8 @@
     </div>
 
     <div class="bio-section" id="bio-section">
-        <!-- Përmbajtja e biografisë është hequr -->
+        <h2>Biografia e Arianit Murati</h2>
+        <p>LOREM IPSUM</p>
     </div>
 
     <script>
@@ -226,8 +227,9 @@
 
         function showSection(sectionId) {
             console.log('Shfaq seksionin:', sectionId);
-            // Kthimi në faqen kryesore
-            window.location.href = 'index.html';
+            // Fsheh biografinë kur kalon në seksione të tjera
+            var bioSection = document.getElementById('bio-section');
+            bioSection.style.display = 'none';
         }
 
         function showBio() {
