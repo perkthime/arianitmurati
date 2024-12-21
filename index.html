@@ -11,21 +11,28 @@
     /* Stilet ekzistuese */
     body {
         font-family: Arial, sans-serif;
-        background-color: orange; /* Sfondi ngjyrë portokalli */
+        background-image: url('pc.jpeg');
+        background-size: 100% 100%;
+        background-attachment: fixed;
         margin: 0;
         padding: 0;
+        animation: backgroundAnimation 20s infinite alternate;
+    }
+    @keyframes backgroundAnimation {
+        0% { background-position: 0% 0%; }
     }
     .navbar {
-        background-color: transparent;
+        background-color: transparent; /* Ndryshuar nga black në transparent */
         overflow: hidden;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 14px 20px;
-        background-color: orange; /* Sfondi ngjyrë portokalli */
+        background-image: url('navbar-background.jpeg'); /* Shto sfondin këtu */
+        background-size: cover; /* Mbulo të gjithë elementin */
     }
     .navbar .left {
-        color: white;
+        color: orange;
         font-size: 18px;
     }
     .navbar .right {
@@ -39,17 +46,17 @@
         text-align: center;
         padding: 0px 15px;
         text-decoration: none;
-        background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));
-        box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7);
-        border-radius: 25px;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        color: black;
-        margin: 0 50px;
+        background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); /* Gradient shumë i ndezur */
+        box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); /* Hije për efekt futuristik */
+        border-radius: 25px; /* Formë ovale */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Kalim i butë për efektet */
+        color: black; /* Ngjyra e tekstit në të zezë */
+        margin: 0 50px; /* Shton distancë horizontale ndërmjet elementeve */
     }
     .navbar .right a:hover,
     #services-button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(255, 69, 0, 1);
+        transform: scale(1.1); /* Efekt zmadhimi i lehtë */
+        box-shadow: 0 6px 20px rgba(255, 69, 0, 1); /* Hije më e theksuar në hover */
     }
     .dropdown {
         display: inline-block;
@@ -168,10 +175,11 @@
         to { transform: scale(1.1); }
     }
     .logo {
-        height: 30px;
+        height: 30px; /* Increase the height of the logo */
         margin: 0 15px;
     }
 </style>
+
 </head>
 <body>
  <style>
