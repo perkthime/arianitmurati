@@ -297,6 +297,7 @@ Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në m�
    <script>
 function changeLanguage(lang) {
     if (lang === 'fr') {
+        document.getElementById('translator-title').innerText = 'Arianit Murati';
         document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
         document.getElementById('welcome-link').innerText = 'Bienvenue';
         document.getElementById('services-button').innerText = 'Services';
@@ -305,15 +306,21 @@ function changeLanguage(lang) {
         document.getElementById('contact-link').innerText = 'Contactez';
         document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
         
+     
+        
         // Update the services section
+        document.querySelector('#bio-section h2 span').innerText = 'Traducteur judiciaire et professeur de langue française';
         document.querySelector('#services h1').innerText = 'Services';
         document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
+        
+        
         
         // Remove background from services section
         document.getElementById('services').style.background = 'none';
         
         // Update each service
         const services = [
+            
             { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
             { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
             { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
@@ -330,6 +337,7 @@ function changeLanguage(lang) {
         });
     } else if (lang === 'sq') {
         // Existing Albanian content
+        document.getElementById('translator-title').innerText = 'MURATI Arianit';
         document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
         document.getElementById('welcome-link').innerText = 'Mirë se vini';
         document.getElementById('services-button').innerText = 'Shërbime';
