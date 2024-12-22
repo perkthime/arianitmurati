@@ -328,6 +328,9 @@ function changeLanguage(lang) {
             serviceElement.querySelector('p').innerText = service.description;
             serviceElement.querySelector('div').style.backgroundColor = service.color;
         });
+          // Update the bio section
+        document.querySelector('#bio-section h2 span').innerText = 'Traducteur Assermenté et Enseignant de la Langue Française';
+        document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur assermenté et enseignant de la langue française avec une vaste expérience académique et professionnelle...'; // Continue with the French bio description
     } else if (lang === 'sq') {
         // Existing Albanian content
         document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
@@ -360,8 +363,12 @@ function changeLanguage(lang) {
             serviceElement.querySelector('p').innerText = service.description;
             serviceElement.querySelector('div').style.backgroundColor = service.color;
         });
+         // Update the bio section
+        document.querySelector('#bio-section h2 span').innerText = 'Përkthyes Gjyqësor dhe Mësimdhënës i Gjuhës Frënge';
+        document.querySelector('#bio-section p').innerText = 'Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale...'; // Continue with the Albanian bio description
     }
 }
+
 </script>
 
 <script>
