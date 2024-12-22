@@ -239,18 +239,15 @@
             <button class="dropbtn highlight-orange" id="services-button">Shërbime 
                 <i class="fa fa-caret-down"></i>
             </button>
-            <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
-            </div>
-        </div>
-        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
-    </div>
+         <div class="dropdown-content">
+    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
+    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
 </div>
+<a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
 
 <div class="bio-section" id="bio-section">
-    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Përkthyes Gjyqësor dhe Mësimdhënës i Gjuhës Frënge</span></h2>
-    <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge.
+    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;" id="translator-title">Përkthyes Gjyqësor dhe Mësimdhënës i Gjuhës Frënge</span></h2>
+    <p id="bio-text">Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge.
 Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning)
 Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij.
 Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
@@ -274,7 +271,6 @@ Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në m�
         var bioSection = document.getElementById('bio-section');
         bioSection.style.display = 'block';
     }
-</script>
     </div>
     <div id="welcome" class="content welcome" style="display: block;"> 
         <p> 
@@ -295,8 +291,10 @@ Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në m�
 </script>
     </div>
    <script>
-function changeLanguage(lang) {
-    if (lang === 'fr') {
+ function changeLanguage(lang) {
+        if (lang === 'fr') {
+            document.getElementById('translator-title').innerText = 'Traducteur Assermenté et Enseignant de la Langue Française';
+            document.getElementById('bio-text').innerHTML = 'Arianit Murati est traducteur assermenté et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l\'Université de Pristina, où il a acquis une solide base en langue et culture françaises.<br>Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning)<br>Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij.<br>Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.';
         document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
         document.getElementById('welcome-link').innerText = 'Bienvenue';
         document.getElementById('services-button').innerText = 'Services';
@@ -329,7 +327,8 @@ function changeLanguage(lang) {
             serviceElement.querySelector('div').style.backgroundColor = service.color;
         });
     } else if (lang === 'sq') {
-        // Existing Albanian content
+            document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor dhe Mësimdhënës i Gjuhës Frënge';
+            document.getElementById('bio-text').innerHTML = 'Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge.<br>Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning)<br>Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij.<br>Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.';
         document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
         document.getElementById('welcome-link').innerText = 'Mirë se vini';
         document.getElementById('services-button').innerText = 'Shërbime';
