@@ -248,18 +248,12 @@
     </div>
 </div>
 
-<div class="dropdown-content">
-    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Clip vidéo en français</a>
-</div>
-<a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Contactez</a>
-
 <div class="bio-section" id="bio-section">
-    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Traducteur Assermenté et Enseignant de la Langue Française</span></h2>
-    <p>Arianit Murati est traducteur assermenté et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l'Université de Pristina, où il a acquis une solide base en langue et culture françaises.
-Sa passion pour les langues l'a conduit à l'Université Paris 8, où il a poursuivi des études en Sciences du Langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning).
-Actuellement, il est enseignant de la langue française au lycée "Ulpiana" à Lipjan, où il s'efforce d'inspirer et d'éduquer les jeunes générations en langue et culture françaises. En outre, il sert de traducteur assermenté, offrant des services de traduction précis et fiables à ses clients.
-Avec un engagement profond envers la langue et une riche expérience en enseignement et en traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.</p>
+    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Përkthyes Gjyqësor dhe Mësimdhënës i Gjuhës Frënge</span></h2>
+    <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge.
+Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning)
+Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij.
+Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
 </div>
 
 <script>
@@ -280,74 +274,94 @@ Avec un engagement profond envers la langue et une riche expérience en enseigne
         var bioSection = document.getElementById('bio-section');
         bioSection.style.display = 'block';
     }
+</script>
+    </div>
+    <div id="welcome" class="content welcome" style="display: block;"> 
+        <p> 
+            <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
+        </p> 
+        <p> 
+            <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
+                Keni nevojë për përkthyes gjyqësor të besueshëm?
+            </a> 
+        </p>
+        <audio id="background-music" autoplay loop>
+    <source src="Wicked Game-Clipchamp.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 
-    function changeLanguage(lang) {
-        if (lang === 'fr') {
-            document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
-            document.getElementById('welcome-link').innerText = 'Bienvenue';
-            document.getElementById('services-button').innerText = 'Services';
-            document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
-            document.getElementById('video-french').innerText = 'Clip vidéo en français';
-            document.getElementById('contact-link').innerText = 'Contactez';
-            document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
-            
-            // Update the services section
-            document.querySelector('#services h1').innerText = 'Services';
-            document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
-            
-            // Remove background from services section
-            document.getElementById('services').style.background = 'none';
-            
-            // Update each service
-            const services = [
-                { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
-                { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
-                { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
-                { color: 'none', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
-                { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
-                { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
-            ];
-            
-            services.forEach((service, index) => {
-                const serviceElement = document.querySelectorAll('.col-lg-6')[index];
-                serviceElement.querySelector('h3').innerText = service.title;
-                serviceElement.querySelector('p').innerText = service.description;
-                serviceElement.querySelector('div').style.backgroundColor = service.color;
-            });
-        } else if (lang === 'sq') {
-            // Existing Albanian content
-            document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
-            document.getElementById('welcome-link').innerText = 'Mirë se vini';
-            document.getElementById('services-button').innerText = 'Shërbime';
-            document.getElementById('video-albanian').innerText = 'Filmim në shqip';
-            document.getElementById('video-french').innerText = 'Filmim në frëngjisht';
-            document.getElementById('contact-link').innerText = 'Kontaktoni';
-            document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
-            
-            // Remove background from services section
-            document.getElementById('services').style.background = 'none';
-            
-            // Existing Albanian services content
-            document.querySelector('#services h1').innerText = 'Shërbimet';
-            document.querySelector('#services p').innerText = 'Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
-            
-            const services = [
-                { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
-                { color: 'none', title: 'Përkthime Mjekësore', description: 'Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.' },
-                { color: 'none', title: 'Përkthime Teknike', description: 'Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.' },
-                { color: 'none', title: 'Përkthime Financiare', description: 'Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.' },
-                { color: 'none', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
-                { color: 'none', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
-            ];
-            
-            services.forEach((service, index) => {
-                const serviceElement = document.querySelectorAll('.col-lg-6')[index];
-                serviceElement.querySelector('h3').innerText = service.title;
-                serviceElement.querySelector('p').innerText = service.description;
-                serviceElement.querySelector('div').style.backgroundColor = service.color;
-            });
-        }
+<script>
+    document.getElementById('background-music').volume = 0.04;
+</script>
+    </div>
+   <script>
+function changeLanguage(lang) {
+    if (lang === 'fr') {
+        document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
+        document.getElementById('welcome-link').innerText = 'Bienvenue';
+        document.getElementById('services-button').innerText = 'Services';
+        document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
+        document.getElementById('video-french').innerText = 'Clip vidéo en français';
+        document.getElementById('contact-link').innerText = 'Contactez';
+        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
+        
+        // Update the services section
+        document.querySelector('#services h1').innerText = 'Services';
+        document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
+        
+        // Remove background from services section
+        document.getElementById('services').style.background = 'none';
+        
+        // Update each service
+        const services = [
+            { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
+            { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
+            { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
+            { color: 'none', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
+            { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
+            { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
+        ];
+        
+        services.forEach((service, index) => {
+            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
+            serviceElement.querySelector('h3').innerText = service.title;
+            serviceElement.querySelector('p').innerText = service.description;
+            serviceElement.querySelector('div').style.backgroundColor = service.color;
+        });
+    } else if (lang === 'sq') {
+        // Existing Albanian content
+        document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
+        document.getElementById('welcome-link').innerText = 'Mirë se vini';
+        document.getElementById('services-button').innerText = 'Shërbime';
+        document.getElementById('video-albanian').innerText = 'Filmim në shqip';
+        document.getElementById('video-french').innerText = 'Filmim në frëngjisht';
+        document.getElementById('contact-link').innerText = 'Kontaktoni';
+        document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
+        
+        // Remove background from services section
+        document.getElementById('services').style.background = 'none';
+        
+        // Existing Albanian services content
+        document.querySelector('#services h1').innerText = 'Shërbimet';
+        document.querySelector('#services p').innerText = 'Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
+        
+        const services = [
+            { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
+            { color: 'none', title: 'Përkthime Mjekësore', description: 'Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.' },
+            { color: 'none', title: 'Përkthime Teknike', description: 'Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.' },
+            { color: 'none', title: 'Përkthime Financiare', description: 'Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.' },
+            { color: 'none', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
+            { color: 'none', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
+        ];
+        
+        services.forEach((service, index) => {
+            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
+            serviceElement.querySelector('h3').innerText = service.title;
+            serviceElement.querySelector('p').innerText = service.description;
+            serviceElement.querySelector('div').style.backgroundColor = service.color;
+        });
     }
+}
 </script>
 
 <script>
