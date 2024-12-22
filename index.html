@@ -217,7 +217,7 @@
 }
 </style>
 </head>
-        <style>
+       <style>
         /* Sfondi për seksionin e biografisë */
         #bio-section {
             background: url('am1.1.png') no-repeat center center fixed;
@@ -228,10 +228,11 @@
             width: 100%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Qendron tekstin vertikalisht */
+            justify-content: flex-start; /* Ngrit përmbajtjen lart */
             align-items: center; /* Qendron tekstin horizontalisht */
             text-align: center; /* Qendron tekstin brenda seksionit */
             box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
+            padding-top: 50px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
         }
 
         /* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
@@ -239,12 +240,6 @@
             font-size: 70%;
             max-width: 90%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
             word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
-        }
-
-        /* Rregullimi i pozicionit të pjesës së kërkuar */
-        .click-icon {
-            position: relative;
-            top: -50px; /* Rrit vlerën për të ngritur më lart */
         }
     </style>
 <body>
