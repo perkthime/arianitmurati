@@ -178,8 +178,8 @@
         to { transform: scale(1.1); }
     }
     .logo {
-        height: 30px; /* Increase the height of the logo */
-        margin: 0 25px;
+        height: 60px; /* Increase the height of the logo */
+        margin: 0 20px;
     }
     .bio-section {
         display: none;
@@ -217,31 +217,16 @@
 }
 </style>
 </head>
-      <style>
+       <style>
         /* Sfondi për seksionin e biografisë */
         #bio-section {
-            background: url('marcher.png') no-repeat center center fixed;
+            background: url('am1.1.png') no-repeat center center fixed;
             background-size: cover; /* Siguron që imazhi të mbulojë të gjithë seksionin */
             color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
             padding: 20px;
             min-height: 100vh; /* Siguron që seksioni të ketë të paktën lartësinë e dritares së shfletuesit */
             width: 100%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Ngrit përmbajtjen lart */
-            align-items: center; /* Qendron tekstin horizontalisht */
-            text-align: center; /* Qendron tekstin brenda seksionit */
-            box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
-            padding-top: 50px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
         }
-
-        /* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
-        #bio-section h2 span, #bio-section p {
-            font-size: 70%;
-            max-width: 90%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
-            word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
-        }
-    </style>
 <body>
  <style>
     
@@ -272,23 +257,15 @@
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
     </div>
 </div>
- <!-- Faqja e Arianit Murati -->
-    <div class="bio-section" id="bio-section">
-        <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
-        <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
-    </div>
 
-     <script>
-        // Kontrollon faqen aktuale dhe fsheh ose shfaq përmbajtjen përkatëse
-        document.addEventListener('DOMContentLoaded', function() {
-            var path = window.location.pathname;
-            if (path.includes('arianit-murati')) {
-                document.getElementById('homepage').style.display = 'none';
-            } else {
-                document.getElementById('bio-section').style.display = 'none';
-            }
-        });
-    </script>
+<div class="bio-section" id="bio-section">
+    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
+    <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge.
+Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning)
+Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij.
+Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
+</div>
+
 <script>
     function toggleMenu() {
         var menu = document.getElementById('menu');
@@ -308,12 +285,14 @@
         bioSection.style.display = 'block';
     }
 </script>
-   <body class="arianit-murati">
-    <!-- Faqja kryesore -->
-    <div id="welcome" class="content welcome">
-        <p><span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span></p>
-        <p><a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
     </div>
+    <div id="welcome" class="content welcome" style="display: block;"> 
+        <p> 
+            <span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span> 
+        </p> 
+        <p> 
+            <a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link"> 
+                Keni nevojë për përkthyes gjyqësor të besueshëm?
             </a> 
         </p>
         <audio id="background-music" autoplay loop>
@@ -361,7 +340,7 @@ function changeLanguage(lang) {
         });
            // Update the bio section
         document.querySelector('#bio-section h2 span').innerText = 'Quelques mots...';
-        document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur juridique et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l\'Université de Pristina, où il a acquis une solide base en langue et culture françaises. Sa passion pour les langues l\'a conduit à l\'Université Paris 8, où il a poursuivi des études en Sciences du Langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l\'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning). Actuellement, il est enseignant de la langue française au lycée "Ulpiana" à Lipjan, où il s\'efforce d\'inspirer et d\'éduquer les jeunes générations en langue et culture françaises. En outre, il travaille comme traducteur juridique, offrant des services de traduction précis et fiables à ses clients. Avec un engagement profond envers la langue et une riche expérience en enseignement et traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.';
+        document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur juridique et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l\'Université de Pristina, où il a acquis une solide base en langue et culture françaises. Sa passion pour les langues l\'a conduit à l\'Université Paris 8, où il a poursuivi des études en Sciences du Langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l\'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning). Actuellement, il est enseignant de la langue française au lycée "Ulpiana" à Lipjan, où il s\'efforce d\'inspirer et d\'éduquer les jeunes générations en langue et culture françaises. En outre, il sert comme traducteur juridique, offrant des services de traduction précis et fiables à ses clients. Avec un engagement profond envers la langue et une riche expérience en enseignement et traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.';
     } else if (lang === 'sq') {
         // Existing Albanian content
         document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
@@ -377,7 +356,7 @@ function changeLanguage(lang) {
         
         // Existing Albanian services content
         document.querySelector('#services h1').innerText = 'Shërbimet';
-        document.querySelector('#services p').innerText = 'Besoni profesionalizmit tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
+        document.querySelector('#services p').innerText = 'Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
         
         const services = [
             { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
@@ -651,4 +630,5 @@ function showSection(sectionId) {
 </script>
 </body>
 </html>
+
 
