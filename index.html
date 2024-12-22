@@ -321,7 +321,6 @@ function changeLanguage(lang) {
         
         // Update each service
         const services = [
-            
             { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
             { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
             { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
@@ -329,6 +328,7 @@ function changeLanguage(lang) {
             { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
             { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
         ];
+        const frenchText = "Arianit Murati est un traducteur juridique et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l'Université de Pristina, où il a acquis une solide base en langue et culture françaises. Sa passion pour les langues l'a conduit à l'Université Paris 8, où il a poursuivi des études en Sciences du Langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning). Actuellement, il est enseignant de la langue française au lycée 'Ulpiana' à Lipjan, où il s'efforce d'inspirer et d'éduquer les jeunes générations en langue et culture françaises. En outre, il sert comme traducteur juridique, offrant des services de traduction précis et fiables à ses clients. Avec un engagement profond envers la langue et une riche expérience en enseignement et traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.";
         
         services.forEach((service, index) => {
             const serviceElement = document.querySelectorAll('.col-lg-6')[index];
@@ -364,6 +364,8 @@ function changeLanguage(lang) {
             { color: 'none', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
             { color: 'none', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
         ];
+        const albanianText = "Arianit Murati është një përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin 'Ulpiana' në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.";
+
         
         services.forEach((service, index) => {
             const serviceElement = document.querySelectorAll('.col-lg-6')[index];
