@@ -297,6 +297,7 @@ Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në m�
    <script>
 function changeLanguage(lang) {
     if (lang === 'fr') {
+        document.getElementById('translator-title').innerText = 'Arianit Murati';
         document.getElementById('translator-title').innerText = 'Traducteur Assermenté';
         document.getElementById('welcome-link').innerText = 'Bienvenue';
         document.getElementById('services-button').innerText = 'Services';
@@ -333,6 +334,7 @@ function changeLanguage(lang) {
         });
     } else if (lang === 'sq') {
         // Existing Albanian content
+        document.getElementById('translator-title').innerText = 'Arianit Murati';
         document.getElementById('translator-title').innerText = 'Përkthyes Gjyqësor';
         document.getElementById('welcome-link').innerText = 'Mirë se vini';
         document.getElementById('services-button').innerText = 'Shërbime';
