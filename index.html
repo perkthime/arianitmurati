@@ -244,6 +244,14 @@
             max-width: 90%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
             word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
         }
+          <style>
+    .navbar a:hover, .navbar button:hover {
+        background: linear-gradient(135deg, rgba(0, 255, 0, 1), rgba(0, 128, 0, 1));
+        color: white;
+        box-shadow: 0 4px 15px rgba(0, 255, 0, 0.7);
+        transition: background 0.3s ease, box-shadow 0.3s ease;
+    }
+</style>
     </style>
 <body>
  <style>
@@ -264,7 +272,7 @@
     <div class="right" id="menu" style="display: flex; align-items: center;">
         <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
         <div class="dropdown">
-            <button class="dropbtn highlight-orange" id="services-button">Shërbime 
+            <button class="dropbtn highlight-orange" id="services-button" onclick="showSection('services')">Shërbime 
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
