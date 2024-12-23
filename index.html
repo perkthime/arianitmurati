@@ -89,7 +89,7 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        text-align: center;
+        text-align: left;
     }
     .dropdown-content a:hover {
         background-color: orange;
@@ -109,7 +109,7 @@
         color: white;
     }
     .highlight {
-        border: none;
+        border: 2px solid orange;
         background-color: orange;
         color: black;
         padding: 5px;
@@ -216,34 +216,7 @@
     }
 }
 </style>
-
-<style>
-#bio-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: none;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-#bio-section p {
-    display: inline-block;
-    border: none;
-    padding: 5px;
-}
-</style>
-<style>
-.centered-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
-}
-</style>
+</head>
       <style>
         /* Sfondi për seksionin e biografisë */
            .content {
@@ -465,12 +438,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
-</script>
 </body>
 <style>
     .static-text {
@@ -546,24 +513,6 @@ document.addEventListener('DOMContentLoaded', function() {
             text-decoration: underline;
         }
     </style>
-
-<style>
-#bio-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: none;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-#bio-section p {
-    display: inline-block;
-    border: none;
-    padding: 5px;
-}
-</style>
 </head>
 <body>
     <div id="contact" class="content">
@@ -585,12 +534,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
-</script>
 </body>
 </html>
 
@@ -603,12 +546,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
-</script>
 </body>
 </html>
 
@@ -618,13 +555,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <h1>Shërbimet</h1>
         
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
+<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
     </div>
   </div>
 </div>
-<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
+<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
       <div style="text-align: center;">
@@ -692,23 +629,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 </style>
 
-<div id="service1" class="content service1">
+
+
     
-    
-    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div id="service2" class="content service2">
- 
- 
-    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-    <div id="service2" class="content service2">
-       
-        <p>Detajet e Video në frëngjisht.</p>
-        <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
 <div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="social-links" style="text-align: center;">
+    <div class="social-links" style="text-align: left;">
         <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile">
         </a>
@@ -739,11 +664,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
-</script>
 </body>
 </html>
+
