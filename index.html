@@ -292,8 +292,23 @@
                 document.getElementById('bio-section').style.display = 'none';
             }
         });
-    </script>
-<script>
+    <script>
+  function changeLanguage(lang) {
+    if (lang === 'sq') {
+      document.getElementById('video-albanian').style.display = 'block';
+      document.getElementById('video-french').style.display = 'none';
+    } else if (lang === 'fr') {
+      document.getElementById('video-albanian').style.display = 'none';
+      document.getElementById('video-french').style.display = 'block';
+    }
+  }
+
+  // Shembull për të ndryshuar gjuhën në shqip
+  changeLanguage('sq');
+
+  // Shembull për të ndryshuar gjuhën në frëngjisht
+  // changeLanguage('fr');
+</script>
     function toggleMenu() {
         var menu = document.getElementById('menu');
         if (menu.style.display === 'block') {
