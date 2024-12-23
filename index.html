@@ -704,10 +704,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </head>
 <body>
+    <div id="text-sq">Filmim në shqip</div>
+    <div id="text-fr" style="display: none;">Clip video en albanais</div>
     <div id="service1" class="content service1">
         <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-    <div id="service2" class="content service2">
+    <div id="service2" class="content service2" style="display: none;">
         <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
     <div id="service2" class="content service2">
@@ -736,6 +738,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
             document.getElementById(sectionId).style.display = 'block';
         }
+    </script>
+    document.addEventListener('DOMContentLoaded', function() {
+            var lang = document.documentElement.lang;
+            if (lang === 'sq') {
+                document.getElementById('service1').style.display = 'block';
+                document.getElementById('service2').style.display = 'none';
+                document.getElementById('text-fr').style.display = 'none';
+                document.getElementById('text-sq').style.display = 'block';
+            } else if (lang === 'fr') {
+                document.getElementById('service1').style.display = 'none';
+                document.getElementById('service2').style.display = 'block';
+                document.getElementById('text-fr').style.display = 'block';
+                document.getElementById('text-sq').style.display = 'none';
+            }
+        });
     </script>
 
 <script>
