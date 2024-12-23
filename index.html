@@ -268,8 +268,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian" style="display: none;">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Filmim në frëngjisht</a>
             </div>
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
@@ -354,6 +354,13 @@
     </div>
    <script>
 function changeLanguage(lang) {
+    if (lang === 'sq') {
+        document.getElementById('video-albanian').style.display = 'block';
+        document.getElementById('video-french').style.display = 'none';
+    } else if (lang === 'fr') {
+        document.getElementById('video-albanian').style.display = 'none';
+        document.getElementById('video-french').style.display = 'block';
+    }
     if (lang === 'fr') {
         document.getElementById('translator-title').innerText = 'TRADUCTEUR ASSERMENTÉ';
         document.getElementById('welcome-link').innerText = 'Bienvenue';
