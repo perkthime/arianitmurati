@@ -680,6 +680,18 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 </script>
 
+        function changeLanguage(language) {
+            if (language === 'fr') {
+                document.getElementById('service1').style.display = 'none';
+                document.getElementById('service2').style.display = 'block';
+                document.getElementById('text').innerText = 'Filmim në frëngjisht';
+            } else if (language === 'sq') {
+                document.getElementById('service1').style.display = 'block';
+                document.getElementById('service2').style.display = 'none';
+                document.getElementById('text').innerText = 'Filmim në shqip';
+            }
+        }
+    </script>
     </div>
 
     <style>
@@ -692,19 +704,17 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 </style>
 
-<div id="service1" class="content service1">
-    
-    
-    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div id="service2" class="content service2">
- 
- 
-    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-    <div id="service2" class="content service2">
-       
-        <p>Detajet e Video në frëngjisht.</p>
+</head>
+<body>
+    <div>
+        <button onclick="changeLanguage('sq')">🇦🇱 Shqip</button>
+        <button onclick="changeLanguage('fr')">🇫🇷 Frëngjisht</button>
+    </div>
+    <div id="text">Filmim në shqip</div>
+    <div id="service1" class="content service1">
+        <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="service2" class="content service2" style="display: none;">
         <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 <div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
