@@ -679,8 +679,18 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementsByTagName("head")[0]?.appendChild(msViewportStyle);
   }
 </script>
-
-    </div>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var lang = document.documentElement.lang;
+            if (lang === 'sq') {
+                document.getElementById('service1').style.display = 'block';
+                document.getElementById('service2').style.display = 'none';
+            } else if (lang === 'fr') {
+                document.getElementById('service1').style.display = 'none';
+                document.getElementById('service2').style.display = 'block';
+            }
+        });
+    </script>
 
     <style>
     .content {
@@ -692,16 +702,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 </style>
 
-<div id="service1" class="content service1">
-    
-    
-    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-<div id="service2" class="content service2">
- 
- 
-    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+</head>
+<body>
+    <div id="service1" class="content service1">
+        <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div id="service2" class="content service2">
+        <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
     <div id="service2" class="content service2">
        
         <p>Detajet e Video në frëngjisht.</p>
