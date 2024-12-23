@@ -76,24 +76,24 @@
         margin: 0;
     }
     .dropdown-content {
-       .dropdown-content {
-        background-color: transparent !important; /* Hiqni sfondin e zi */
-        box-shadow: none !important; /* Hiqni hijen */
+        display: none;
+        position: absolute;
+        background-color: black;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
     }
-
     .dropdown-content a {
-        color: white !important; /* Ruani ngjyrën e tekstit */
+        float: none;
+        color: white;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         text-align: left;
-        background-color: transparent !important; /* Sigurohuni që sfondi të jetë transparent */
     }
-
     .dropdown-content a:hover {
-        background-color: orange !important; /* Shtoni ngjyrën e sfondit në hover */
-        color: black !important;
-    }
+        background-color: orange;
+        color: black;
     }
     .dropdown:hover .dropdown-content {
         display: block;
