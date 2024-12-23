@@ -46,7 +46,7 @@
     #services-button {
         display: inline-block;
         color: white;
-        text-align: center;
+        text-align: center; padding-left: 10px;
         padding: 0px 15px;
         text-decoration: none;
         background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); /* Gradient shumë i ndezur */
@@ -89,7 +89,7 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        text-align: center;
+        text-align: left;
     }
     .dropdown-content a:hover {
         background-color: orange;
@@ -122,12 +122,12 @@
     }
     .main-text {
         color: orange;
-        text-align: center;
+        text-align: center; padding-left: 10px;
         margin-top: 20px;
         font-size: 24px;
     }
     .image-container {
-        text-align: center;
+        text-align: center; padding-left: 10px;
         margin-top: 20px;
     }
     .image-container img {
@@ -233,7 +233,7 @@
             flex-direction: column;
             justify-content: flex-start; /* Ngrit përmbajtjen lart */
             align-items: center; /* Qendron tekstin horizontalisht */
-            text-align: center; /* Qendron tekstin brenda seksionit */
+            text-align: center; padding-left: 10px; /* Qendron tekstin brenda seksionit */
             box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
             padding-top: 50px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
         }
@@ -470,7 +470,7 @@ function showSection(sectionId) {
         padding: 10px 20px;
         border-radius: 25px; /* Bën formën eliptike */
         background: linear-gradient(135deg, rgba(255, 165, 0, 0.3), rgba(255, 69, 0, 0.5)); /* Gradient nga portokalli i lehtë në portokalli të ndezur */
-        text-align: center;
+        text-align: center; padding-left: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shton një hije të lehtë për elegancë */
         transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Kalim i butë për efektin hover */
         color: white; /* Ngjyra e bardhë për tekstin */
@@ -489,7 +489,7 @@ function showSection(sectionId) {
         padding: 10px 20px;
         border-radius: 25px; /* Bën formën eliptike */
         background-color: rgba(255, 255, 255, 0.1); /* Ngjyrë e bardhë transparente */
-        text-align: center;
+        text-align: center; padding-left: 10px;
         box-shadow: 0 0 15px rgba(255, 69, 0, 0.7); /* Efekt ndriçimi portokalli */
         transition: background-color 0.3s ease; /* Kalim i butë për efektin hover */
         font-family: 'Georgia', serif; /* Font elegant */
@@ -555,55 +555,55 @@ function showSection(sectionId) {
         <h1>Shërbimet</h1>
         
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
+<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
     </div>
   </div>
 </div>
-<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
+<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
+      <div style="text-align: center; padding-left: 10px;">
         <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
         <h3 style="color: orange;">Përkthime Ligjore</h3>
       </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
+      <p style="text-align: center; padding-left: 10px;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
     </div>
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
+      <div style="text-align: center; padding-left: 10px;">
         <div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
         <h3 style="color: orange;">Përkthime Mjekësore</h3>
       </div>
-      <p style="text-align: center;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
+      <p style="text-align: center; padding-left: 10px;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
     </div>
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
+      <div style="text-align: center; padding-left: 10px;">
         <div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
         <h3 style="color: orange;">Përkthime Teknike</h3>
       </div>
-      <p style="text-align: center;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
+      <p style="text-align: center; padding-left: 10px;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
     </div>
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
+      <div style="text-align: center; padding-left: 10px;">
         <div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
         <h3 style="color: orange;">Përkthime Financiare</h3>
       </div>
-      <p style="text-align: center;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
+      <p style="text-align: center; padding-left: 10px;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
     </div>
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
+      <div style="text-align: center; padding-left: 10px;">
         <div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
         <h3 style="color: orange;">Përkthime të Marketingut</h3>
       </div>
-      <p style="text-align: center;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
+      <p style="text-align: center; padding-left: 10px;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
     </div>
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-      <div style="text-align: center;">
+      <div style="text-align: center; padding-left: 10px;">
         <div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display: inline-block;"></div>
         <h3 style="color: orange;">Përkthime të Etiketave Ushqimore</h3>
       </div>
-      <p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
+      <p style="text-align: center; padding-left: 10px;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
     </div>
   </div>
 </div>
@@ -621,7 +621,7 @@ function showSection(sectionId) {
 
     <style>
     .content {
-        text-align: center;
+        text-align: center; padding-left: 10px;
     }
     iframe {
         width: 80%;
@@ -645,7 +645,7 @@ function showSection(sectionId) {
         <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 <div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="social-links" style="text-align: center;">
+    <div class="social-links" style="text-align: left;">
         <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile">
         </a>
