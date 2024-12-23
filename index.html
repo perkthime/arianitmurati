@@ -680,16 +680,21 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 </script>
 <script>
-        document.addEventListener('DOMContentLoaded', function() {
+          document.addEventListener('DOMContentLoaded', function() {
             var lang = document.documentElement.lang;
             if (lang === 'sq') {
                 document.getElementById('service1').style.display = 'block';
                 document.getElementById('service2').style.display = 'none';
+                document.getElementById('text-fr').style.display = 'none';
+                document.getElementById('text-sq').style.display = 'block';
             } else if (lang === 'fr') {
                 document.getElementById('service1').style.display = 'none';
                 document.getElementById('service2').style.display = 'block';
+                document.getElementById('text-fr').style.display = 'block';
+                document.getElementById('text-sq').style.display = 'none';
             }
         });
+    </script>
     </script>
 
     <style>
@@ -739,21 +744,6 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
-    document.addEventListener('DOMContentLoaded', function() {
-            var lang = document.documentElement.lang;
-            if (lang === 'sq') {
-                document.getElementById('service1').style.display = 'block';
-                document.getElementById('service2').style.display = 'none';
-                document.getElementById('text-fr').style.display = 'none';
-                document.getElementById('text-sq').style.display = 'block';
-            } else if (lang === 'fr') {
-                document.getElementById('service1').style.display = 'none';
-                document.getElementById('service2').style.display = 'block';
-                document.getElementById('text-fr').style.display = 'block';
-                document.getElementById('text-sq').style.display = 'none';
-            }
-        });
-    </script>
 
 <script>
 function showSection(sectionId) {
@@ -767,7 +757,7 @@ function showSection(sectionId) {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
+    document.getElemenyId('bio-section').style.display = 'block';
 });
 </script>
 </body>
