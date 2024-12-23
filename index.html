@@ -216,6 +216,17 @@
     }
 }
 </style>
+    <style>
+    .active-link {
+        background: linear-gradient(135deg, rgba(0, 255, 0, 1), rgba(0, 128, 0, 1));
+        color: white;
+        padding: 0px 15px;
+        text-decoration: none;
+        box-shadow: 0 4px 15px rgba(0, 255, 0, 0.7);
+        border-radius: 25px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+</style>
 </head>
       <style>
         /* Sfondi për seksionin e biografisë */
@@ -414,6 +425,24 @@ function changeLanguage(lang) {
     }
 }
 
+</script>
+       <script>
+    function showSection(sectionId) {
+        // Fshihni të gjitha seksionet
+        document.querySelectorAll('.content').forEach(section => {
+            section.style.display = 'none';
+        });
+        // Shfaqni seksionin e zgjedhur
+        document.getElementById(sectionId).style.display = 'block';
+
+        // Hiqni klasën 'active-link' nga të gjitha lidhjet
+        document.querySelectorAll('.navbar a, .navbar button').forEach(link => {
+            link.classList.remove('active-link');
+        });
+
+        // Shtoni klasën 'active-link' në lidhjen e zgjedhur
+        document.querySelector(`[onclick="showSection('${sectionId}')"]`).classList.add('active-link');
+    }
 </script>
 
 <script>
