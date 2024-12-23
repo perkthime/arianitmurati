@@ -274,6 +274,7 @@
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
     </div>
+    <a href="https://perkthime.github.io/arianitmurati/" target="_blank" onclick="document.getElementById('background-music').play();">Your Link Text</a>
 </div>
 
  <div id="bio-section">
@@ -336,7 +337,13 @@
 </audio>
 
 <script>
-    document.getElementById('background-music').volume = 0.04;
+    document.addEventListener('DOMContentLoaded', function() {
+        var audio = document.getElementById('background-music');
+        audio.volume = 0.04;
+        audio.play().catch(function(error) {
+            console.log('Autoplay was prevented:', error);
+        });
+    });
 </script>
     </div>
    <script>
