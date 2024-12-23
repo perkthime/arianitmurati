@@ -139,6 +139,7 @@
         padding: 8px;
         margin: 20px 0;
         display: flex;
+        justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         min-height: 52px;
@@ -146,22 +147,11 @@
         bottom: 0;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap; /* Lejon që elementet të mbështillen në rreshta të rinj në pajisjet më të vogla */
-    }
-     .social-container div {
-            text-align: center; /* Qendron tekstin për pajisjet më të vogla */
-            width: 100%; /* Siguron që elementet të mbulojnë të gjithë gjerësinë */
-        }
     }
     .social-links {
         display: flex;
         justify-content: center;
-        text-align: left;
-        flex: 1;
-        margin-bottom: 10px; /* Shton hapësirë poshtë lidhjeve sociale për pajisjet më të vogla */
-        }
+        align-items: center;
     }
     .social-links a {
         margin: 0 10px;
@@ -187,20 +177,9 @@
         from { transform: scale(1); }
         to { transform: scale(1.1); }
     }
-    .social-container img.logo {
-        max-width: 100%; /* Siguron që logoja të përshtatet brenda kontejnerit */
-        height: auto;
+    .logo {
         height: 30px; /* Increase the height of the logo */
         margin: 0 25px;
-        
-    }
-.social-container img.logo {
-            margin-top: 10px; /* Shton hapësirë sipër logos për pajisjet më të vogla */
-        }
-.social-container {
-            flex-direction: column; /* Ndryshon drejtimin e elementeve në kolonë për pajisjet më të vogla */
-            align-items: flex-start; /* Rreshton elementet në fillim për pajisjet më të vogla */
-        }
     }
     .bio-section {
         display: none;
@@ -244,7 +223,7 @@
         display: none; /* Fshihni të gjitha seksionet fillimisht */
     }
         #bio-section {
-            background: url('walking.jpg') no-repeat center center fixed;
+            background: url('marcher.jpg') no-repeat center center fixed;
             background-size: cover; /* Siguron që imazhi të mbulojë të gjithë seksionin */
             color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
             padding: 20px;
@@ -661,7 +640,7 @@ function showSection(sectionId) {
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile">
         </a>
     </div>
-    <div style="text-align: right; flex-grow: 1; color: rgba(255, 255, 255, 0.1); margin-right: 20px; font-family: 'Helvetica Neue', sans-serif; opacity: 0.75;">
+    <div style="text-align: right; flex-grow: 1; color: rgba(255, 255, 255, 0.1); margin-right: 20px; font-family: 'Helvetica Neue', sans-serif; opacity: 1">
         COPYRIGHT 2024. TË GJITHA TË DREJTAT E REZERVUARA.
     </div>
     <img src="Designer.png" alt="Logo" class="logo"> <!-- Logo with red dot -->
