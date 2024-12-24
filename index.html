@@ -192,7 +192,7 @@
   .center {
     display: flex;
     align-items: center;
-    margin-left: 30px; /* Shton hapësirë ndërmjet tekstit dhe ikonave */
+    margin-left: 20px; /* Shton hapësirë ndërmjet tekstit dhe ikonave */
 }
 
 .center {
@@ -255,7 +255,7 @@
         <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
             <span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
         </span>
-        <span style="color: #fff; margin-left: 4px;" id="translator-title">PËRKTHYES GJYQËSOR</span>
+        <span style="color: #fff; margin-left: 10px;" id="translator-title">PËRKTHYES GJYQËSOR</span>
         <div class="center" style="display: flex; align-items: center; margin-left: 10px;">
               <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 5px;"></a>
             <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 5px;"></a>
@@ -268,8 +268,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Clip vidéo</a>
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">filmim</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">clip vidéo</a>
             </div>
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
@@ -278,7 +278,7 @@
 
  <div id="bio-section">
     <h2></h2>
-        <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: yellow; padding: 0px px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
+        <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
         <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
     </div>
 
@@ -371,7 +371,7 @@ function changeLanguage(lang) {
         document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
         
         // Update the services section
-
+        document.querySelector('#services h1').innerText = '';
         document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
         
         // Remove background from services section
@@ -410,7 +410,7 @@ function changeLanguage(lang) {
         document.getElementById('services').style.background = 'none';
         
         // Existing Albanian services content
-    
+        document.querySelector('#services h1').innerText = '';
         document.querySelector('#services p').innerText = 'Besoni profesionalizmit tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
         
         const services = [
@@ -558,6 +558,8 @@ function showSection(sectionId) {
 
     <div id="services" class="content services">
         <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
+        
+        <h1>Shërbimet</h1>
         
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
 <div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
