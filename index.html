@@ -89,7 +89,7 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        text-align: left;
+        text-align: center;
     }
     .dropdown-content a:hover {
         background-color: orange;
@@ -109,7 +109,7 @@
         color: white;
     }
     .highlight {
-        border: 2px solid orange;
+        border: none;
         background-color: orange;
         color: black;
         padding: 5px;
@@ -216,7 +216,34 @@
     }
 }
 </style>
-</head>
+
+<style>
+#bio-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+#bio-section p {
+    display: inline-block;
+    border: none;
+    padding: 5px;
+}
+</style>
+<style>
+.centered-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    flex-direction: column;
+}
+</style>
       <style>
         /* Sfondi për seksionin e biografisë */
            .content {
@@ -269,7 +296,7 @@
             </button>
             <div class="dropdown-content">
                 <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french"></a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">Filmim në frëngjisht</a>
             </div>
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
@@ -358,7 +385,8 @@ function changeLanguage(lang) {
         document.getElementById('translator-title').innerText = 'TRADUCTEUR ASSERMENTÉ';
         document.getElementById('welcome-link').innerText = 'Bienvenue';
         document.getElementById('services-button').innerText = 'Services';
-        document.getElementById('video-french').innerText = 'Clip vidéo en français';
+        document.getElementById('video-albanian').style.display = 'none'; // Hide Albanian video section
+        document.getElementById('video-french').style.display = 'block'; // Show French video section
         document.getElementById('contact-link').innerText = 'Contactez';
         document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
         
@@ -385,7 +413,8 @@ function changeLanguage(lang) {
             serviceElement.querySelector('p').innerText = service.description;
             serviceElement.querySelector('div').style.backgroundColor = service.color;
         });
-           // Update the bio section
+        
+        // Update the bio section
         document.querySelector('#bio-section h2 span').innerText = 'Quelques mots...';
         document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur juridique et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l\'Université de Pristina, où il a acquis une solide base en langue et culture françaises. Sa passion pour les langues l\'a conduit à l\'Université Paris 8, où il a poursuivi des études en Sciences du Langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l\'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning). Actuellement, il est enseignant de la langue française au lycée "Ulpiana" à Lipjan, où il s\'efforce d\'inspirer et d\'éduquer les jeunes générations en langue et culture françaises. En outre, il travaille comme traducteur juridique, offrant des services de traduction précis et fiables à ses clients. Avec un engagement profond envers la langue et une riche expérience en enseignement et traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.';
     } else if (lang === 'sq') {
@@ -393,7 +422,8 @@ function changeLanguage(lang) {
         document.getElementById('translator-title').innerText = 'PËRKTHYES GJYQËSOR';
         document.getElementById('welcome-link').innerText = 'Mirë se vini';
         document.getElementById('services-button').innerText = 'Shërbime';
-        document.getElementById('video-albanian').innerText = 'Filmim në shqip';
+        document.getElementById('video-albanian').style.display = 'block'; // Show Albanian video section
+        document.getElementById('video-french').style.display = 'none'; // Hide French video section
         document.getElementById('contact-link').innerText = 'Kontaktoni';
         document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
         
@@ -435,6 +465,12 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('bio-section').style.display = 'block';
+});
 </script>
 </body>
 <style>
@@ -511,6 +547,24 @@ function showSection(sectionId) {
             text-decoration: underline;
         }
     </style>
+
+<style>
+#bio-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: none;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+#bio-section p {
+    display: inline-block;
+    border: none;
+    padding: 5px;
+}
+</style>
 </head>
 <body>
     <div id="contact" class="content">
@@ -532,6 +586,12 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('bio-section').style.display = 'block';
+});
+</script>
 </body>
 </html>
 
@@ -544,6 +604,12 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('bio-section').style.display = 'block';
+});
+</script>
 </body>
 </html>
 
@@ -553,13 +619,13 @@ function showSection(sectionId) {
         <h1>Shërbimet</h1>
         
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
     </div>
   </div>
 </div>
-<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
       <div style="text-align: center;">
@@ -643,7 +709,7 @@ function showSection(sectionId) {
         <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 <div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="social-links" style="text-align: left;">
+    <div class="social-links" style="text-align: center;">
         <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile">
         </a>
@@ -674,6 +740,11 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('bio-section').style.display = 'block';
+});
+</script>
 </body>
 </html>
-
