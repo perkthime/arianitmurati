@@ -445,6 +445,28 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+
+<script>
+    async function lookupWord() {
+        const word = document.getElementById('word').value.toLowerCase();
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = 'Duke kërkuar...';
+
+        try {
+            const response = await fetch('dictionary.json');
+            const dictionary = await response.json();
+
+            if (dictionary[word]) {
+                resultDiv.innerHTML = `<strong>${word}:</strong> ${dictionary[word]}`;
+            } else {
+                resultDiv.innerHTML = 'Nuk u gjetën përkufizime për këtë fjalë.';
+            }
+        } catch (error) {
+            resultDiv.innerHTML = 'Ndodhi një gabim gjatë kërkimit.';
+        }
+    }
+</script>
+
 </body>
 <style>
     .static-text {
@@ -541,6 +563,28 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+
+<script>
+    async function lookupWord() {
+        const word = document.getElementById('word').value.toLowerCase();
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = 'Duke kërkuar...';
+
+        try {
+            const response = await fetch('dictionary.json');
+            const dictionary = await response.json();
+
+            if (dictionary[word]) {
+                resultDiv.innerHTML = `<strong>${word}:</strong> ${dictionary[word]}`;
+            } else {
+                resultDiv.innerHTML = 'Nuk u gjetën përkufizime për këtë fjalë.';
+            }
+        } catch (error) {
+            resultDiv.innerHTML = 'Ndodhi një gabim gjatë kërkimit.';
+        }
+    }
+</script>
+
 </body>
 </html>
 
@@ -553,6 +597,28 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+
+<script>
+    async function lookupWord() {
+        const word = document.getElementById('word').value.toLowerCase();
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = 'Duke kërkuar...';
+
+        try {
+            const response = await fetch('dictionary.json');
+            const dictionary = await response.json();
+
+            if (dictionary[word]) {
+                resultDiv.innerHTML = `<strong>${word}:</strong> ${dictionary[word]}`;
+            } else {
+                resultDiv.innerHTML = 'Nuk u gjetën përkufizime për këtë fjalë.';
+            }
+        } catch (error) {
+            resultDiv.innerHTML = 'Ndodhi një gabim gjatë kërkimit.';
+        }
+    }
+</script>
+
 </body>
 </html>
 
@@ -683,6 +749,29 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+
+<script>
+    async function lookupWord() {
+        const word = document.getElementById('word').value.toLowerCase();
+        const resultDiv = document.getElementById('result');
+        resultDiv.innerHTML = 'Duke kërkuar...';
+
+        try {
+            const response = await fetch('dictionary.json');
+            const dictionary = await response.json();
+
+            if (dictionary[word]) {
+                resultDiv.innerHTML = `<strong>${word}:</strong> ${dictionary[word]}`;
+            } else {
+                resultDiv.innerHTML = 'Nuk u gjetën përkufizime për këtë fjalë.';
+            }
+        } catch (error) {
+            resultDiv.innerHTML = 'Ndodhi një gabim gjatë kërkimit.';
+        }
+    }
+</script>
+
 </body>
 </html>
+
 
