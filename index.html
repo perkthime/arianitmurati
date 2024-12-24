@@ -523,6 +523,32 @@ function showSection(sectionId) {
 </head>
 <body>
     <div id="contact" class="content">
+<div id="dictionary" class="content">
+    <h2>Fjalor Gjyqësor</h2>
+    <input type="text" id="search-word" placeholder="Kërko fjalën...">
+    <button onclick="searchWord()">Kërko</button>
+    <div id="result"></div>
+</div>
+
+<script>
+function searchWord() {
+    var word = document.getElementById('search-word').value.toLowerCase();
+    var dictionary = {
+        "gjykatë": "court",
+        "avokat": "lawyer",
+        "dëshmitar": "witness",
+        "prokuror": "prosecutor",
+        "gjyqtar": "judge"
+    };
+    var result = dictionary[word];
+    if (result) {
+        document.getElementById('result').innerText = word + " - " + result;
+    } else {
+        document.getElementById('result').innerText = "Fjala nuk u gjet.";
+    }
+}
+</script>
+
       
         <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
             <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
