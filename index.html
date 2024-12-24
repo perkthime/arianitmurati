@@ -222,6 +222,13 @@
            .content {
         display: none; /* Fshihni të gjitha seksionet fillimisht */
     }
+        @font-face {
+            font-family: 'Geraldine';
+            src: url('path/to/your/geraldine-font.woff2') format('woff2'),
+                 url('path/to/your/geraldine-font.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         #bio-section {
             background: url('marcher.jpg') no-repeat center center fixed;
             background-size: cover; /* Siguron që imazhi të mbulojë të gjithë seksionin */
@@ -236,17 +243,7 @@
             text-align: center; /* Qendron tekstin brenda seksionit */
             box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
             padding-top: 50px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
-              @font-face {
-            font-family: 'Geraldine';
-            src: url('path/to/your/geraldine-font.woff2') format('woff2'),
-                 url('path/to/your/geraldine-font.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
-        .calligraphy {
-            font-family: 'Geraldine', cursive;
-            font-size: 18px;
-        }
+            font-family: 'Geraldine', cursive; /* Aplikon stilin kaligrafik Geraldine */
         }
 
         /* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
