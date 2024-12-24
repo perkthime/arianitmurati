@@ -254,7 +254,7 @@
         }
     </style>
 <body>
-    <style>
+   <style>
         @font-face {
             font-family: 'Tahoma';
             src: url('path/to/your/tahoma-font.woff2') format('woff2'),
@@ -264,7 +264,7 @@
         }
         .tahoma {
             font-family: 'Tahoma', sans-serif;
-            font-size: 18px;
+            font-size: 16px; /* Madhësi e barabartë me Bienvenue, Services, Contactez */
         }
         .tahoma-small {
             font-family: 'Tahoma', sans-serif;
@@ -285,18 +285,21 @@
             </div>
         </div>
         <div class="right" id="menu" style="display: flex; align-items: center;">
-            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">MIRË SE VINI</a>
+            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
             <div class="dropdown">
-                <button class="dropbtn highlight-orange" id="services-button">SHËRBIME 
+                <button class="dropbtn highlight-orange" id="services-button">Shërbime 
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim</a>
-                    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Clip vidéo</a>
+                    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">filmim</a>
+                    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">clip vidéo</a>
                 </div>
             </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">KONTAKTONI</a>
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
         </div>
+    </div>
+</body>
+</html>
     </div>
 </body>
 </html>
