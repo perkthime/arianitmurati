@@ -89,7 +89,7 @@
         padding: 12px 16px;
         text-decoration: none;
         display: block;
-        text-align: center;
+        text-align: left;
     }
     .dropdown-content a:hover {
         background-color: orange;
@@ -109,7 +109,7 @@
         color: white;
     }
     .highlight {
-        border: none;
+        border: 2px solid orange;
         background-color: orange;
         color: black;
         padding: 5px;
@@ -216,34 +216,7 @@
     }
 }
 </style>
-
-<style>
-#bio-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: none;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-#bio-section p {
-    display: inline-block;
-    border: none;
-    padding: 5px;
-}
-</style>
-<style>
-.centered-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
-    flex-direction: column;
-}
-</style>
+</head>
       <style>
         /* Sfondi për seksionin e biografisë */
            .content {
@@ -295,8 +268,8 @@
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">filmim</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">clip video </a>
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim në shqip</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Filmim në frëngjisht</a>
             </div>
         </div>
         <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
@@ -380,96 +353,86 @@
 </script>
     </div>
    <script>
-  function changeLanguage(lang) {
-            if (lang === 'fr') {
-                document.getElementById('translator-title').innerText = 'TRADUCTEUR ASSERMENTÉ';
-                document.getElementById('welcome-link').innerText = 'Bienvenue';
-                document.getElementById('services-button').innerText = 'Services';
-                document.getElementById('video-albanian').style.display = 'none'; // Hide Albanian video section
-                document.getElementById('video-french').style.display = 'block'; // Show French video section
-                document.getElementById('contact-link').innerText = 'Contactez';
-                document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
-                
-                // Update the services section
-                document.querySelector('#services h1').innerText = '';
-                document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
-                
-                // Remove background from services section
-                document.getElementById('services').style.background = 'none';
-                
-                // Update each service
-                const services = [
-                    { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
-                    { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
-                    { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
-                    { color: 'none', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
-                    { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
-                    { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
-                ];
-                
-                services.forEach((service, index) => {
-                    const serviceElement = document.querySelectorAll('.col-lg-6')[index];
-                    serviceElement.querySelector('h3').innerText = service.title;
-                    serviceElement.querySelector('p').innerText = service.description;
-                    serviceElement.querySelector('div').style.backgroundColor = service.color;
-                });
-                
-                // Update the bio section
-                document.querySelector('#bio-section h2 span').innerText = 'Quelques mots...';
-                document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur juridique et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l\'Université de Pristina, où il a acquis une solide base en langue et culture françaises. Sa passion pour les langues l\'a conduit à l\'Université Paris 8, où il a poursuivi des études en Sciences du Langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l\'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning). Actuellement, il est enseignant de la langue française au lycée "Ulpiana" à Lipjan, où il s\'efforce d\'inspirer et d\'éduquer les jeunes générations en langue et culture françaises. En outre, il travaille comme traducteur juridique, offrant des services de traduction précis et fiables à ses clients. Avec un engagement profond envers la langue et une riche expérience en enseignement et traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.';
-            } else if (lang === 'sq') {
-                // Existing Albanian content
-                document.getElementById('translator-title').innerText = 'PËRKTHYES GJYQËSOR';
-                document.getElementById('welcome-link').innerText = 'Mirë se vini';
-                document.getElementById('services-button').innerText = 'Shërbime';
-                document.getElementById('video-albanian').style.display = 'block'; // Show Albanian video section
-                document.getElementById('video-french').style.display = 'none'; // Hide French video section
-                document.getElementById('contact-link').innerText = 'Kontaktoni';
-                document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
-                
-                // Remove background from services section
-                document.getElementById('services').style.background = 'none';
-                
-                // Existing Albanian services content
-                document.querySelector('#services h1').innerText = '';
-                document.querySelector('#services p').innerText = 'Besoni profesionalizmit tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
-                
-                const services = [
-                    { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
-                    { color: 'none', title: 'Përkthime Mjekësore', description: 'Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.' },
-                    { color: 'none', title: 'Përkthime Teknike', description: 'Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.' },
-                    { color: 'none', title: 'Përkthime Financiare', description: 'Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.' },
-                    { color: 'none', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
-                    { color: 'none', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
-                ];
-                
-                services.forEach((service, index) => {
-                    const serviceElement = document.querySelectorAll('.col-lg-6')[index];
-                    serviceElement.querySelector('h3').innerText = service.title;
-                    serviceElement.querySelector('p').innerText = service.description;
-                    serviceElement.querySelector('div').style.backgroundColor = service.color;
-                });
+function changeLanguage(lang) {
+    if (lang === 'sq') {
+        document.getElementById('video-albanian').style.display = 'block';
+        document.getElementById('video-french').style.display = 'none';
+    } else if (lang === 'fr') {
+        document.getElementById('video-albanian').style.display = 'none';
+        document.getElementById('video-french').style.display = 'block';
+    }
+    if (lang === 'fr') {
+        document.getElementById('translator-title').innerText = 'TRADUCTEUR ASSERMENTÉ';
+        document.getElementById('welcome-link').innerText = 'Bienvenue';
+        document.getElementById('services-button').innerText = 'Services';
+        document.getElementById('video-albanian').innerText = 'Clip vidéo en albanais';
+        document.getElementById('video-french').innerText = 'Clip vidéo en français';
+        document.getElementById('contact-link').innerText = 'Contactez';
+        document.getElementById('translator-link').innerText = 'Besoin d\'un traducteur assermenté fiable?';
+        
+        // Update the services section
+        document.querySelector('#services h1').innerText = '';
+        document.querySelector('#services p').innerText = 'Faites confiance à notre professionnalisme pour des traductions précises et fiables dans tous les domaines.';
+        
+        // Remove background from services section
+        document.getElementById('services').style.background = 'none';
+        
+        // Update each service
+        const services = [
+            { color: 'none', title: 'Traductions Juridiques', description: 'Traduction de documents juridiques tels que contrats, décisions judiciaires et autres documents officiels.' },
+            { color: 'none', title: 'Traductions Médicales', description: 'Traduction de documents médicaux, y compris les rapports médicaux, les résultats de tests de laboratoire et les documents éducatifs pour les patients.' },
+            { color: 'none', title: 'Traductions Techniques', description: 'Traduction de manuels techniques, de documents d\'ingénierie et d\'autres matériaux techniques.' },
+            { color: 'none', title: 'Traductions Financières', description: 'Traduction de rapports financiers, bilans et autres documents financiers.' },
+            { color: 'none', title: 'Traductions Marketing', description: 'Traduction de matériel marketing, y compris les brochures, les campagnes publicitaires et le contenu des médias sociaux.' },
+            { color: 'none', title: 'Traductions d\'Étiquettes Alimentaires', description: 'Traduction des étiquettes alimentaires et du contenu des emballages.' }
+        ];
+        
+        services.forEach((service, index) => {
+            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
+            serviceElement.querySelector('h3').innerText = service.title;
+            serviceElement.querySelector('p').innerText = service.description;
+            serviceElement.querySelector('div').style.backgroundColor = service.color;
+        });
+           // Update the bio section
+        document.querySelector('#bio-section h2 span').innerText = 'Quelques mots...';
+        document.querySelector('#bio-section p').innerText = 'Arianit Murati est traducteur juridique et enseignant de la langue française avec une vaste expérience académique et professionnelle. Il a étudié la langue et la littérature françaises à l\'Université de Pristina, où il a acquis une solide base en langue et culture françaises. Sa passion pour les langues l\'a conduit à l\'Université Paris 8, où il a poursuivi des études en Sciences du Langage, avec un accent particulier sur la didactique des langues étrangères. Il a également suivi des études à l\'Université de Franche-Comté, au Centre de Télé-Enseignement, dans le parcours Politique et Éducatives, Environnement Numérique (E-learning). Actuellement, il est enseignant de la langue française au lycée "Ulpiana" à Lipjan, où il s\'efforce d\'inspirer et d\'éduquer les jeunes générations en langue et culture françaises. En outre, il travaille comme traducteur juridique, offrant des services de traduction précis et fiables à ses clients. Avec un engagement profond envers la langue et une riche expérience en enseignement et traduction, Arianit est déterminé à offrir des services de haute qualité et à aider à construire des ponts de communication interculturelle.';
+    } else if (lang === 'sq') {
+        // Existing Albanian content
+        document.getElementById('translator-title').innerText = 'PËRKTHYES GJYQËSOR';
+        document.getElementById('welcome-link').innerText = 'Mirë se vini';
+        document.getElementById('services-button').innerText = 'Shërbime';
+        document.getElementById('video-albanian').innerText = 'Filmim në shqip';
+        document.getElementById('video-french').innerText = 'Filmim në frëngjisht';
+        document.getElementById('contact-link').innerText = 'Kontaktoni';
+        document.getElementById('translator-link').innerText = 'Keni nevojë për përkthyes gjyqësor të besueshëm?';
+        
+        // Remove background from services section
+        document.getElementById('services').style.background = 'none';
+        
+        // Existing Albanian services content
+        document.querySelector('#services h1').innerText = '';
+        document.querySelector('#services p').innerText = 'Besoni profesionalizmit tonë për përkthime të sakta dhe të besueshme në çdo fushë.';
+        
+        const services = [
+            { color: 'none', title: 'Përkthime Ligjore', description: 'Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.' },
+            { color: 'none', title: 'Përkthime Mjekësore', description: 'Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.' },
+            { color: 'none', title: 'Përkthime Teknike', description: 'Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.' },
+            { color: 'none', title: 'Përkthime Financiare', description: 'Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.' },
+            { color: 'none', title: 'Përkthime të Marketingut', description: 'Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.' },
+            { color: 'none', title: 'Përkthime të Etiketave Ushqimore', description: 'Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.' }
+        ];
+        
+        services.forEach((service, index) => {
+            const serviceElement = document.querySelectorAll('.col-lg-6')[index];
+            serviceElement.querySelector('h3').innerText = service.title;
+            serviceElement.querySelector('p').innerText = service.description;
+            serviceElement.querySelector('div').style.backgroundColor = service.color;
+        });
       // Update the bio section
         document.querySelector('#bio-section h2 span').innerText = 'Pak fjalë...';
         document.querySelector('#bio-section p').innerText = 'Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Ai ka studiuar gjuhën dhe letërsinë frënge në Universitetin e Prishtinës, ku ka fituar një bazë të fortë në gjuhën dhe kulturën frënge. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në didaktikën e gjuhëve të huaja. Gjithashtu, ai ka ndjekur studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Parcours Politique et Éducatives, Environment Numérique (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.';
     }
 }
-        
-        // Hide the video sections on initial load
-        window.onload = function() {
-            document.getElementById('video-albanian').style.display = 'none';
-            document.getElementById('video-french').style.display = 'none';
-        }
-    </script>
-</head>
-<body>
-    <!-- Your HTML content here -->
-    <div id="services">
-        <h1></h1>
-        <p></p>
-        <div id="video-albanian">Filmim në shqip</div>
-        <div id="video-french">Clip vidéo en français</div>
-    </div>
 
 </script>
 
@@ -481,12 +444,6 @@ function showSection(sectionId) {
     document.getElementById(sectionId).style.display = 'block';
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
-</script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
 </script>
 </body>
 <style>
@@ -563,24 +520,6 @@ document.addEventListener('DOMContentLoaded', function() {
             text-decoration: underline;
         }
     </style>
-
-<style>
-#bio-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: none;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-#bio-section p {
-    display: inline-block;
-    border: none;
-    padding: 5px;
-}
-</style>
 </head>
 <body>
     <div id="contact" class="content">
@@ -602,12 +541,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
-</script>
 </body>
 </html>
 
@@ -620,12 +553,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
-</script>
 </body>
 </html>
 
@@ -635,13 +562,13 @@ document.addEventListener('DOMContentLoaded', function() {
         <h1>Shërbimet</h1>
         
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
+<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
     </div>
   </div>
 </div>
-<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: center; min-height: auto;">
+<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
     <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
       <div style="text-align: center;">
@@ -719,12 +646,13 @@ document.addEventListener('DOMContentLoaded', function() {
  
     <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-</style>
-
+    <div id="service2" class="content service2">
        
-       
+        <p>Detajet e Video në frëngjisht.</p>
+        <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 <div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
-    <div class="social-links" style="text-align: center;">
+    <div class="social-links" style="text-align: left;">
         <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
             <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile">
         </a>
@@ -755,11 +683,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('bio-section').style.display = 'block';
-});
-</script>
 </body>
 </html>
+
