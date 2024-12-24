@@ -255,16 +255,15 @@
     </style>
 <body>
  <style>
-      <style>
-        @font-face {
-            font-family: 'Geraldine';
-            src: url('path/to/your/geraldine-font.woff2') format('woff2'),
-                 url('path/to/your/geraldine-font.woff') format('woff');
+             @font-face {
+            font-family: 'Tahoma';
+            src: url('path/to/your/tahoma-font.woff2') format('woff2'),
+                 url('path/to/your/tahoma-font.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-        .calligraphy {
-            font-family: 'Geraldine', cursive;
+        .tahoma {
+            font-family: 'Tahoma', sans-serif;
             font-size: 18px;
         }
     </style>
@@ -273,7 +272,7 @@
     <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
         <div class="left" style="display: flex; align-items: center;">
             <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
-                <span class="calligraphy" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
+                <span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
             </span>
             <span style="color: #fff; margin-left: 10px;" id="translator-title">PËRKTHYES GJYQËSOR</span>
             <div class="center" style="display: flex; align-items: center; margin-left: 10px;">
@@ -282,9 +281,9 @@
             </div>
         </div>
         <div class="right" id="menu" style="display: flex; align-items: center;">
-            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">MIRË SE VINI</a>
+            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
             <div class="dropdown">
-                <button class="dropbtn highlight-orange" id="services-button">SHËRBIME 
+                <button class="dropbtn highlight-orange" id="services-button">Shërbime 
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -292,8 +291,11 @@
                     <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">clip vidéo</a>
                 </div>
             </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">KONTAKTONI</a>
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
         </div>
+    </div>
+</body>
+</html>
     </div>
 </body>
 </html>
