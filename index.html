@@ -279,27 +279,27 @@
 
 <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
     <div class="left" style="display: flex; align-items: center;">
-        <span style="color: #fff; cursor: pointer;" id="translator-name" >
+        <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
             <span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
         </span>
         <span style="color: #fff; margin-left: 10px;" id="translator-title">PËRKTHYES GJYQËSOR</span>
         <div class="center" style="display: flex; align-items: center; margin-left: 10px;">
-              <a href="#" ><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 5px;"></a>
-            <a href="#" ><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 5px;"></a>
+              <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 5px;"></a>
+            <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 5px;"></a>
         </div>
     </div>
     <div class="right" id="menu" style="display: flex; align-items: center;">
-        <a href="#"  class="highlight-transparent" id="welcome-link">Mirë se vini</a>
+        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">Mirë se vini</a>
         <div class="dropdown">
             <button class="dropbtn highlight-orange" id="services-button">Shërbime 
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#"  class="highlight" id="video-albanian">filmim</a>
-                <a href="#"  class="highlight" id="video-french">clip video </a>
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">filmim</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french">clip video </a>
             </div>
         </div>
-        <a href="#"  class="highlight-transparent" id="contact-link">Kontaktoni</a>
+        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">Kontaktoni</a>
     </div>
 </div>
 
@@ -353,7 +353,7 @@
     <!-- Faqja kryesore -->
     <div id="welcome" class="content welcome">
         <p><span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span></p>
-        <p><a href="#"  class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+        <p><a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
     </div>
             </a> 
         </p>
@@ -585,10 +585,10 @@ document.addEventListener('DOMContentLoaded', function() {
 <body>
     <div id="contact" class="content">
       
-        <p >
+        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
             <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
         </p>
-        <p >
+        <p onclick="window.location.href='tel:+38345569246'">
             <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
         </p>
     </div>
