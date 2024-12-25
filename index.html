@@ -229,43 +229,52 @@
             font-weight: normal;
             font-style: normal;
         }
-       #bio-section {
+      #bio-section {
     background: url('arianit49.JPG') no-repeat center center fixed;
-     background-size: 100%; /* Zmadhon imazhin për të krijuar efektin e largësisë */
-    background-position: center 0%; /* Zhvendos imazhin më poshtë */
+    background-size: cover; /* Siguron që imazhi të mbulojë të gjithë seksionin */
     color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
     padding: 25px;
     min-height: 100vh; /* Siguron që seksioni të ketë të paktën lartësinë e dritares së shfletuesit */
     width: 100%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Ngrit përmbajtjen lart */
-    align-items: center; /* Qendron tekstin horizontalisht */
-    text-align: center; /* Qendron tekstin brenda seksionit */
+    flex-direction: row; /* Vendos përmbajtjen në rresht */
+    justify-content: space-between; /* Hapësirë midis përmbajtjes */
+    align-items: center; /* Qendron përmbajtjen vertikalisht */
     box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
-    padding-top: 150px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
+    padding-top: 50px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
     font-family: 'Geraldine', cursive; /* Aplikon stilin kaligrafik Geraldine */
+    text-align: left; /* Teksti në anën e majtë */
 }
 
-/* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
-#bio-section h2 span, #bio-section p {
-    font-size: 90%;
-    max-width: 100%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
-    word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
+#bio-text {
+    flex: 1; /* Përdor njësi fleksibël për tekstin */
+    padding-right: 50px; /* Hapësirë midis tekstit dhe imazhit */
 }
 
+#bio-image {
+    flex: 1; /* Përdor njësi fleksibël për imazhin */
+    background: url('arianit49.JPG') no-repeat center center;
+    background-size: contain; /* Siguron që imazhi të përshtatet brenda seksionit */
+    height: 50%; /* Siguron që imazhi të mbulojë të gjithë lartësinë */
+}
 
 /* Media queries për pajisjet mobile */
 @media (max-width: 768px) {
     #bio-section {
-        background-attachment: scroll; /* Ndryshon fiksimin e sfondit për pajisjet mobile */
+        flex-direction: column; /* Vendos përmbajtjen në kolonë për pajisjet mobile */
         padding: 15px; /* Zvogëlon padding për pajisjet mobile */
         padding-top: 30px; /* Zvogëlon padding në krye për pajisjet mobile */
     }
 
-    #bio-section h2 span, #bio-section p {
-        font-size: 80%; /* Zvogëlon madhësinë e tekstit për pajisjet mobile */
+    #bio-text, #bio-image {
+        flex: none; /* Heq njësitë fleksibël për pajisjet mobile */
+        width: 100%; /* Siguron që përmbajtja të mbulojë të gjithë gjerësinë */
     }
+
+    #bio-image {
+        height: auto; /* Lejon që imazhi të përshtatet natyrshëm */
+    }
+}
 }
 <body>
    <style>
