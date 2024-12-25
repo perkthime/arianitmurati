@@ -228,52 +228,33 @@
                  url('path/to/your/geraldine-font.woff') format('woff');
             font-weight: normal;
             font-style: normal;
-             }
-  
- <style>
-        #bio-section {
-            background: url('https://images.pexels.com/photos/1816/sky-night-dark-black.jpg') no-repeat center center fixed;
-            background-size: cover; /* Siguron që imazhi të mbulojë të gjithë seksionin */
-            color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
-            padding: 25px;
-            min-height: 100vh; /* Siguron që seksioni të ketë të paktën lartësinë e dritares së shfletuesit */
-            width: 100%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Ngrit përmbajtjen lart */
-            align-items: center; /* Qendron tekstin horizontalisht */
-            text-align: center; /* Qendron tekstin brenda seksionit */
-            box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
-            padding-top: 150px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
-            font-family: 'Geraldine', cursive; /* Aplikon stilin kaligrafik Geraldine */
-            position: relative; /* Për të vendosur portretin mbi sfondin */
         }
+       #bio-section {
+    background: url('arianit49copy.JPG') no-repeat center center fixed;
+    background-size: cover; /* Siguron që imazhi të mbulojë të gjithë seksionin */
+    background-position: center 30%; /* Zhvendos imazhin më poshtë */
+    color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
+    padding: 25px;
+    min-height: 100vh; /* Siguron që seksioni të ketë të paktën lartësinë e dritares së shfletuesit */
+    width: 100%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ngrit përmbajtjen lart */
+    align-items: center; /* Qendron tekstin horizontalisht */
+    text-align: center; /* Qendron tekstin brenda seksionit */
+    box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
+    padding-top: 150px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
+    font-family: 'Geraldine', cursive; /* Aplikon stilin kaligrafik Geraldine */
+}
 
-        #portrait {
-            position: absolute;
-            top: 20%; /* Pozicionon portretin më poshtë */
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px; /* Madhësia e portretit */
-            height: auto;
-            border-radius: 50%; /* Bën portretin të rrumbullakët */
-            border: 5px solid white; /* Kufiri i bardhë rreth portretit */
-        }
-
-        /* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
-        #bio-section h2 span, #bio-section p {
-            font-size: 90%;
-            max-width: 100%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
-            word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
-        }
-    </style>
-
-    <div id="bio-section">
-        <img id="portrait" src="arianit49copy.JPG" alt="Portreti i Arianit Murati">
-        <h2><span>Arianit Murati</span></h2>
-        <p>Biografia e Arianit Murati...</p>
-    </div>
-</body>
+/* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
+#bio-section h2 span, #bio-section p {
+    font-size: 90%;
+    max-width: 100%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
+    word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
+}
+<body>
+   <style>
         @font-face {
             font-family: 'Tahoma';
             src: url('path/to/your/tahoma-font.woff2') format('woff2'),
