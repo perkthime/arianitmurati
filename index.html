@@ -230,23 +230,16 @@
             font-style: normal;
         }
         #bio-section {
-            background-image: url('arianit49copy.jpeg') no-repeat center center fixed;
-            background-size: cover; /* Siguron që imazhi të mbulojë të gjithë seksionin */
-            background-attachment: fixed;
-            background-position: center center;
-            color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
-             margin: 0;
-            padding: 0;
-            min-height: 100vh; /* Siguron që seksioni të ketë të paktën lartësinë e dritares së shfletuesit */
-            width: 100%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start; /* Ngrit përmbajtjen lart */
-            align-items: center; /* Qendron tekstin horizontalisht */
-            text-align: center; /* Qendron tekstin brenda seksionit */
-            box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
-            padding-top: 50px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
-            font-family: 'Geraldine', cursive; /* Aplikon stilin kaligrafik Geraldine */
+         body {
+    font-family: Arial, sans-serif;
+    background-image: url('arianit49copy.jpeg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    animation: backgroundAnimation 20s infinite alternate;
+}
         }
 
         /* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
