@@ -229,7 +229,7 @@
             font-weight: normal;
             font-style: normal;
         }
-     #bio-section {
+       #bio-section {
     background: url('arianit49.JPG') no-repeat center center fixed;
      background-size: 100%; /* Zmadhon imazhin për të krijuar efektin e largësisë */
     background-position: center 0%; /* Zhvendos imazhin më poshtë */
@@ -254,35 +254,18 @@
     word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
 }
 
-#bio-text {
-    flex: 1; /* Përdor njësi fleksibël për tekstin */
-    padding-right: 10px; /* Hapësirë midis tekstit dhe imazhit */
-}
-
-#bio-image {
-    flex: 1; /* Përdor njësi fleksibël për imazhin */
-    background: url('arianit49.JPG') no-repeat center center;
-    background-size: contain; /* Siguron që imazhi të përshtatet brenda seksionit */
-    height: 50%; /* Siguron që imazhi të mbulojë të gjithë lartësinë */
-}
 
 /* Media queries për pajisjet mobile */
 @media (max-width: 768px) {
     #bio-section {
-        flex-direction: column; /* Vendos përmbajtjen në kolonë për pajisjet mobile */
+        background-attachment: scroll; /* Ndryshon fiksimin e sfondit për pajisjet mobile */
         padding: 15px; /* Zvogëlon padding për pajisjet mobile */
         padding-top: 30px; /* Zvogëlon padding në krye për pajisjet mobile */
     }
 
-    #bio-text, #bio-image {
-        flex: none; /* Heq njësitë fleksibël për pajisjet mobile */
-        width: 100%; /* Siguron që përmbajtja të mbulojë të gjithë gjerësinë */
+    #bio-section h2 span, #bio-section p {
+        font-size: 80%; /* Zvogëlon madhësinë e tekstit për pajisjet mobile */
     }
-
-    #bio-image {
-        height: auto; /* Lejon që imazhi të përshtatet natyrshëm */
-    }
-}
 }
 <body>
    <style>
