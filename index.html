@@ -270,11 +270,6 @@
             font-family: 'Tahoma', sans-serif;
             font-size: 9px; /* 50% më e vogël */
         }
-      <style>
-        .signature {
-            width: 200px; /* Mund ta ndryshoni madhësinë sipas dëshirës */
-            height: auto;
-        }
     </style>
 </head>
 <body>
@@ -300,11 +295,9 @@
                     <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Clip vidéo</a>
                 </div>
             </div>
-            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">KONTAKTONI</a>  
-    </div>
-           <h1>Nënshkrimi im</h1>
-    <img src="sign1.png" alt="Nënshkrimi" class="signature">
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">KONTAKTONI</a>
         </div>
+    </div>
 </body>
 </html>
     </div>
@@ -313,9 +306,19 @@
 
  <div id="bio-section">
     <h2></h2>
-        <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
-        <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
-    </div>
+    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
+    <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
+    <img src="path/to/your/signature.png" alt="Nënshkrimi" class="signature">
+</div>
+
+<style>
+    .signature {
+        width: 200px; /* Mund ta ndryshoni madhësinë sipas dëshirës */
+        height: auto;
+        display: block;
+        margin-top: 20px; /* Hapësirë mbi nënshkrimin */
+    }
+</style>
 
     <script>
         // Kontrollon faqen aktuale dhe fsheh ose shfaq përmbajtjen përkatëse
@@ -720,6 +723,5 @@ function showSection(sectionId) {
 </script>
 </body>
 </html>
-
 
 
