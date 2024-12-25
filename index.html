@@ -1,11 +1,12 @@
 
-<!DOCTYPE html>
 
+
+<!DOCTYPE html>
 <html lang="sq">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Faqja Ime Personale</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faqja Ime Personale</title>
 <style>
     /* Stilet ekzistuese */
     body {
@@ -216,7 +217,7 @@
 }
 </style>
 </head>
-<style>
+      <style>
         /* Sfondi për seksionin e biografisë */
            .content {
         display: none; /* Fshihni të gjitha seksionet fillimisht */
@@ -234,7 +235,7 @@
             color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
             padding: 25px;
             min-height: 100vh; /* Siguron që seksioni të ketë të paktën lartësinë e dritares së shfletuesit */
-            width: 50%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
+            width: 40%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
             display: flex;
             flex-direction: column;
             justify-content: flex-start; /* Ngrit përmbajtjen lart */
@@ -253,7 +254,7 @@
         }
     </style>
 <body>
-<style>
+   <style>
         @font-face {
             font-family: 'Tahoma';
             src: url('path/to/your/tahoma-font.woff2') format('woff2'),
@@ -270,44 +271,46 @@
             font-size: 9px; /* 50% më e vogël */
         }
     </style>
-
+</head>
 <body>
-<div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
-<div class="left" style="display: flex; align-items: center;">
-<span id="translator-name" onclick="showBio()" style="color: #fff; cursor: pointer;">
-<span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
-</span>
-<span class="tahoma-small" id="translator-title" style="color: #fff; margin-left: 10px;">PËRKTHYES GJYQËSOR</span>
-<div class="center" style="display: flex; align-items: center; margin-left: 10px;">
-<a href="#" onclick="changeLanguage('sq')"><img alt="Shqip" src="sq.png" style="max-width: 100%; height: auto;"/></a>
-<a href="#" onclick="changeLanguage('fr')"><img alt="Frëngjisht" src="fr.png" style="max-width: 100%; height: auto;"/></a>
-</div>
-</div>
-<div class="right" id="menu" style="display: flex; align-items: center;">
-<a class="highlight-transparent" href="#" id="welcome-link" onclick="showSection('welcome')">MIRË SE VINI</a>
-<div class="dropdown">
-<button class="dropbtn highlight-orange" id="services-button">SHËRBIME 
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
+        <div class="left" style="display: flex; align-items: center;">
+            <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
+                <span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
+            </span>
+            <span class="tahoma-small" style="color: #fff; margin-left: 10px;" id="translator-title">PËRKTHYES GJYQËSOR</span>
+            <div class="center" style="display: flex; align-items: center; margin-left: 10px;">
+                <a href="#" onclick="changeLanguage('sq')"><img src="sq.png" alt="Shqip" style="width: 30px; height: 20px; margin: 0 5px;"></a>
+                <a href="#" onclick="changeLanguage('fr')"><img src="fr.png" alt="Frëngjisht" style="width: 30px; height: 20px; margin: 0 5px;"></a>
+            </div>
+        </div>
+        <div class="right" id="menu" style="display: flex; align-items: center;">
+            <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">MIRË SE VINI</a>
+            <div class="dropdown">
+                <button class="dropbtn highlight-orange" id="services-button">SHËRBIME 
                     <i class="fa fa-caret-down"></i>
-</button>
-<div class="dropdown-content">
-<a class="highlight" href="#" id="video-albanian" onclick="showSection('service1')">Filmim</a>
-<a class="highlight" href="#" id="video-french" onclick="showSection('service2')" style="display: none;">Clip vidéo</a>
-</div>
-</div>
-<a class="highlight-transparent" href="#" id="contact-link" onclick="showSection('contact')">KONTAKTONI</a>
-</div>
-</div>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim</a>
+                    <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Clip vidéo</a>
+                </div>
+            </div>
+            <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">KONTAKTONI</a>
+        </div>
+    </div>
 </body>
-</body></html>
+</html>
+    </div>
+</body>
+</html>
 
-
-
-<div id="bio-section">
-<h2></h2>
-<h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
-<p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
-<img alt="" class="signature" src="sign1.png" style="max-width: 100%; height: auto;"/>
+ <div id="bio-section">
+    <h2></h2>
+    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
+    <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
+    <img src="sign1.png" alt="" class="signature">
 </div>
+
 <style>
     .signature {
         width: 125px; /* Mund ta ndryshoni madhësinë sipas dëshirës */
@@ -318,7 +321,8 @@
         margin-right: 20px; /* Shton hapësirë në të djathtë të imazhit */
     }
 </style>
-<script>
+
+    <script>
         // Kontrollon faqen aktuale dhe fsheh ose shfaq përmbajtjen përkatëse
         document.addEventListener('DOMContentLoaded', function() {
             var path = window.location.pathname;
@@ -357,19 +361,20 @@
         document.getElementById('bio-section').style.display = 'block';
     }
 </script>
-
-<body class="arianit-murati">
-<!-- Faqja kryesore -->
-<div class="content welcome" id="welcome">
-<p><span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span></p>
-<p><a class="highlight-transparent no-underline" href="#" id="translator-link" onclick="showSection('services')" style="font-size: 1.05em;">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
-</div>
-
-
-<audio autoplay="" id="background-music" loop="">
-<source src="Wicked Game-Clipchamp.mp3" type="audio/mpeg"/>
+</script>
+   <body class="arianit-murati">
+    <!-- Faqja kryesore -->
+    <div id="welcome" class="content welcome">
+        <p><span class="click-icon" style="color: blue; font-size: 1.05em;">👇</span></p>
+        <p><a href="#" onclick="showSection('services')" class="highlight-transparent no-underline" style="font-size: 1.05em;" id="translator-link">Keni nevojë për përkthyes gjyqësor të besueshëm?</a></p>
+    </div>
+            </a> 
+        </p>
+        <audio id="background-music" autoplay loop>
+    <source src="Wicked Game-Clipchamp.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
+
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var audio = document.getElementById('background-music');
@@ -385,9 +390,9 @@
     }, { once: true });
 </script>
     });
-
-
-<script>
+</script>
+    </div>
+   <script>
 function changeLanguage(lang) {
     if (lang === 'sq') {
         document.getElementById('video-albanian').style.display = 'block';
@@ -470,6 +475,7 @@ function changeLanguage(lang) {
 }
 
 </script>
+
 <script>
 function showSection(sectionId) {
     document.querySelectorAll('.content').forEach(section => {
@@ -544,26 +550,28 @@ function showSection(sectionId) {
         text-decoration: none; /* Largon nënvizimin */
     }
 </style>
-
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Kontaktoni</title>
-<style>
+    </div>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontaktoni</title>
+    <style>
         #contact p:hover {
             cursor: pointer;
             text-decoration: underline;
         }
     </style>
-
+</head>
 <body>
-<div class="content" id="contact">
-<p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
-<img alt="Email Icon" height="20" src="https://cdn-icons-png.flaticon.com/512/732/732200.png" style="max-width: 100%; height: auto;" width="20"/> murati.arianit@gmail.com
+    <div id="contact" class="content">
+      
+        <p onclick="window.location.href='mailto:murati.arianit@gmail.com'">
+            <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email Icon" width="20" height="20"> murati.arianit@gmail.com
         </p>
-<p onclick="window.location.href='tel:+38345569246'">
-<img alt="Phone Icon" height="20" src="https://cdn-icons-png.flaticon.com/512/724/724664.png" style="max-width: 100%; height: auto;" width="20"/> +383 45 56 92 46
+        <p onclick="window.location.href='tel:+38345569246'">
+            <img src="https://cdn-icons-png.flaticon.com/512/724/724664.png" alt="Phone Icon" width="20" height="20"> +383 45 56 92 46
         </p>
-</div>
+    </div>
+
 <script>
 function showSection(sectionId) {
     document.querySelectorAll('.content').forEach(section => {
@@ -574,6 +582,7 @@ function showSection(sectionId) {
 }
 </script>
 </body>
+</html>
 
 <script>
 function showSection(sectionId) {
@@ -584,63 +593,66 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
+</body>
+</html>
 
-
-<div class="content services" id="services">
-<p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
-<h1>Shërbimet</h1>
-<div class="row sectionBlockLayout" data-component-theme="portalThemeColor3" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
-<div class="row sectionBlockLayout" data-component-theme="portalThemeColor8" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-<div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-<div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+    <div id="services" class="content services">
+        <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
+        
+        <h1>Shërbimet</h1>
+        
+        <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
+<div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+    </div>
+  </div>
 </div>
-</div>
-</div>
-<div class="row sectionBlockLayout" data-component-theme="portalThemeColor7" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
-<div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
-<div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-<div style="text-align: center;">
-<div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
-<h3 style="color: orange;">Përkthime Ligjore</h3>
-</div>
-<p style="text-align: center;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
-</div>
-<div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-<div style="text-align: center;">
-<div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
-<h3 style="color: orange;">Përkthime Mjekësore</h3>
-</div>
-<p style="text-align: center;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
-</div>
-<div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-<div style="text-align: center;">
-<div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
-<h3 style="color: orange;">Përkthime Teknike</h3>
-</div>
-<p style="text-align: center;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
-</div>
-<div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-<div style="text-align: center;">
-<div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
-<h3 style="color: orange;">Përkthime Financiare</h3>
-</div>
-<p style="text-align: center;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
-</div>
-<div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-<div style="text-align: center;">
-<div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
-<h3 style="color: orange;">Përkthime të Marketingut</h3>
-</div>
-<p style="text-align: center;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
-</div>
-<div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
-<div style="text-align: center;">
-<div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display: inline-block;"></div>
-<h3 style="color: orange;">Përkthime të Etiketave Ushqimore</h3>
-</div>
-<p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
-</div>
-</div>
+<div data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
+  <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: green; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Ligjore</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i dokumenteve ligjore si kontrata, vendime gjyqësore, dhe dokumente të tjera zyrtare.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: blue; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Mjekësore</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i dokumenteve mjekësore, përfshirë raportet mjekësore, rezultatet e testeve laboratorike, dhe materialet për edukimin e pacientëve.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: orange; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Teknike</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i manualeve teknike, dokumenteve të inxhinierisë, dhe materialeve të tjera teknike.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: purple; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime Financiare</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i raporteve financiare, bilanceve, dhe dokumenteve të tjera financiare.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: yellow; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime të Marketingut</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i materialeve të marketingut, përfshirë broshurat, fushatat reklamuese, dhe përmbajtjen e mediave sociale.</p>
+    </div>
+    <div class="col-lg-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;">
+      <div style="text-align: center;">
+        <div style="width: 20px; height: 20px; background-color: red; border-radius: 50%; display: inline-block;"></div>
+        <h3 style="color: orange;">Përkthime të Etiketave Ushqimore</h3>
+      </div>
+      <p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
+    </div>
+  </div>
 </div>
 </div>
 <script type="text/javascript">
@@ -652,7 +664,9 @@ function showSection(sectionId) {
   }
 </script>
 
-<style>
+    </div>
+
+    <style>
     .content {
         text-align: center;
     }
@@ -661,31 +675,37 @@ function showSection(sectionId) {
         height: 450px;
     }
 </style>
-<div class="content service1" id="service1">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/wUN913EFMW8"></iframe>
+
+<div id="service1" class="content service1">
+    
+    
+    <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="content service2" id="service2">
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/zwUkAS6bBF8"></iframe>
+<div id="service2" class="content service2">
+ 
+ 
+    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div class="content service2" id="service2">
-<p>Detajet e Video në frëngjisht.</p>
-<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" frameborder="0" src="https://www.youtube.com/embed/zwUkAS6bBF8"></iframe>
-</div>
+    <div id="service2" class="content service2">
+       
+        <p>Detajet e Video në frëngjisht.</p>
+        <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 <div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
-<div class="social-links" style="text-align: left;">
-<a aria-label="Facebook" href="https://www.facebook.com/arianit.murati.942" target="_blank">
-<img alt="Facebook profile" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" style="max-width: 100%; height: auto;"/>
-</a>
-<a aria-label="LinkedIn" href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank">
-<img alt="LinkedIn profile" src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" style="max-width: 100%; height: auto;"/>
-</a>
-</div>
-<div style="text-align: right; flex-grow: 1; color: rgba(255, 255, 255, 0.1); margin-right: 20px; font-family: 'Helvetica Neue', sans-serif; opacity: 1">
+    <div class="social-links" style="text-align: left;">
+        <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook profile">
+        </a>
+        <a href="https://www.linkedin.com/in/arianit-murati-354b0782" target="_blank" aria-label="LinkedIn">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn profile">
+        </a>
+    </div>
+    <div style="text-align: right; flex-grow: 1; color: rgba(255, 255, 255, 0.1); margin-right: 20px; font-family: 'Helvetica Neue', sans-serif; opacity: 1">
         COPYRIGHT 2024. TË GJITHA TË DREJTAT E REZERVUARA.
     </div>
-<img alt="Logo" class="logo" src="Designer.png" style="max-width: 100%; height: auto;"/> <!-- Logo with red dot -->
+    <img src="Designer.png" alt="Logo" class="logo"> <!-- Logo with red dot -->
 </div>
-<script>
+    <script>
         function showSection(sectionId) {
             document.querySelectorAll('.content').forEach(section => {
                 section.style.display = 'none';
@@ -693,6 +713,7 @@ function showSection(sectionId) {
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
+
 <script>
 function showSection(sectionId) {
     document.querySelectorAll('.content').forEach(section => {
@@ -702,5 +723,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
+</body>
+</html>
 
