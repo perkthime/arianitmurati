@@ -407,16 +407,10 @@
         audio.play().catch(function(error) {
             console.log('Autoplay was prevented:', error);
         });
-    });
-
     document.addEventListener('click', function() {
         var audio = document.getElementById('background-music');
         audio.play();
     }, { once: true });
-</script>
-    });
-
-
 <script>
 function changeLanguage(lang) {
     if (lang === 'sq') {
@@ -614,8 +608,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-
 <div class="content services" id="services">
 <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
 <div class="row sectionBlockLayout" data-component-theme="portalThemeColor3" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
