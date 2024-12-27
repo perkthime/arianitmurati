@@ -407,15 +407,18 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var audio = document.getElementById('background-music');
-        audio.volume = 0.01;
+        audio.volume = 0.04;
         audio.play().catch(function(error) {
             console.log('Autoplay was prevented:', error);
         });
+    });
+
     document.addEventListener('click', function() {
         var audio = document.getElementById('background-music');
         audio.play();
     }, { once: true });
 </script>
+    });
 </script>
     </div>
    <script>
@@ -624,8 +627,7 @@ function showSection(sectionId) {
 
     <div id="services" class="content services">
         <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
-
-        
+               
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
 <div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
