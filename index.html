@@ -360,6 +360,7 @@
             } else {
                 document.getElementById('bio-section').style.display = 'none';
             }
+        });
     </script>
 <script>
     function toggleMenu() {
@@ -409,12 +410,15 @@
         audio.volume = 0.01;
         audio.play().catch(function(error) {
             console.log('Autoplay was prevented:', error);
+        });
     });
 
     document.addEventListener('click', function() {
         var audio = document.getElementById('background-music');
         audio.play();
     }, { once: true });
+</script>
+    });
 </script>
     </div>
    <script>
