@@ -841,10 +841,10 @@ function showSection(sectionId) {
 </script>
 
 <script>
-window.addEventListener('orientationchange', function() {
+function rotateToLandscape() {
     if (window.orientation === 90 || window.orientation === -90) {
         document.body.style.transform = 'rotate(90deg)';
-        document.body.style.transformOrigin = 'left top';
+        document.body.style.transformOrigin = 'center center';
         document.body.style.width = '100vh';
         document.body.style.height = '100vw';
         document.body.style.overflow = 'hidden';
@@ -854,7 +854,10 @@ window.addEventListener('orientationchange', function() {
         document.body.style.height = '100vh';
         document.body.style.overflow = 'auto';
     }
-});
+}
+
+window.addEventListener('orientationchange', rotateToLandscape);
+document.addEventListener('DOMContentLoaded', rotateToLandscape);
 </script>
 
 </body>
