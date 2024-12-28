@@ -386,6 +386,7 @@
         // Shfaqni seksionin e biografisë
         document.getElementById('bio-section').style.display = 'block';
     }
+    window.addEventListener('orientationchange', function() { if (window.orientation === 90 || window.orientation === -90) { alert('Landscape mode'); } else { alert('Portrait mode'); } });
 </script>
 </script>
    <body class="arianit-murati">
