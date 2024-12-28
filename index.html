@@ -1,6 +1,4 @@
 
-
-
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -11,7 +9,7 @@
     /* Stilet ekzistuese */
     body {
         font-family: Arial, sans-serif;
-        background-image: url('https://images.pexels.com/photos/986774/pexels-photo-986774.jpeg');
+        background-image: url('prison.jpg');
         background-size: 100% 100%;
         background-attachment: fixed;
         margin: 0;
@@ -25,7 +23,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 20px;
+    padding: 10px 20px;
 }
 
 .left, .center, .right {
@@ -78,7 +76,7 @@
     .dropdown-content {
         display: none;
         position: absolute;
-        background-color: black;
+        background-color: none;
         min-width: 160px;
         box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
         z-index: 1;
@@ -93,7 +91,7 @@
     }
     .dropdown-content a:hover {
         background-color: orange;
-        color: black;
+        color: none;
     }
     .dropdown:hover .dropdown-content {
         display: block;
@@ -236,7 +234,7 @@
      background-size: 100%; /* Zmadhon imazhin për të krijuar efektin e largësisë */
     background-position: center 0%; /* Zhvendos imazhin më poshtë */
     color: white; /* Ngjyra e tekstit për të kontrastuar me sfondin */
-    padding: 25px;
+    padding: 80px;
     min-height: 100vh; /* Siguron që seksioni të ketë të paktën lartësinë e dritares së shfletuesit */
     width: 100%; /* Siguron që seksioni të mbulojë të gjithë gjerësinë */
     display: flex;
@@ -245,7 +243,7 @@
     align-items: center; /* Qendron tekstin horizontalisht */
     text-align: center; /* Qendron tekstin brenda seksionit */
     box-sizing: border-box; /* Përfshin padding në llogaritjen e gjerësisë dhe lartësisë */
-    padding-top: 150px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
+    padding-top: 50px; /* Shton hapësirë në krye për të ngritur përmbajtjen */
     font-family: 'Geraldine', cursive; /* Aplikon stilin kaligrafik Geraldine */
          
 }
@@ -263,11 +261,11 @@
     #bio-section {
         background-attachment: scroll; /* Ndryshon fiksimin e sfondit për pajisjet mobile */
         padding: 15px; /* Zvogëlon padding për pajisjet mobile */
-        padding-top: 30px; /* Zvogëlon padding në krye për pajisjet mobile */
+        padding-top: 100px; /* Zvogëlon padding në krye për pajisjet mobile */
     }
 
     #bio-section h2 span, #bio-section p {
-        font-size: 80%; /* Zvogëlon madhësinë e tekstit për pajisjet mobile */
+        font-size: 50%; /* Zvogëlon madhësinë e tekstit për pajisjet mobile */
         display: block;
     }
 }
@@ -289,9 +287,14 @@
             font-size: 9px; /* 50% më e vogël */
         }
     </style>
+    <style>
+    #bio-section {
+        text-align: right;
+    }
+</style>
 </head>
 <body>
-    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(0, 0, 0, 0.4);">
         <div class="left" style="display: flex; align-items: center;">
             <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
                 <span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
@@ -321,25 +324,30 @@
     </div>
 </body>
 </html>
-
- <div id="bio-section">
+<div id="bio-section">
     <h2></h2>
-    <h2><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
-    <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
-    <img src="sign1.png" alt="" class="signature">
+    <h2 style="float: left;"><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
+    <div class="bio-text">
+        <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
+        <img src="sign1.png" alt="" class="signature">
+    </div>
 </div>
 
 <style>
+    .bio-text {
+        float: left;
+        width: 60%; /* Mund ta ndryshoni madhësinë sipas dëshirës */
+        margin-right: 30px; /* Shton hapësirë në të djathtë të tekstit */
+    }
     .signature {
-        width: 125px; /* Mund ta ndryshoni madhësinë sipas dëshirës */
+        width: 80px; /* Mund ta ndryshoni madhësinë sipas dëshirës */
         height: auto;
         display: block;
         margin-top: 20px; /* Hapësirë mbi nënshkrimin */
-        float: right; /* Pozicionon imazhin në anën e djathtë */
-        margin-right: 20px; /* Shton hapësirë në të djathtë të imazhit */
+        float: left; /* Pozicionon imazhin në anën e majtë */
+        margin-left: 240px; /* Shton hapësirë në të majtë të imazhit */
     }
 </style>
-
     <script>
         // Kontrollon faqen aktuale dhe fsheh ose shfaq përmbajtjen përkatëse
         document.addEventListener('DOMContentLoaded', function() {
@@ -396,7 +404,7 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var audio = document.getElementById('background-music');
-        audio.volume = 0.04;
+        audio.volume = 0.01;
         audio.play().catch(function(error) {
             console.log('Autoplay was prevented:', error);
         });
@@ -616,7 +624,9 @@ function showSection(sectionId) {
 
     <div id="services" class="content services">
         <p>Besoni në profesionalizmin tonë për përkthime të sakta dhe të besueshme në çdo fushë.</p>
-               
+        
+        <h1>Shërbimet</h1>
+        
         <div data-component-theme="portalThemeColor3" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; height: 15px; min-height: 15px;"></div>
 <div data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; text-align: left; min-height: auto;">
   <div class="container" style="padding: 0px; display: flex; flex-wrap: wrap;">
