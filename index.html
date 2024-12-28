@@ -291,37 +291,6 @@
     #bio-section {
         text-align: right;
     }
-         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            text-align: center;
-            background-color: #fff;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        .container img {
-            width: 250px;
-            height: auto;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h2>Certifikimi</h2>
-        <img src="certificat.jpg" alt="Certifikata e Përkthyesit Gjyqësor">
-    </div>
-</body>
-</html>
 </style>
 </head>
 <body>
@@ -347,27 +316,8 @@
                     <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Clip vidéo</a>
                 </div>
             </div>
-            <a href="#" onclick="showSection('Certifikimi')" class="highlight-transparent" id="certifikimi-link">CERTIFIKIMI</a>
             <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">KONTAKTONI</a>
         </div>
-    </div>
-
-    <div id="Certifikimi" style="display: none;">
-        <h2>Certifikimi</h2>
-        <img src="certificat.jpg" alt="Certifikata e Përkthyesit Gjyqësor" style="width: 250px; height: auto; display: block; margin: 20px auto;">
-    </div>
-
-    <script>
-        function showSection(sectionId) {
-            var sections = document.querySelectorAll('body > div');
-            sections.forEach(function(section) {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
-</body>
-           
     </div>
 </body>
 </html>
