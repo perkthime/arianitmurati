@@ -159,6 +159,17 @@
         height: 30px;
     }
     @media (max-width: 768px) {
+  #bio-section {
+    padding: 15px;
+    padding-top: 50px;
+    background-attachment: scroll;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
         .navbar {
             flex-direction: column;
         }
@@ -204,6 +215,17 @@
 }
 
 @media (max-width: 768px) {
+  #bio-section {
+    padding: 15px;
+    padding-top: 50px;
+    background-attachment: scroll;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
     .navbar {
         flex-direction: column;
     }
@@ -230,6 +252,9 @@
             font-style: normal;
         }
        #bio-section {
+  padding: 20px;
+  box-sizing: border-box;
+
     background: url('arianit49.JPG') no-repeat center center fixed;
      background-size: 100%; /* Zmadhon imazhin për të krijuar efektin e largësisë */
     background-position: center 0%; /* Zhvendos imazhin më poshtë */
@@ -250,6 +275,10 @@
 
 /* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
 #bio-section h2 span, #bio-section p {
+  font-size: 16px;
+  max-width: 100%;
+  word-wrap: break-word;
+
     font-size: 50%;
     max-width: 50%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
     word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
@@ -258,13 +287,31 @@
 
 /* Media queries për pajisjet mobile */
 @media (max-width: 768px) {
+  #bio-section {
+    padding: 15px;
+    padding-top: 50px;
+    background-attachment: scroll;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
     #bio-section {
+  padding: 20px;
+  box-sizing: border-box;
+
         background-attachment: scroll; /* Ndryshon fiksimin e sfondit për pajisjet mobile */
         padding: 15px; /* Zvogëlon padding për pajisjet mobile */
         padding-top: 100px; /* Zvogëlon padding në krye për pajisjet mobile */
     }
 
     #bio-section h2 span, #bio-section p {
+  font-size: 16px;
+  max-width: 100%;
+  word-wrap: break-word;
+
         font-size: 50%; /* Zvogëlon madhësinë e tekstit për pajisjet mobile */
         display: block;
     }
@@ -289,6 +336,9 @@
     </style>
     <style>
     #bio-section {
+  padding: 20px;
+  box-sizing: border-box;
+
         text-align: right;
     }
 </style>
@@ -343,6 +393,8 @@
 
 <style>
     .bio-text {
+  margin-top: 20px;
+
         float: left;
         width: 60%; /* Mund ta ndryshoni madhësinë sipas dëshirës */
         margin-right: 30px; /* Shton hapësirë në të djathtë të tekstit */
