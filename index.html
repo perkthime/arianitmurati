@@ -159,6 +159,12 @@
         height: 30px;
     }
     @media (max-width: 768px) {
+  #bio-section {
+    padding: 15px;
+    padding-top: 50px;
+    background-attachment: scroll;
+  }
+
         .navbar {
             flex-direction: column;
         }
@@ -204,6 +210,12 @@
 }
 
 @media (max-width: 768px) {
+  #bio-section {
+    padding: 15px;
+    padding-top: 50px;
+    background-attachment: scroll;
+  }
+
     .navbar {
         flex-direction: column;
     }
@@ -230,6 +242,9 @@
             font-style: normal;
         }
        #bio-section {
+  padding: 20px;
+  box-sizing: border-box;
+
     background: url('arianit49.JPG') no-repeat center center fixed;
      background-size: 100%; /* Zmadhon imazhin për të krijuar efektin e largësisë */
     background-position: center 0%; /* Zhvendos imazhin më poshtë */
@@ -250,6 +265,10 @@
 
 /* Zvogëlimi i madhësisë së tekstit për 30% dhe mbështjellja e tekstit */
 #bio-section h2 span, #bio-section p {
+  font-size: 16px;
+  max-width: 100%;
+  word-wrap: break-word;
+
     font-size: 50%;
     max-width: 50%; /* Kufizon gjerësinë maksimale të tekstit për të mbetur brenda faqes */
     word-wrap: break-word; /* Mbështjell fjalët që janë shumë të gjata për të qëndruar brenda kufijve */
@@ -258,13 +277,26 @@
 
 /* Media queries për pajisjet mobile */
 @media (max-width: 768px) {
+  #bio-section {
+    padding: 15px;
+    padding-top: 50px;
+    background-attachment: scroll;
+  }
+
     #bio-section {
+  padding: 20px;
+  box-sizing: border-box;
+
         background-attachment: scroll; /* Ndryshon fiksimin e sfondit për pajisjet mobile */
         padding: 15px; /* Zvogëlon padding për pajisjet mobile */
         padding-top: 100px; /* Zvogëlon padding në krye për pajisjet mobile */
     }
 
     #bio-section h2 span, #bio-section p {
+  font-size: 16px;
+  max-width: 100%;
+  word-wrap: break-word;
+
         font-size: 50%; /* Zvogëlon madhësinë e tekstit për pajisjet mobile */
         display: block;
     }
@@ -289,6 +321,9 @@
     </style>
     <style>
     #bio-section {
+  padding: 20px;
+  box-sizing: border-box;
+
         text-align: right;
     }
 </style>
@@ -332,7 +367,7 @@
 </div>
 </body>
 </html>
-<div id="bio-section" style="position: fixed; width: 100%; height: 100%;">
+<div id="bio-section">
     <h2></h2>
     <h2 style="float: left;"><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
     <div class="bio-text">
@@ -730,17 +765,17 @@ function showSection(sectionId) {
     }
 </style>
 
-<div id="service1" style="position: fixed; width: 100%; height: 100%;" class="content service1">
+<div id="service1" class="content service1">
     
     
     <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div id="service2" style="position: fixed; width: 100%; height: 100%;" class="content service2">
+<div id="service2" class="content service2">
  
  
     <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-    <div id="service2" style="position: fixed; width: 100%; height: 100%;" class="content service2">
+    <div id="service2" class="content service2">
        
         <p>Detajet e Video në frëngjisht.</p>
         <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
