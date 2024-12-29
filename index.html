@@ -9,7 +9,7 @@
     /* Stilet ekzistuese */
     body {
         font-family: Arial, sans-serif;
-        background-image: url('booksblack.jpg');
+        background-image: url('prison.jpg');
         background-size: 100% 100%;
         background-attachment: fixed;
         margin: 0;
@@ -184,7 +184,7 @@
         padding: 10px;
         margin: 10px;
         border-radius: 10px;
-        background-color: rgba(0, 0, 0, 0.9);
+        background-color: rgba(0, 0, 0, 0.8);
         color: white;
         text-align: left;
     
@@ -294,10 +294,10 @@
 </style>
 </head>
 <body>
-<div class="navbar" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(0, 0, 0, 0.4);">
+   <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; background-color: rgba(0, 0, 0, 0.4);">
     <div class="left" style="display: flex; align-items: center;">
         <span style="color: #fff; cursor: pointer;" id="translator-name" onclick="showBio()">
-            <span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
+            <span class="tahoma" style="background: linear-gradient(135deg, rgba(255, 140, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 15px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Arianit Murati</span>
         </span>
         <span class="tahoma-small" style="color: #fff; margin-left: 10px;" id="translator-title">PËRKTHYES GJYQËSOR</span>
         <div class="center" style="display: flex; align-items: center; margin-left: 10px;">
@@ -306,25 +306,26 @@
         </div>
     </div>
     <div class="right" id="menu" style="display: flex; align-items: center;">
-        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">MIRË SE VINI</a>
+        <a href="#" onclick="showSection('welcome')" class="highlight-transparent" id="welcome-link">MIRË SE VINI</a>
         <div class="dropdown">
-            <button class="dropbtn highlight-orange" id="services-button" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">SHËRBIME 
+            <button class="dropbtn highlight-orange" id="services-button">SHËRBIME 
                 <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content">
-                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Filmim</a>
-                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none; background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">Clip vidéo</a>
+                <a href="#" onclick="showSection('service1')" class="highlight" id="video-albanian">Filmim</a>
+                <a href="#" onclick="showSection('service2')" class="highlight" id="video-french" style="display: none;">Clip vidéo</a>
             </div>
         </div>
-        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">KONTAKTONI</a>
-        <a href="#" onclick="showSection('certification')" class="highlight-transparent" id="certification-link" style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1));">CERTIFIKIMI</a>
+        <a href="#" onclick="showSection('contact')" class="highlight-transparent" id="contact-link">KONTAKTONI</a>
+        <a href="#" onclick="showSection('certification')" class="highlight-transparent" id="certification-link">CERTIFIKIMI</a>
     </div>
 </div>
 
-<div id="certification" class="content certification" style="background: url('certificatbackground.jpg') no-repeat center center fixed; background-size: cover; min-height: 100vh; width: 100%; height: 100%; text-align: center;">
+<div id="certification" class="content certification" style="background: url('lune.jpg') no-repeat center center fixed; background-size: cover; min-height: 100vh; width: 100%; height: 100%; text-align: center;">
     <div class="image-container" style="display: flex; justify-content: center; gap: 20px;">
-        <img src="certificat.jpg" style="max-width: 35%; margin-right: 5%;">
+        <img src="certificat.jpg" style="max-width: 45%; margin-right: 10%;">
     </div>
+</div>
 </body>
 </html>
     </div>
@@ -333,7 +334,7 @@
 </html>
 <div id="bio-section">
     <h2></h2>
-    <h2 style="float: left;"><span style="background: linear-gradient(135deg, rgba(255, 223, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
+    <h2 style="float: left;"><span style="background: linear-gradient(135deg, rgba(255, 165, 0, 1), rgba(255, 69, 0, 1)); color: white; padding: 0px 8px; text-decoration: none; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); border-radius: 25px; transition: transform 0.3s ease, box-shadow 0.3s ease;">Pak fjalë...</span></h2>
     <div class="bio-text">
         <p>Arianit Murati është përkthyes gjyqësor dhe mësimdhënës i gjuhës frënge me një përvojë të gjerë akademike dhe profesionale. Hapat e parë të gjuhës frënge i bëri në Universitetin Katolik të Perëndimit në Angers. Pastaj studioi gjuhën dhe letërsinë frënge në Universitetin e Prishtinës. Pasioni i tij për gjuhët e çoi në Universitetin e Paris 8, ku vazhdoi studimet në Shkencat e Gjuhës, me fokus të veçantë në Didaktikën e gjuhëve të huaja. Gjithashtu, ai ndoqi studimet në Universitetin e Franche-Comté, në Centre de Télé-Enseignement, në drejtimin Politikat gjuhësore dhe edukative, ambientet dixhitale (E-learning). Aktualisht, është mësimdhënës i gjuhës frënge në gjimnazin "Ulpiana" në Lipjan, ku përpiqet të inspirojë dhe të edukojë brezat e rinj në gjuhën dhe kulturën frënge. Përveç kësaj, ai shërben si përkthyes gjyqësor, duke ofruar shërbime të përkthimit të saktë dhe të besueshëm për klientët e tij. Me një përkushtim të thellë ndaj gjuhës dhe një përvojë të pasur në mësimdhënie dhe përkthim, Arianiti është i përkushtuar të ofrojë shërbime të cilësisë së lartë dhe të ndihmojë në ndërtimin e urave të komunikimit ndërkulturor.</p>
         <img src="sign1.png" alt="" class="signature">
