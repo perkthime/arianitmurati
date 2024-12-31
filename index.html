@@ -326,122 +326,10 @@
         <img src="certificat.jpg" style="max-width: 35%; margin-right: 5%;">
     </div>
 </div>
-
-<!-- Live Chat Section -->
-<div id="live-chat" style="position: fixed; bottom: 0; right: 0; margin: 10px;">
-    <button onclick="toggleChat()" style="background-color: orange; color: white; border: none; padding: 10px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); transition: transform 0.3s ease, box-shadow 0.3s ease;">Live Chat</button>
-    <div id="chat-box" style="display: none; background-color: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); width: 300px; height: 400px;">
-        <div style="background-color: orange; color: white; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">Chat with us</div>
-        <div id="chat-content" style="padding: 10px; height: calc(100% - 60px); overflow-y: auto;"></div>
-        <input type="text" id="chat-input" placeholder="Type your message..." style="width: calc(100% - 20px); padding: 10px; border: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" onkeypress="sendMessage(event)">
-    </div>
-</div>
-
-<script>
-function toggleChat() {
-    var chatBox = document.getElementById('chat-box');
-    if (chatBox.style.display === 'none') {
-        chatBox.style.display = 'block';
-    } else {
-        chatBox.style.display = 'none';
-    }
-}
-
-function sendMessage(event) {
-    if (event.key === 'Enter') {
-        var input = document.getElementById('chat-input');
-        var message = input.value;
-        if (message.trim() !== '') {
-            var chatContent = document.getElementById('chat-content');
-            var newMessage = document.createElement('div');
-            newMessage.textContent = message;
-            newMessage.style.padding = '5px';
-            newMessage.style.marginBottom = '5px';
-            newMessage.style.backgroundColor = '#f1f1f1';
-            newMessage.style.borderRadius = '5px';
-            chatContent.appendChild(newMessage);
-            input.value = '';
-            chatContent.scrollTop = chatContent.scrollHeight;
-        }
-    }
-}
-</script>
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67739332af5bfec1dbe504a2/1igdndvlr';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
     </div>
 </div>
-
-<!-- Live Chat Section -->
-<div id="live-chat" style="position: fixed; bottom: 0; right: 0; margin: 10px;">
-    <button onclick="toggleChat()" style="background-color: orange; color: white; border: none; padding: 10px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); transition: transform 0.3s ease, box-shadow 0.3s ease;">Live Chat</button>
-    <div id="chat-box" style="display: none; background-color: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); width: 300px; height: 400px;">
-        <div style="background-color: orange; color: white; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">Chat with us</div>
-        <div id="chat-content" style="padding: 10px; height: calc(100% - 60px); overflow-y: auto;"></div>
-        <input type="text" id="chat-input" placeholder="Type your message..." style="width: calc(100% - 20px); padding: 10px; border: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" onkeypress="sendMessage(event)">
-    </div>
-</div>
-
-<script>
-function toggleChat() {
-    var chatBox = document.getElementById('chat-box');
-    if (chatBox.style.display === 'none') {
-        chatBox.style.display = 'block';
-    } else {
-        chatBox.style.display = 'none';
-    }
-}
-
-function sendMessage(event) {
-    if (event.key === 'Enter') {
-        var input = document.getElementById('chat-input');
-        var message = input.value;
-        if (message.trim() !== '') {
-            var chatContent = document.getElementById('chat-content');
-            var newMessage = document.createElement('div');
-            newMessage.textContent = message;
-            newMessage.style.padding = '5px';
-            newMessage.style.marginBottom = '5px';
-            newMessage.style.backgroundColor = '#f1f1f1';
-            newMessage.style.borderRadius = '5px';
-            chatContent.appendChild(newMessage);
-            input.value = '';
-            chatContent.scrollTop = chatContent.scrollHeight;
-        }
-    }
-}
-</script>
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67739332af5bfec1dbe504a2/1igdndvlr';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
 <div id="bio-section">
@@ -631,62 +519,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-
-<!-- Live Chat Section -->
-<div id="live-chat" style="position: fixed; bottom: 0; right: 0; margin: 10px;">
-    <button onclick="toggleChat()" style="background-color: orange; color: white; border: none; padding: 10px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); transition: transform 0.3s ease, box-shadow 0.3s ease;">Live Chat</button>
-    <div id="chat-box" style="display: none; background-color: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); width: 300px; height: 400px;">
-        <div style="background-color: orange; color: white; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">Chat with us</div>
-        <div id="chat-content" style="padding: 10px; height: calc(100% - 60px); overflow-y: auto;"></div>
-        <input type="text" id="chat-input" placeholder="Type your message..." style="width: calc(100% - 20px); padding: 10px; border: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" onkeypress="sendMessage(event)">
-    </div>
-</div>
-
-<script>
-function toggleChat() {
-    var chatBox = document.getElementById('chat-box');
-    if (chatBox.style.display === 'none') {
-        chatBox.style.display = 'block';
-    } else {
-        chatBox.style.display = 'none';
-    }
-}
-
-function sendMessage(event) {
-    if (event.key === 'Enter') {
-        var input = document.getElementById('chat-input');
-        var message = input.value;
-        if (message.trim() !== '') {
-            var chatContent = document.getElementById('chat-content');
-            var newMessage = document.createElement('div');
-            newMessage.textContent = message;
-            newMessage.style.padding = '5px';
-            newMessage.style.marginBottom = '5px';
-            newMessage.style.backgroundColor = '#f1f1f1';
-            newMessage.style.borderRadius = '5px';
-            chatContent.appendChild(newMessage);
-            input.value = '';
-            chatContent.scrollTop = chatContent.scrollHeight;
-        }
-    }
-}
-</script>
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67739332af5bfec1dbe504a2/1igdndvlr';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 </body>
 <style>
     .static-text {
@@ -792,62 +624,6 @@ function showSection(sectionId) {
         <img src="image3.jpg" alt="Image 3">
     </div>
 </div>
-
-<!-- Live Chat Section -->
-<div id="live-chat" style="position: fixed; bottom: 0; right: 0; margin: 10px;">
-    <button onclick="toggleChat()" style="background-color: orange; color: white; border: none; padding: 10px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); transition: transform 0.3s ease, box-shadow 0.3s ease;">Live Chat</button>
-    <div id="chat-box" style="display: none; background-color: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); width: 300px; height: 400px;">
-        <div style="background-color: orange; color: white; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">Chat with us</div>
-        <div id="chat-content" style="padding: 10px; height: calc(100% - 60px); overflow-y: auto;"></div>
-        <input type="text" id="chat-input" placeholder="Type your message..." style="width: calc(100% - 20px); padding: 10px; border: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" onkeypress="sendMessage(event)">
-    </div>
-</div>
-
-<script>
-function toggleChat() {
-    var chatBox = document.getElementById('chat-box');
-    if (chatBox.style.display === 'none') {
-        chatBox.style.display = 'block';
-    } else {
-        chatBox.style.display = 'none';
-    }
-}
-
-function sendMessage(event) {
-    if (event.key === 'Enter') {
-        var input = document.getElementById('chat-input');
-        var message = input.value;
-        if (message.trim() !== '') {
-            var chatContent = document.getElementById('chat-content');
-            var newMessage = document.createElement('div');
-            newMessage.textContent = message;
-            newMessage.style.padding = '5px';
-            newMessage.style.marginBottom = '5px';
-            newMessage.style.backgroundColor = '#f1f1f1';
-            newMessage.style.borderRadius = '5px';
-            chatContent.appendChild(newMessage);
-            input.value = '';
-            chatContent.scrollTop = chatContent.scrollHeight;
-        }
-    }
-}
-</script>
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67739332af5bfec1dbe504a2/1igdndvlr';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
 
@@ -869,62 +645,6 @@ function showSection(sectionId) {
         <img src="image3.jpg" alt="Image 3">
     </div>
 </div>
-
-<!-- Live Chat Section -->
-<div id="live-chat" style="position: fixed; bottom: 0; right: 0; margin: 10px;">
-    <button onclick="toggleChat()" style="background-color: orange; color: white; border: none; padding: 10px 20px; border-radius: 25px; box-shadow: 0 4px 15px rgba(255, 69, 0, 0.7); transition: transform 0.3s ease, box-shadow 0.3s ease;">Live Chat</button>
-    <div id="chat-box" style="display: none; background-color: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); width: 300px; height: 400px;">
-        <div style="background-color: orange; color: white; padding: 10px; border-top-left-radius: 10px; border-top-right-radius: 10px;">Chat with us</div>
-        <div id="chat-content" style="padding: 10px; height: calc(100% - 60px); overflow-y: auto;"></div>
-        <input type="text" id="chat-input" placeholder="Type your message..." style="width: calc(100% - 20px); padding: 10px; border: none; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;" onkeypress="sendMessage(event)">
-    </div>
-</div>
-
-<script>
-function toggleChat() {
-    var chatBox = document.getElementById('chat-box');
-    if (chatBox.style.display === 'none') {
-        chatBox.style.display = 'block';
-    } else {
-        chatBox.style.display = 'none';
-    }
-}
-
-function sendMessage(event) {
-    if (event.key === 'Enter') {
-        var input = document.getElementById('chat-input');
-        var message = input.value;
-        if (message.trim() !== '') {
-            var chatContent = document.getElementById('chat-content');
-            var newMessage = document.createElement('div');
-            newMessage.textContent = message;
-            newMessage.style.padding = '5px';
-            newMessage.style.marginBottom = '5px';
-            newMessage.style.backgroundColor = '#f1f1f1';
-            newMessage.style.borderRadius = '5px';
-            chatContent.appendChild(newMessage);
-            input.value = '';
-            chatContent.scrollTop = chatContent.scrollHeight;
-        }
-    }
-}
-</script>
-
-
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/67739332af5bfec1dbe504a2/1igdndvlr';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
-
 </body>
 </html>
 
@@ -1065,7 +785,6 @@ function showSection(sectionId) {
     </div>
 </div>
 
-
 <!--Start of Tawk.to Script-->
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
@@ -1079,6 +798,5 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
-
 </body>
 </html>
