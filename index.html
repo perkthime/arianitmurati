@@ -215,40 +215,7 @@
         margin: 5px 0;
     }
 }
-       .chat-bubble {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #4CAF50;
-            border-radius: 50%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-        }
-        .chat-container {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            width: 300px;
-            height: 400px;
-            border: 2px solid #4CAF50;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            display: none;
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-     <style>
+</style>
 </head>
       <style>
         /* Sfondi për seksionin e biografisë */
@@ -428,7 +395,6 @@
         // Shfaqni seksionin e biografisë
         document.getElementById('bio-section').style.display = 'block';
     }
-       
 </script>
 </script>
    <body class="arianit-murati">
@@ -554,15 +520,6 @@ function showSection(sectionId) {
     document.getElementById('bio-section').style.display = 'none'; // Hide bio section
 }
 </script>
-        function toggleChat() {
-            var chatContainer = document.getElementById('chat-container');
-            if (chatContainer.style.display === 'none' || chatContainer.style.display === '') {
-                chatContainer.style.display = 'block';
-            } else {
-                chatContainer.style.display = 'none';
-            }
-        }
-    </script>
 
 </body>
 <style>
@@ -846,9 +803,7 @@ function showSection(sectionId) {
     </div>
 </div>
 
- <div class="chat-container">
-        <iframe src="https://copilotstudio.microsoft.com/environments/Default-3878a38b-3042-41d3-9a9d-52efa3dc5a99/bots/cr025_agent/webchat?__version__=2"></iframe>
-    </div>
+<iframe src="https://copilotstudio.microsoft.com/environments/Default-3878a38b-3042-41d3-9a9d-52efa3dc5a99/bots/cr025_agent/webchat?__version__=2" frameborder="0" style="width: 100%; height: 100%;"></iframe></body></html>
 
 </body>
 </html>
