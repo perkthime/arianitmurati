@@ -807,7 +807,23 @@ function showSection(sectionId) {
     </div>
 </div>
 
-<script>window.$zoho=window.$zoho || {};$zoho.salesiq=$zoho.salesiq||{ready:function(){}}</script><script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq63d7b5b2f4150a123ed00ead3af171b25f1be71754afe1883c858a2134b1fba2" defer></script>
+<script>
+    window.$zoho=window.$zoho || {};
+    $zoho.salesiq=$zoho.salesiq||{ready:function(){
+        // Aplikoni klasën CSS në elementin e ikonës
+        var widget = document.getElementById('zsiqscript');
+        if (widget) {
+            widget.classList.add('zsiq-widget');
+        }
+    }};
+</script>
+<script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq63d7b5b2f4150a123ed00ead3af171b25f1be71754afe1883c858a2134b1fba2" defer></script>
+<style>
+    .zsiq-widget {
+        width: 50px; /* Gjerësia e ikonës */
+        height: 50px; /* Lartësia e ikonës */
+    }
+</style>
 </body>
 </html>
 
