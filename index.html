@@ -818,8 +818,8 @@ Tawk_API.onLoad = function(){
     var tawkWidget = document.querySelector('.tawk-button');
     if (tawkWidget) {
         var textOverlay = document.createElement('div');
-        textOverlay.style.position = 'fixed';
-        textOverlay.style.bottom = '100px'; // Adjust as needed
+        textOverlay.style.position = 'absolute';
+        textOverlay.style.bottom = '50px'; // Adjust as needed
         textOverlay.style.right = '50px'; // Adjust as needed
         textOverlay.style.color = 'white';
         textOverlay.style.fontSize = '14px'; // Adjust as needed
@@ -830,6 +830,12 @@ Tawk_API.onLoad = function(){
 };
 </script>
 <!--End of Tawk.to Script-->
+
+<style>
+.tawk-button {
+    position: relative;
+}
+</style>
 </body>
 </html>
 
