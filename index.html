@@ -817,7 +817,15 @@ s0.parentNode.insertBefore(s1,s0);
 Tawk_API.onLoad = function(){
     var tawkWidget = document.querySelector('.tawk-button');
     if (tawkWidget) {
-        tawkWidget.innerHTML = 'Live 24/7 këtu!';
+        var textOverlay = document.createElement('div');
+        textOverlay.style.position = 'absolute';
+        textOverlay.style.top = '10px'; // Adjust as needed
+        textOverlay.style.left = '10px'; // Adjust as needed
+        textOverlay.style.color = 'white';
+        textOverlay.style.fontSize = '14px'; // Adjust as needed
+        textOverlay.style.zIndex = '1000';
+        textOverlay.innerHTML = 'Live 24/7 këtu!';
+        tawkWidget.appendChild(textOverlay);
     }
 };
 </script>
