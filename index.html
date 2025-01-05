@@ -286,27 +286,8 @@
             font-family: 'Tahoma', sans-serif;
             font-size: 9px; /* 50% më e vogël */
         }
-   
-     .tawk-bubble-custom {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #fff;
-            color: #000;
-            border-radius: 50%;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            font-size: 14px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 60px;
-            height: 60px;
-            text-align: center;
-        }
-    
+    </style>
+    <style>
     #bio-section {
         text-align: right;
     }
@@ -822,33 +803,19 @@ function showSection(sectionId) {
     </div>
 </div>
 
-    <!-- Your website content -->
-
-    <!--Start of Tawk.to Script-->
-    <script type="text/javascript">
-    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-    (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/677695ee49e2fd8dfe01ab01/1igjjjblv';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
-    })();
-
-    // Add custom text to the Tawk.to bubble
-    Tawk_API.onLoad = function() {
-        var tawkBubble = document.querySelector('iframe[title="chat widget"]');
-        if (tawkBubble) {
-            var customBubble = document.createElement('div');
-            customBubble.className = 'tawk-bubble-custom';
-            customBubble.innerText = 'Call us';
-            tawkBubble.parentNode.insertBefore(customBubble, tawkBubble);
-            customBubble.appendChild(tawkBubble);
-        }
-    };
-    </script>
-    <!--End of Tawk.to Script-->
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/677695ee49e2fd8dfe01ab01/1igjjjblv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
 </body>
 </html>
 
