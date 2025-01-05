@@ -287,25 +287,29 @@
             font-size: 9px; /* 50% më e vogël */
         }
     </style>
-    <style>
-    #bio-section {
-        text-align: right;
-    }
-
-        .tawk-bubble-custom {
+     .tawk-bubble-custom {
             position: fixed;
             bottom: 20px;
             right: 20px;
             background-color: #fff;
             color: #000;
-            border-radius: 10px;
+            border-radius: 50%;
             padding: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             z-index: 1000;
             font-size: 14px;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            text-align: center;
         }
-    
+    <style>
+    #bio-section {
+        text-align: right;
+    }
 </style>
 </head>
 <body>
@@ -818,9 +822,9 @@ function showSection(sectionId) {
     </div>
 </div>
 
-<!-- Your website content -->
+ <!-- Your website content -->
 
-    <div class="tawk-bubble-custom">Live 24/7 këtu!</div>
+    <div id="tawk-bubble" class="tawk-bubble-custom">Call us</div>
 
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
@@ -833,8 +837,18 @@ function showSection(sectionId) {
     s1.setAttribute('crossorigin','*');
     s0.parentNode.insertBefore(s1,s0);
     })();
+
+    // Move the Tawk.to bubble inside the custom bubble
+    Tawk_API.onLoad = function() {
+        var tawkBubble = document.querySelector('#tawk-bubble');
+        var tawkWidget = document.querySelector('iframe[title="chat widget"]');
+        if (tawkBubble && tawkWidget) {
+            tawkBubble.appendChild(tawkWidget);
+        }
+    };
     </script>
     <!--End of Tawk.to Script-->
+<!--End of Tawk.to Script-->
 </body>
 </html>
 
