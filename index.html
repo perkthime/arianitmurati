@@ -804,16 +804,20 @@ function showSection(sectionId) {
 </style>
 
 <div id="service1" class="content service1">
+    
+    
     <iframe src="https://www.youtube.com/embed/wUN913EFMW8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <a href="https://default3878a38b304241d39a9d52efa3dc5a.99.environment.api.powerplatform.com/powervirtualagents/botsbyschema/cr025_webAgent/directline/token?api-version=2022-03-01-preview" target="_blank">Komunikoni me ne</a>
 </div>
 <div id="service2" class="content service2">
+ 
+ 
     <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
-<div id="service2" class="content service2">
-    <p>Detajet e Video në frëngjisht.</p>
-    <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+    <div id="service2" class="content service2">
+       
+        <p>Detajet e Video në frëngjisht.</p>
+        <iframe src="https://www.youtube.com/embed/zwUkAS6bBF8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
 <div class="social-container" style="display: flex; justify-content: space-between; align-items: center;">
     <div class="social-links" style="text-align: left;">
         <a href="https://www.facebook.com/arianit.murati.942" target="_blank" aria-label="Facebook">
@@ -828,23 +832,23 @@ function showSection(sectionId) {
     </div>
     <img src="Designer.png" alt="Logo" class="logo"> <!-- Logo with red dot -->
 </div>
-<script>
-    function showSection(sectionId) {
-        document.querySelectorAll('.content').forEach(section => {
-            section.style.display = 'none';
-        });
-        document.getElementById(sectionId).style.display = 'block';
-    }
-</script>
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.content').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 
 <script>
-    function showSection(sectionId) {
-        document.querySelectorAll('.content').forEach(section => {
-            section.style.display = 'none';
-        });
-        document.getElementById(sectionId).style.display = 'block';
-        document.getElementById('bio-section').style.display = 'none'; // Hide bio section
-    }
+function showSection(sectionId) {
+    document.querySelectorAll('.content').forEach(section => {
+        section.style.display = 'none';
+    });
+    document.getElementById(sectionId).style.display = 'block';
+    document.getElementById('bio-section').style.display = 'none'; // Hide bio section
+}
 </script>
 
 <div id="certification" class="content certification">
@@ -857,22 +861,76 @@ function showSection(sectionId) {
 </div>
 
 <div class="chat-bubble" onclick="openIframe()">
-    <img src="7ldwe0vk.png" alt="Chat">
+    <img src="chat-icon.png" alt="Chat">
 </div>
 <div class="iframe-container" id="iframeContainer">
     <button class="close-btn" onclick="closeIframe()">×</button>
-    <iframe src="https://copilotstudio.microsoft.com/environments/Default-3878a38b-3042-41d3-9a9d-52efa3dc5a99/bots/cr025_webAgent/webchat?__version__=2" frameborder="0"></iframe>
+    <iframe src="https://copilotstudio.microsoft.com/environments/Default-3878a38b-3042-41d3-9a9d-52efa3dc5a99/bots/cr025_agent/webchat?__version__=2"></iframe>
 </div>
 
 <script>
-    function openIframe() {
-        document.getElementById('iframeContainer').style.display = 'block';
-    }
+function openIframe() {
+    document.getElementById('iframeContainer').style.display = 'block';
+}
 
-    function closeIframe() {
-        document.getElementById('iframeContainer').style.display = 'none';
-    }
+function closeIframe() {
+    document.getElementById('iframeContainer').style.display = 'none';
+}
 </script>
 
 </body>
 </html>
+// Use the retrieved token to create a DirectLineClient instance
+using (var directLineClient = new DirectLineClient(token))
+{
+    var conversation = await directLineClient.Conversations.StartConversationAsync();
+    string conversationtId = conversation.ConversationId;
+}
+
+// Use the conversationId from above step
+// endConversationMessage is your predefined message indicating that user wants to quit the chat
+while (!string.Equals(inputMessage = /*Get_User_Input()*/, endConversationMessage, StringComparison.OrdinalIgnoreCase))
+{
+    using (var directLineClient = new DirectLineClient(token))
+    {
+        // Send user message using directlineClient
+        // Payload is a Microsoft.Bot.Connector.DirectLine.Activity
+        await directLineClient.Conversations.PostActivityAsync(conversationtId, new Activity()
+        {
+            Type = ActivityTypes.Message,
+            From = new ChannelAccount { Id = "userId", Name = "userName" },
+            Text = inputMessage,
+            TextFormat = "plain",
+            Locale = "en-Us",
+        });
+    }
+}
+
+// Use the same token to create a directLineClient
+using (var directLineClient = new DirectLineClient(token))
+{
+    // To get the first response set string watermark = null
+    // More information about watermark is available at
+    // https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-direct-line-1-1-receive-messages?view=azure-bot-service-4.0
+
+    // response from bot is of type Microsoft.Bot.Connector.DirectLine.ActivitySet
+    ActivitySet response = await directLineClient.Conversations.GetActivitiesAsync(conversationtId, watermark);
+
+    // update watermark from response
+    watermark = response?.Watermark;
+
+    // response contains set of Activity from both user and bot
+    // To display bot response only, filter Activity.From.Name equals to your bot name
+    List<Activity> botResponses = response?.Activities?.Where(x =>
+              x.Type == ActivityTypes.Message &&
+                string.Equals(x.From.Name, /*Bot_Name*/, StringComparison.Ordinal)).ToList();
+
+    // Display botResponses
+}
+
+// DirectLine provides a token refresh method
+// Requires the currentToken valid when refreshing
+string refreshToken = new DirectLineClient(currentToken).Tokens.RefreshToken().Token;
+// create a new directline client with refreshToken
+directLineClient = new DirectLineClient(refreshToken);
+// use new directLineClient to communicate to your bot
