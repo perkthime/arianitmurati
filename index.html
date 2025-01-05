@@ -292,17 +292,20 @@
         text-align: right;
     }
         <style>
-.tawk-bubble {
-    background-color: #fff; /* Ngjyra e sfondit */
-    color: #000; /* Ngjyra e tekstit */
-    border-radius: 10px; /* Këndet e rrumbullakosura */
-    padding: 10px; /* Hapësira e brendshme */
-}
-.tawk-bubble-text {
-    font-size: 14px; /* Madhësia e tekstit */
-    font-weight: bold; /* Trashësia e tekstit */
-}
-</style>
+        .tawk-bubble-custom {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
 </style>
 </head>
 <body>
@@ -815,25 +818,23 @@ function showSection(sectionId) {
     </div>
 </div>
 
-<!--Start of Tawk.to Script-->
-<script type="text/javascript">
-var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-Tawk_API.onLoad = function() {
-    var bubble = document.querySelector('.tawk-bubble');
-    if (bubble) {
-        bubble.innerHTML = '<div class="tawk-bubble-text">Live 24/7 këtu!</div>';
-    }
-};
-(function(){
-var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-s1.async=true;
-s1.src='https://embed.tawk.to/677695ee49e2fd8dfe01ab01/1igjjjblv';
-s1.charset='UTF-8';
-s1.setAttribute('crossorigin','*');
-s0.parentNode.insertBefore(s1,s0);
-})();
-</script>
-<!--End of Tawk.to Script-->
+<!-- Your website content -->
+
+    <div class="tawk-bubble-custom">Live 24/7 këtu!</div>
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/677695ee49e2fd8dfe01ab01/1igjjjblv';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+    <!--End of Tawk.to Script-->
 </body>
 </html>
 
