@@ -809,6 +809,10 @@ var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 Tawk_API.onLoad = function() {
     Tawk_API.setAttributes({
         'bubbleText': 'Live 24/7 këtu!'
+    }, function(error) {
+        if (error) {
+            console.log('Error setting bubble text:', error);
+        }
     });
 };
 (function(){
