@@ -26,63 +26,6 @@
     padding: 10px 20px;
 }
 
- {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-}
-.chat-bubble {
-    width: 60px;
-    height: 60px;
-    background-color: #4CAF50;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-.chat-bubble img {
-    width: 30px;
-    height: 30px;
-}
-.iframe-container {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    border: 5px solid #4CAF50;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: white;
-}
-.iframe-container iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #ff0000;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-
 .left, .center, .right {
     display: flex;
     align-items: center;
@@ -860,77 +803,20 @@ function showSection(sectionId) {
     </div>
 </div>
 
-<div class="chat-bubble" onclick="openIframe()">
-    <img src="chat-icon.png" alt="Chat">
-</div>
-<div class="iframe-container" id="iframeContainer">
-    <button class="close-btn" onclick="closeIframe()">×</button>
-    <iframe src="https://copilotstudio.microsoft.com/environments/Default-3878a38b-3042-41d3-9a9d-52efa3dc5a99/bots/cr025_agent/webchat?__version__=2"></iframe>
-</div>
-
-<script>
-function openIframe() {
-    document.getElementById('iframeContainer').style.display = 'block';
-}
-
-function closeIframe() {
-    document.getElementById('iframeContainer').style.display = 'none';
-}
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/677695ee49e2fd8dfe01ab01/1igjjjblv';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
 </script>
-
+<!--End of Tawk.to Script-->
 </body>
 </html>
-// Use the retrieved token to create a DirectLineClient instance
-using (var directLineClient = new DirectLineClient(token))
-{
-    var conversation = await directLineClient.Conversations.StartConversationAsync();
-    string conversationtId = conversation.ConversationId;
-}
 
-// Use the conversationId from above step
-// endConversationMessage is your predefined message indicating that user wants to quit the chat
-while (!string.Equals(inputMessage = /*Get_User_Input()*/, endConversationMessage, StringComparison.OrdinalIgnoreCase))
-{
-    using (var directLineClient = new DirectLineClient(token))
-    {
-        // Send user message using directlineClient
-        // Payload is a Microsoft.Bot.Connector.DirectLine.Activity
-        await directLineClient.Conversations.PostActivityAsync(conversationtId, new Activity()
-        {
-            Type = ActivityTypes.Message,
-            From = new ChannelAccount { Id = "userId", Name = "userName" },
-            Text = inputMessage,
-            TextFormat = "plain",
-            Locale = "en-Us",
-        });
-    }
-}
-
-// Use the same token to create a directLineClient
-using (var directLineClient = new DirectLineClient(token))
-{
-    // To get the first response set string watermark = null
-    // More information about watermark is available at
-    // https://learn.microsoft.com/azure/bot-service/rest-api/bot-framework-rest-direct-line-1-1-receive-messages?view=azure-bot-service-4.0
-
-    // response from bot is of type Microsoft.Bot.Connector.DirectLine.ActivitySet
-    ActivitySet response = await directLineClient.Conversations.GetActivitiesAsync(conversationtId, watermark);
-
-    // update watermark from response
-    watermark = response?.Watermark;
-
-    // response contains set of Activity from both user and bot
-    // To display bot response only, filter Activity.From.Name equals to your bot name
-    List<Activity> botResponses = response?.Activities?.Where(x =>
-              x.Type == ActivityTypes.Message &&
-                string.Equals(x.From.Name, /*Bot_Name*/, StringComparison.Ordinal)).ToList();
-
-    // Display botResponses
-}
-
-// DirectLine provides a token refresh method
-// Requires the currentToken valid when refreshing
-string refreshToken = new DirectLineClient(currentToken).Tokens.RefreshToken().Token;
-// create a new directline client with refreshToken
-directLineClient = new DirectLineClient(refreshToken);
-// use new directLineClient to communicate to your bot
+Zapier Central dhe AgentGPT
