@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -724,7 +725,16 @@ function showSection(sectionId) {
       </div>
       <p style="text-align: center;">Përkthimi i etiketave ushqimore dhe përmbajtjes së paketimit.</p>
     </div>
-
+  </div>
+</div>
+</div>
+<script type="text/javascript">
+  // Fix for incorrect viewport width setting in IE 10 on Windows Phone 8.
+  if (navigator.userAgent.match(/IEMobile/10.0/)) {
+    var msViewportStyle = document.createElement("style");
+    msViewportStyle?.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+    document.getElementsByTagName("head")[0]?.appendChild(msViewportStyle);
+  }
 </script>
 
     </div>
