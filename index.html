@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="sq">
 <head>
@@ -395,6 +396,7 @@
         // Shfaqni seksionin e biografisë
         document.getElementById('bio-section').style.display = 'block';
     }
+    
 </script>
 </script>
    <body class="arianit-murati">
@@ -406,14 +408,14 @@
             </a> 
         </p>
         <audio id="background-music" autoplay loop>
-    <source src="" type="audio/mpeg">
+    <source src="Wicked Game-Clipchamp.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var audio = document.getElementById('background-music');
-        audio.volume = 0.01;
+        audio.volume = 0.00;
         audio.play().catch(function(error) {
             console.log('Autoplay was prevented:', error);
         });
@@ -803,13 +805,22 @@ function showSection(sectionId) {
     </div>
 </div>
 
-<!-- Start of LiveAgent integration script: KB search: W1 -->
-<script type="text/javascript">
-(function(d, src, c) { var t=d.scripts[d.scripts.length - 1],s=d.createElement('script');s.id='la_x2s6df8d';s.defer=true;s.src=src;s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs&&(rs!='complete')&&(rs!='loaded')){return;}c(this);};t.parentElement.insertBefore(s,t.nextSibling);})(document,
-'https://perkthime.ladesk.com/scripts/track.js',
-function(e){ LiveAgent.createKbSearchWidget('37qbuxj4', e); });
+<script>
+    window.$zoho=window.$zoho || {};
+    $zoho.salesiq=$zoho.salesiq||{ready:function(){
+        var widget = document.getElementById('zsiqscript');
+        if (widget) {
+            widget.classList.add('zsiq-widget');
+        }
+    }};
 </script>
-<!-- End of LiveAgent integration script -->
+<script id="zsiqscript" src="https://salesiq.zohopublic.eu/widget?wc=siq63d7b5b2f4150a123ed00ead3af171b25f1be71754afe1883c858a2134b1fba2" defer></script>
+<style>
+    .zsiq-widget {
+        width: 10px !important;
+        height: 10px !important;
+    }
+</style>
 </body>
 </html>
 
