@@ -146,6 +146,24 @@
         width: 100%;
         background-color: rgba(0, 0, 0, 0.5);
     }
+    #live-text {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000; /* Ngjyra e sfondit */
+    color: #fff; /* Ngjyra e tekstit */
+    padding: 10px;
+    font-size: 16px;
+    z-index: 1000; /* Sigurohet që të jetë mbi elementet e tjera */
+}
+
+#crisp-chatbox {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
     .social-links {
         display: flex;
         justify-content: center;
@@ -800,11 +818,18 @@ function showSection(sectionId) {
         <img src="image2.jpg" alt="Image 2">
         <img src="image3.jpg" alt="Image 3">
    
-  <div style="position: absolute; top: 20px; right: 20px; z-index: 1000; color: white; padding: 5px;">
-    Live 24/7 këtu
-</div>
-
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="9b02a912-fd95-435d-841b-3a6dbbfa5a3a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+ <div id="live-text">Live 24/7</div>
+<script type="text/javascript">
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "9b02a912-fd95-435d-841b-3a6dbbfa5a3a";
+    (function() {
+        d = document;
+        s = d.createElement("script");
+        s.src = "https://client.crisp.chat/l.js";
+        s.async = 1;
+        d.getElementsByTagName("head")[0].appendChild(s);
+    })();
+</script>
 
 </body>
 </html>
