@@ -17,9 +17,14 @@
         padding: 0;
         animation: backgroundAnimation 20s infinite alternate;
     }
-    .crisp-client .crisp-1 {
+   <style>
+  .crisp-client .crisp-1 {
     width: 300px !important; /* Vendos gjerësinë që dëshiron */
-    height: 400px !important; /* Vendos lartësinë që dëshiron */
+    height: 100vh !important; /* Bëje që të mbulojë të gjithë lartësinë e dritares */
+    right: 0 !important; /* Poziciono chatbox-in në anën e djathtë */
+    bottom: 0 !important; /* Poziciono chatbox-in në fund */
+  }
+</style>
   }
     @keyframes backgroundAnimation {
         0% { background-position: 0% 0%; }
