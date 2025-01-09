@@ -945,25 +945,12 @@ function showSection(sectionId) {
 <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="9b02a912-fd95-435d-841b-3a6dbbfa5a3a";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
 
 
-<script>
-  window.$crisp = [];
-  window.CRISP_WEBSITE_ID = "9b02a912-fd95-435d-841b-3a6dbbfa5a3a";
-  (function() {
-    d = document;
-    s = d.createElement("script");
-    s.src = "https://client.crisp.chat/l.js";
-    s.async = 1;
-    d.getElementsByTagName("head")[0].appendChild(s);
-  })();
+# Load the content of the file
+with open('crisp1.txt', 'r', encoding='utf-8') as file:
+    content = file.read()
 
-  // Open the chatbox overlay widget
-  $crisp.push(["do", "chat:open"]);
-
-  // Send a welcome message
-  $crisp.push(["do", "message:send", ["text", "Mirë se vini! Si mund t'ju ndihmojmë sot?"]]);
-</script>
-
-
+# Define the script with reduced chatbox size and position it at the bottom right corner
+script = """
 <script>
   window.$crisp = [];
   window.CRISP_WEBSITE_ID = "9b02a912-fd95-435d-841b-3a6dbbfa5a3a";
@@ -984,6 +971,13 @@ function showSection(sectionId) {
   // Send a welcome message
   $crisp.push(["do", "message:send", ["text", "Mirë se vini! Si mund t'ju ndihmojmë sot?"]]);
 </script>
+"""
 
-</body>
-</html>
+# Insert the script before the closing </body> tag
+updated_content = content.replace('</body>', script + '\n</body>')
+
+# Save the updated content to a new file
+with open('Updated_Crisp_1_Reduced_Chatbox_Positioned.txt', 'w', encoding='utf-8') as file:
+    file.write(updated_content)
+
+print("The script with reduced chatbox size and positioned at the bottom right corner has been successfully inserted and the updated file is saved as 'Updated_Crisp_1_Reduced_Chatbox_Positioned.txt'.")
