@@ -407,14 +407,14 @@
             </a> 
         </p>
         <audio id="background-music" autoplay loop>
-    <source src="Wicked Game-Clipchamp.mp3" type="audio/mpeg">
+    <source src="" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         var audio = document.getElementById('background-music');
-         audio.volume = 0.01; // Vendos volumin në 1%
+        audio.volume = 0.00;
         audio.play().catch(function(error) {
             console.log('Autoplay was prevented:', error);
         });
